@@ -1,0 +1,66 @@
+name: publish
+
+# Polls for the approval button every 10 minutes from 01:30 to 03:50 UTC, which
+# is 07:00 to 09:20 IST. Actions cannot receive a webhook, so this is how the
+# decision gets picked up. The first check is at 07:00 IST so an approval given
+# any time after the card arrives can go live on the hour; cron takes no step
+# argument from a non-zero start, so the first half hour is listed explicitly.
+on:
+  schedule:
+    - cron: "30,40,50 1 * * *"
+    - cron: "*/10 2-3 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: newsletter
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      # Chromium is only needed if the decision turns out to be "regenerate".
+      - name: Install
+        run: |
+          pip install -e .
+          playwright install --with-deps chromium
+
+      - name: Act on the decision
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CURATE_MODEL: ${{ vars.CURATE_MODEL }}
+          WRITE_MODEL: ${{ vars.WRITE_MODEL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_HANDLE: ${{ vars.IG_HANDLE }}
+          PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          LINKEDIN_TOKEN_EXPIRES_AT: ${{ vars.LINKEDIN_TOKEN_EXPIRES_AT }}
+          DESTINATIONS: ${{ vars.DESTINATIONS }}
+        run: python -m newsletter.pipeline publish
+
+      - name: Commit state
+        run: |
+          git config user.name "ai-newsletter[bot]"
+          git config user.email "noreply@github.com"
+          git add out/ state/
+          git diff --staged --quiet || git commit -m "publish $(date -u +%Y-%m-%d)"
+          # Another run of this workflow may have pushed since checkout.
+          git pull --rebase --autostash || true
+          git push

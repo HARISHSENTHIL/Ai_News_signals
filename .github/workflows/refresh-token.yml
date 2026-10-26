@@ -1,0 +1,72 @@
+name: tokens
+
+# Both platforms issue 60-day tokens, but only one can be renewed in the
+# background. Instagram's is refreshed here weekly, so it is never close to
+# expiry and a few failed weeks running are still recoverable. LinkedIn grants
+# programmatic refresh tokens only to approved Marketing Developer Platform
+# partners, so a self-serve app's token cannot be renewed at all - the best this
+# job can do is tell you to re-mint it while there is still time.
+on:
+  schedule:
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    # Lifted to job level so a step's `if` can test it: the `secrets` context is
+    # not dependably available inside a step-level condition.
+    env:
+      HAS_INSTAGRAM: ${{ secrets.IG_ACCESS_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -e .
+
+      - name: Refresh Instagram token
+        # Skipped entirely until Instagram is set up. Without this the job would
+        # fail every Monday and cry wolf on Telegram the whole time LinkedIn is
+        # running on its own.
+        if: env.HAS_INSTAGRAM == 'true'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          META_APP_ID: ${{ secrets.META_APP_ID }}
+          META_APP_SECRET: ${{ secrets.META_APP_SECRET }}
+          # A fine-grained PAT with `secrets: write` on this repo.
+          # GITHUB_TOKEN cannot update secrets.
+          GH_TOKEN: ${{ secrets.SECRETS_PAT }}
+        run: python scripts/refresh_token.py
+
+      - name: Check the LinkedIn token
+        # There is nothing to refresh, so this only counts down and nags. The
+        # expiry comes from the variable scripts/linkedin_auth.py printed.
+        if: ${{ always() && vars.LINKEDIN_TOKEN_EXPIRES_AT != '' }}
+        env:
+          EXPIRES_AT: ${{ vars.LINKEDIN_TOKEN_EXPIRES_AT }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          LEFT=$(( ( $(date -u -d "$EXPIRES_AT" +%s) - $(date -u +%s) ) / 86400 ))
+          echo "LinkedIn token has $LEFT day(s) left"
+          if [ "$LEFT" -le 14 ]; then
+            curl -s -X POST \
+              "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              -d chat_id="${TELEGRAM_CHAT_ID}" \
+              -d text="LinkedIn token expires in ${LEFT} day(s). Run scripts/linkedin_auth.py and update LINKEDIN_ACCESS_TOKEN, LINKEDIN_PERSON_URN and LINKEDIN_TOKEN_EXPIRES_AT. There is no automatic refresh."
+          fi
+
+      - name: Warn on failure
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          curl -s -X POST \
+            "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            -d text="Instagram token refresh failed. Rotate it by hand before it expires."

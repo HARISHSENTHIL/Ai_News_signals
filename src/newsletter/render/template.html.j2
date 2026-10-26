@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* Fixed 1080x1350 canvas. Instagram portrait, 4:5.
+     Every size that can overflow is multiplied by --s, which card.py shrinks
+     until the content fits. Copy length varies run to run, so the layout has to
+     absorb it rather than assume it. */
+  :root {
+    --s: 1;
+    --g1: {{ bg.palette[0] }};
+    --g2: {{ bg.palette[1] }};
+    --g3: {{ bg.palette[2] }};
+    --ink: #ffffff;
+    --dim: rgba(255, 255, 255, 0.66);
+    --accent: #7dd3fc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; }
+  body {
+    height: 1350px;
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    background: var(--g1);
+    color: var(--ink);
+    position: relative;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Layer 1: the photo, or nothing when we fell back to the gradient. */
+  .photo {
+    position: absolute; inset: 0;
+    {% if bg.data_uri %}
+    background-image: url('{{ bg.data_uri }}');
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.8) contrast(1.05);
+    {% endif %}
+  }
+
+  /* Layer 2: the mesh gradient. The whole background when there is no photo,
+     a colour wash over it when there is. */
+  .mesh {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(62% 54% at 12% 6%, var(--g2) 0%, transparent 60%),
+      radial-gradient(58% 48% at 92% 20%, var(--g3) 0%, transparent 56%),
+      radial-gradient(74% 56% at 46% 104%, var(--g2) 0%, transparent 62%),
+      radial-gradient(40% 30% at 78% 62%, rgba(125, 211, 252, 0.10) 0%, transparent 70%),
+      var(--g1);
+    opacity: {{ 0.78 if bg.data_uri else 1.0 }};
+  }
+
+  /* Layer 3: the scrim. Heavy over a photo, light over the gradient - otherwise
+     it flattens the mesh into a grey rectangle. */
+  .scrim {
+    position: absolute; inset: 0;
+    {% if bg.data_uri %}
+    background: linear-gradient(180deg,
+      rgba(4, 6, 14, 0.74) 0%, rgba(4, 6, 14, 0.58) 34%,
+      rgba(4, 6, 14, 0.88) 70%, rgba(4, 6, 14, 0.96) 100%);
+    {% else %}
+    background: linear-gradient(180deg,
+      rgba(4, 6, 14, 0.20) 0%, rgba(4, 6, 14, 0.06) 38%,
+      rgba(4, 6, 14, 0.34) 78%, rgba(4, 6, 14, 0.52) 100%);
+    {% endif %}
+  }
+
+  .content {
+    position: relative;
+    height: 100%;
+    padding: calc(80px * var(--s)) 76px calc(64px * var(--s));
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eyebrow {
+    display: flex; align-items: center; gap: 14px;
+    font-size: 25px; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  .eyebrow .dot {
+    width: 11px; height: 11px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 18px var(--accent);
+  }
+  .eyebrow .date {
+    margin-left: auto;
+    color: var(--dim);
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  .hook {
+    margin-top: calc(40px * var(--s));
+    font-size: calc({{ 90 if post.hook|length <= 26 else 74 }}px * var(--s));
+    font-weight: 900;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
+  }
+  .subhook {
+    margin-top: calc(20px * var(--s));
+    font-size: calc(32px * var(--s));
+    font-weight: 500;
+    line-height: 1.32;
+    color: var(--dim);
+    max-width: 86%;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .rule {
+    margin: calc(40px * var(--s)) 0 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent) 0%, transparent 72%);
+  }
+
+  .stories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: calc(32px * var(--s));
+    flex: 1;
+    padding: calc(30px * var(--s)) 0;
+  }
+  .story { display: flex; gap: 26px; align-items: flex-start; }
+  .num {
+    flex: 0 0 auto;
+    font-size: calc(29px * var(--s));
+    font-weight: 900;
+    color: var(--accent);
+    width: calc(48px * var(--s));
+    padding-top: calc(6px * var(--s));
+    font-variant-numeric: tabular-nums;
+  }
+  .story-body { flex: 1; min-width: 0; }
+  .story h2 {
+    font-size: calc(39px * var(--s));
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: -0.015em;
+    text-wrap: pretty;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+  }
+  .story p {
+    margin-top: calc(9px * var(--s));
+    font-size: calc(26px * var(--s));
+    font-weight: 400;
+    line-height: 1.38;
+    color: var(--dim);
+  }
+  .story .src {
+    margin-top: calc(10px * var(--s));
+    font-size: calc(20px * var(--s));
+    font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(125, 211, 252, 0.86);
+  }
+
+  .footer {
+    display: flex; align-items: baseline; gap: 16px;
+    padding-top: calc(28px * var(--s));
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    font-size: calc(24px * var(--s));
+  }
+  .handle { font-weight: 700; }
+  .tagline { color: var(--dim); font-weight: 400; }
+  .credit {
+    margin-left: auto;
+    font-size: calc(16px * var(--s));
+    color: rgba(255, 255, 255, 0.38);
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+  <div class="photo"></div>
+  <div class="mesh"></div>
+  <div class="scrim"></div>
+
+  <div class="content">
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span>AI Daily</span>
+      <span class="date">{{ date_label }}</span>
+    </div>
+
+    <h1 class="hook">{{ post.hook }}</h1>
+    <p class="subhook">{{ post.subhook }}</p>
+
+    <div class="rule"></div>
+
+    <div class="stories">
+      {% for story in post.stories %}
+      <div class="story">
+        <div class="num">{{ "%02d"|format(loop.index) }}</div>
+        <div class="story-body">
+          <h2>{{ story.headline }}</h2>
+          <p>{{ story.detail }}</p>
+          <div class="src">{{ story.source_name }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="footer">
+      <span class="handle">{{ handle }}</span>
+      <span class="tagline">links in caption</span>
+      {% if bg.credit %}<span class="credit">{{ bg.credit }}</span>{% endif %}
+    </div>
+  </div>
+</body>
+</html>
