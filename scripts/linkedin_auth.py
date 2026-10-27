@@ -13,7 +13,8 @@ the authorization code never has to be copied out of a URL bar.
 
 Prerequisites, all self-serve in https://www.linkedin.com/developers/apps:
   - Products tab: add "Share on LinkedIn" and "Sign In with LinkedIn using
-    OpenID Connect". Both are instant; no review.
+    OpenID Connect". Both are instant; no review. Only the openid and
+    w_member_social scopes are needed - see SCOPES below.
   - Auth tab: add this exact redirect URL: http://localhost:8765/callback
 """
 
@@ -22,6 +23,7 @@ from __future__ import annotations
 import http.server
 import secrets
 import socket
+import subprocess
 import sys
 import threading
 import urllib.parse
@@ -41,6 +43,12 @@ AUTH_URL = "https://www.linkedin.com/oauth/v2/authorization"
 TOKEN_URL = "https://www.linkedin.com/oauth/v2/accessToken"
 # w_member_social posts; openid+profile are what /v2/userinfo needs to tell us
 # the person URN, which the publisher has to send as the post's author.
+#
+# `profile` cannot be dropped even though only `sub` is read from the response:
+# LinkedIn rejects `openid` on its own with openid_insufficient_scope_error,
+# "Include valid openId scopes like profile, email". Both scopes arrive with
+# the "Sign In with LinkedIn using OpenID Connect" product - until that product
+# is Added, every set containing openid is refused as unauthorized.
 SCOPES = "openid profile w_member_social"
 
 received: dict[str, str] = {}
@@ -92,9 +100,16 @@ def main() -> int:
     thread = threading.Thread(target=server.handle_request, daemon=True)
     thread.start()
 
-    print("Opening LinkedIn authorization in your browser.")
-    print(f"If it does not open, paste this:\n\n{url}\n")
-    webbrowser.open(url)
+    # Which browser matters: the one already signed in to LinkedIn is the one
+    # that can approve this without a fresh login. Set OAUTH_BROWSER to its
+    # macOS application name, e.g. OAUTH_BROWSER="Brave Browser".
+    browser = env("OAUTH_BROWSER")
+    print(f"Opening LinkedIn authorization in {browser or 'your default browser'}.")
+    print(f"If it does not open, paste this into any browser:\n\n{url}\n")
+    if browser and sys.platform == "darwin":
+        subprocess.run(["open", "-a", browser, url], check=False)
+    else:
+        webbrowser.open(url)
 
     thread.join(timeout=300)
     server.server_close()
@@ -148,7 +163,12 @@ def main() -> int:
         return 1
     info = userinfo.json()
 
-    print(f"\nAuthenticated as {info.get('name', '?')}")
+    if "sub" not in info:
+        print(f"userinfo returned no 'sub': {info}")
+        return 1
+    # `name` is only present when the profile scope was granted, which we no
+    # longer ask for; the id is the thing that matters here anyway.
+    print(f"\nAuthenticated as {info.get('name') or info['sub']}")
     print(f"Token expires {expiry.isoformat()} ({payload.get('expires_in', 0) // 86400} days)\n")
     print("Set these three as GitHub Actions secrets, and in .env for local runs:\n")
     print(f"LINKEDIN_ACCESS_TOKEN={token}")
