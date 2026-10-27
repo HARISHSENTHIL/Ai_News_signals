@@ -53,8 +53,19 @@ TITLE_JACCARD_THRESHOLD = 0.72
 # ranked by tier, weight and votes before being cut, so what gets dropped is
 # always the least promising rather than whatever happened to fetch last.
 MAX_CANDIDATES = 160
-# Stories that end up on the card.
-STORIES_PER_POST = 4
+# Stories that end up on the card. The template auto-shrinks to fit, so this is
+# bounded by legibility rather than space: measured against real copy, 5 stories
+# render at 84% (22px body text) and 6 at 74% (19px), which is roughly 7px once
+# the 1080px card is scaled into a phone feed. Past 8 the fit falls below
+# MIN_SCALE and the render is rejected outright.
+STORIES_PER_POST = int(env("STORIES_PER_POST", "5"))
+
+# --- brand -----------------------------------------------------------------
+
+# The eyebrow on the card and the handle in its footer. Kept here rather than in
+# the template so a rename never means touching markup.
+BRAND_NAME = env("BRAND_NAME", "AI Signals")
+BRAND_HANDLE = env("BRAND_HANDLE", "@aisignals")
 # Previous posts shown to the ranker so it will not repeat itself.
 HISTORY_LOOKBACK = 14
 

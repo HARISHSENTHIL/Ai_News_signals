@@ -191,6 +191,18 @@ def publish_approved(run_date: date | None = None) -> str:
 
     if decision.action == "regen":
         telegram.acknowledge(decision, "Regenerating...")
+        # Record what was turned down before rebuilding. The ranker is shown
+        # recent headlines and told not to repeat them, and nothing else marks
+        # a rejected draft as rejected - so without this a regenerate can hand
+        # back the same four stories it was just asked to replace.
+        rejected = json.loads(draft_path.read_text())["post"]
+        append_history(
+            {
+                "date": run_id,
+                "status": "rejected",
+                "headlines": [s["headline"] for s in rejected["stories"]],
+            }
+        )
         record = draft(run_date)
         return f"{run_id} regenerated with {record['candidate_count']} candidates"
 

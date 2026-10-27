@@ -47,7 +47,9 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          IG_HANDLE: ${{ vars.IG_HANDLE }}
+          BRAND_NAME: ${{ vars.BRAND_NAME }}
+          BRAND_HANDLE: ${{ vars.BRAND_HANDLE }}
+          STORIES_PER_POST: ${{ vars.STORIES_PER_POST }}
           PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}

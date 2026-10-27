@@ -214,13 +214,15 @@ reliably, and the brand drifts between runs.
 | | Card (the image) | Caption |
 |---|---|---|
 | Hook + subhook | ✅ | — |
-| **4 stories** | headline + one-line detail | headline + detail |
+| **5 stories** | headline + one-line detail | headline + detail |
 | Source | **name only** (`Anthropic`) | **name + full URL** |
 | Hashtags | — | 5, as LinkedIn `{hashtag\|\#\|tag}` templates |
 
-Four stories is the ceiling at which 1080×1350 stays readable on a phone feed.
-Citations live in the caption only — a card full of URLs nobody can tap is
-wasted space.
+Five is the ceiling at which 1080×1350 stays readable on a phone feed. Measured
+against real copy: 5 stories render at 84% scale (22px body text), 6 at 74%
+(19px), and past 8 the fit drops below `MIN_SCALE` and the render is rejected.
+`STORIES_PER_POST` sets it. Citations live in the caption only — a card full of
+URLs nobody can tap is wasted space.
 
 ### 07:00–09:20 IST — `publish.yml`, the approval poller
 

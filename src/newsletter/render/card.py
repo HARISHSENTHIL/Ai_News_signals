@@ -13,7 +13,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from ..config import env
+from ..config import BRAND_HANDLE, BRAND_NAME
 from ..models import Post
 from .background import Background, fetch_background
 
@@ -56,7 +56,8 @@ def build_html(post: Post, background: Background, run_date: date) -> str:
         post=post,
         bg=background,
         date_label=run_date.strftime("%d %b %Y").upper(),
-        handle=env("IG_HANDLE", "@ai.daily"),
+        brand=BRAND_NAME,
+        handle=BRAND_HANDLE,
     )
 
 

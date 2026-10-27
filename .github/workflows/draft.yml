@@ -46,7 +46,9 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-          IG_HANDLE: ${{ vars.IG_HANDLE }}
+          BRAND_NAME: ${{ vars.BRAND_NAME }}
+          BRAND_HANDLE: ${{ vars.BRAND_HANDLE }}
+          STORIES_PER_POST: ${{ vars.STORIES_PER_POST }}
           DESTINATIONS: ${{ vars.DESTINATIONS }}
         run: |
           python -m newsletter.pipeline draft \

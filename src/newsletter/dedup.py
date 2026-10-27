@@ -159,8 +159,18 @@ def prune_seen(seen: dict[str, str], window_days: int = SEEN_WINDOW_DAYS) -> dic
     return out
 
 
-def drop_seen(items: list[Item], seen: dict[str, str]) -> list[Item]:
-    fresh = [i for i in items if i.canonical not in seen]
+def drop_seen(items: list[Item], seen: dict[str, str], today: str = "") -> list[Item]:
+    """Drop candidates burned by a run on an earlier day.
+
+    Entries recorded *today* are deliberately not treated as seen. A real run
+    records every candidate it fetched, not just the four it used, so without
+    this a second run on the same day - which is exactly what the regenerate
+    button triggers - would find its whole pool already burned and fail with
+    "nothing new today". Yesterday's stories still stay gone, which is the
+    point of the store.
+    """
+    today = today or date.today().isoformat()
+    fresh = [i for i in items if seen.get(i.canonical, today) == today]
     log.info("dedup: %d -> %d after dropping previously seen", len(items), len(fresh))
     return fresh
 

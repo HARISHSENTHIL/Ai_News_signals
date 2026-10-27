@@ -123,8 +123,25 @@ class TestSeenStore:
             Item(title="Old", url="https://e.com/old", source="A", canonical="https://e.com/old"),
             Item(title="New", url="https://e.com/new", source="A", canonical="https://e.com/new"),
         ]
-        fresh = drop_seen(items, {"https://e.com/old": "2026-10-20"})
+        fresh = drop_seen(items, {"https://e.com/old": "2026-10-20"}, "2026-10-27")
         assert [i.title for i in fresh] == ["New"]
+
+    def test_same_day_rerun_keeps_its_own_pool(self):
+        """Regenerate re-collects the same day's items and must still find them.
+
+        A real draft records every candidate it fetched, not just the four it
+        used, so treating today's own records as seen would leave the second
+        run of a day with an empty pool.
+        """
+        items = [
+            Item(title="A", url="https://e.com/a", source="S", canonical="https://e.com/a"),
+            Item(title="B", url="https://e.com/b", source="S", canonical="https://e.com/b"),
+        ]
+        seen = {"https://e.com/a": "2026-10-27", "https://e.com/b": "2026-10-27"}
+
+        assert len(drop_seen(items, seen, "2026-10-27")) == 2
+        # Tomorrow they are correctly gone, which is the point of the store.
+        assert drop_seen(items, seen, "2026-10-28") == []
 
     def test_prune_drops_old_and_unparseable_entries(self):
         seen = {

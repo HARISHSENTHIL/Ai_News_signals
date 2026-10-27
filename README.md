@@ -126,7 +126,8 @@ Repo → Settings → Secrets and variables → Actions.
 `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_PERSON_URN`.
 
 **Variables:** `PUBLIC_BASE_URL` = `https://raw.githubusercontent.com/<you>/<repo>/main`,
-`IG_HANDLE` = `@yourhandle`, `DESTINATIONS` = `instagram`, `linkedin`, or
+`BRAND_NAME` = `AI Signals`, `BRAND_HANDLE` = `@aisignals`,
+`STORIES_PER_POST` = `5`, `DESTINATIONS` = `instagram`, `linkedin`, or
 `instagram,linkedin`, `LINKEDIN_TOKEN_EXPIRES_AT` = the date `linkedin_auth.py`
 printed. Optionally `CURATE_MODEL` / `WRITE_MODEL` to override the default
 `anthropic/claude-opus-5.5`.
