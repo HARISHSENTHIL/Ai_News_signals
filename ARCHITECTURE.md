@@ -264,6 +264,13 @@ are all markup and must be backslash-escaped *even as plain text* — which
 matters because `_` and `~` appear in ordinary article URLs. Hashtags are not
 `#tag` but a template: `{hashtag|\#|AI}`.
 
+**The post appears as you, not as the page.** `w_member_social` posts to
+`urn:li:person:…`. The Company Page exists only because app registration demands
+one. Posting as the page needs `w_organization_social` from the Community
+Management API - an application-and-review product, but open to all developers
+rather than partner-gated (LinkedIn docs li-lms-2026-10). Its Development tier
+allows 500 calls/day against the 3 a post costs, and expires after 12 months.
+
 **The token cannot auto-refresh.** LinkedIn grants programmatic refresh tokens
 only to approved Marketing Developer Platform partners. A self-serve app gets a
 60-day access token and no way to renew it, so it is re-minted by hand with
