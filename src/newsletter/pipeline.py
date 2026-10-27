@@ -291,6 +291,11 @@ def main(argv: list[str] | None = None) -> int:
         format="%(asctime)s  %(levelname)-7s %(message)s",
         datefmt="%H:%M:%S",
     )
+    # httpx logs every request URL at INFO, and the Telegram bot token is *in*
+    # the URL path - so this would print a live credential on every run, into
+    # CI logs and any terminal output that gets pasted somewhere. Our own log
+    # lines already say what each call did, so nothing useful is lost.
+    logging.getLogger("httpx").setLevel(logging.WARNING)
 
     run_date = date.fromisoformat(args.date) if args.date else date.today()
 
