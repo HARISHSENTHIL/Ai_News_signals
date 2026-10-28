@@ -1,0 +1,195 @@
+{
+  "date": "2026-10-28",
+  "post": {
+    "hook": "Genie 4 adds sound and live steering",
+    "subhook": "Plus LFM3 goes local, Qwen data routing, and Claude for government",
+    "stories": [
+      {
+        "headline": "DeepMind's Genie 4 world model adds audio and live steering",
+        "detail": "Genie 4 takes natural-language steering in real time and keeps scenes consistent for up to two minutes.",
+        "source_name": "Google DeepMind",
+        "source_url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation"
+      },
+      {
+        "headline": "Ollama v0.40.12 adds Liquid AI's LFM3 models",
+        "detail": "Local users can now run the LFM3 family through Ollama, including a 1.7B text model with a 256K context window.",
+        "source_name": "Ollama (GitHub)",
+        "source_url": "https://github.com/ollama/ollama/releases/tag/v0.40.12"
+      },
+      {
+        "headline": "Liquid AI releases LFM3 small models for local and edge use",
+        "detail": "The family targets local agents, audio and vision at the edge. Its 1.7B text model needs about 1 GB at 4-bit.",
+        "source_name": "Liquid AI",
+        "source_url": "https://huggingface.co/blog/LiquidAI/lfm3"
+      },
+      {
+        "headline": "Qwen 3.8 models found sending data to Alibaba servers",
+        "detail": "Researchers saw three Qwen 3.8 models route some requests to Alibaba's cloud during testing, a concern for sensitive data.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/alibabas-latest-qwen-models-routed-some-requests-through-company-servers-researchers-find"
+      },
+      {
+        "headline": "GSA expands OneGov deal to bring Claude to government",
+        "detail": "The expanded agreement offers Claude at discounted rates across more levels of government.",
+        "source_name": "Anthropic",
+        "source_url": "https://www.anthropic.com"
+      }
+    ],
+    "caption": "Google DeepMind's Genie 4 leads today: its world model now does audio and real-time steering.\n\n1. Genie 4 adds audio, real-time natural-language steering and scenes that stay consistent for up to two minutes. Source: Google DeepMind\n\n2. Ollama v0.40.12 adds Liquid AI's LFM3 models, including a 1.7B text model with a 256K context window. Source: Ollama on GitHub\n\n3. Liquid AI releases the LFM3 family of small multimodal models for local agents, audio and vision at the edge. The 1.7B text model needs about 1 GB at 4-bit. Source: Liquid AI on Hugging Face\n\n4. Researchers found three Qwen 3.8 models routing some requests through Alibaba's own cloud servers during testing. Check this before deploying them with sensitive data. Source: The Decoder\n\n5. GSA expands its OneGov agreement with Anthropic, bringing Claude to more levels of government at discounted rates. Source: Anthropic\n\nLocal models had a good day; read the network logs before you trust one.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "MachineLearning",
+      "GoogleDeepMind",
+      "WorldModels",
+      "Ollama",
+      "LocalLLM",
+      "EdgeAI",
+      "Qwen",
+      "AIPrivacy",
+      "Claude",
+      "AINews"
+    ],
+    "image_query": "virtual landscape render"
+  },
+  "clusters": [
+    {
+      "headline": "Google DeepMind releases Genie 4 world model with audio, real-time steering and longer consistent scenes",
+      "member_ids": [
+        3,
+        66,
+        67,
+        84,
+        98
+      ],
+      "primary_url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+      "importance": 7,
+      "why_it_matters": "Genie 4 adds audio, real-time natural-language steering and scenes that stay consistent for up to two minutes, which expands what world-model researchers and developers can build.",
+      "sources": [
+        "Google DeepMind",
+        "TechCrunch",
+        "The Verge",
+        "The Decoder",
+        "Lemmy"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Ollama v0.40.12 adds Liquid AI LFM3 models",
+      "member_ids": [
+        56,
+        57,
+        30,
+        40,
+        41,
+        42,
+        15
+      ],
+      "primary_url": "https://github.com/ollama/ollama/releases/tag/v0.40.12",
+      "importance": 6,
+      "why_it_matters": "Local users can run the LFM3 family, including a 1.7B text model with a 256K context window, through Ollama.",
+      "sources": [
+        "Ollama",
+        "Hacker News",
+        "r/LocalLLaMA",
+        "Hugging Face"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Liquid AI releases LFM3 family of small multimodal models for local and edge use",
+      "member_ids": [
+        15,
+        30,
+        40,
+        41,
+        42
+      ],
+      "primary_url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "importance": 6,
+      "why_it_matters": "The LFM3 family provides small models for local agents, audio and vision at the edge, with a 1.7B text model that needs about 1 GB at 4-bit.",
+      "sources": [
+        "Hugging Face",
+        "Hacker News",
+        "r/LocalLLaMA"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Alibaba Qwen 3.8 models found routing some requests through company servers",
+      "member_ids": [
+        80
+      ],
+      "primary_url": "https://the-decoder.com/alibabas-latest-qwen-models-routed-some-requests-through-company-servers-researchers-find",
+      "importance": 6,
+      "why_it_matters": "Researchers found three Qwen 3.8 models sending data to Alibaba's own cloud servers during testing, which matters to anyone deploying them with sensitive data.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "GSA expands OneGov agreement with Anthropic to bring Claude to government at discounted rates",
+      "member_ids": [
+        9,
+        10
+      ],
+      "primary_url": "https://www.anthropic.com",
+      "importance": 5,
+      "why_it_matters": "Expanded federal access to Claude at discounted pricing makes it available across more levels of government.",
+      "sources": [
+        "Anthropic",
+        "FedScoop"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Meta AI infrastructure deal with AMD and Nvidia investment in Meta AI partnership",
+      "member_ids": [
+        13,
+        19,
+        20,
+        23
+      ],
+      "primary_url": "https://mexicobusiness.news",
+      "importance": 4,
+      "why_it_matters": "A reported $3B Nvidia investment in Meta's AI partnership signals large compute commitments, though the reports are investor-focused.",
+      "sources": [
+        "Yahoo Finance",
+        "MarketForces Africa",
+        "Mexico Business News",
+        "Bloomberg.com"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "OpenAI expands Oracle partnership to bring apps and AI agents into ChatGPT",
+      "member_ids": [
+        1
+      ],
+      "primary_url": "https://openai.com/index/oracle-apps-in-chatgpt",
+      "importance": 5,
+      "why_it_matters": "Business applications and AI agents from Oracle are coming into ChatGPT, widening distribution for enterprise users.",
+      "sources": [
+        "OpenAI"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Meta AI agent can access private messages, per ZDNET",
+      "member_ids": [
+        17
+      ],
+      "primary_url": "https://www.zdnet.com",
+      "importance": 5,
+      "why_it_matters": "Users may want to check settings, since Meta's AI agent can reach private messages, according to the report.",
+      "sources": [
+        "ZDNET"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-10-28/card.jpg",
+  "candidate_count": 112,
+  "unsupported_terms": []
+}
