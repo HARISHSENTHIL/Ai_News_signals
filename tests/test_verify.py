@@ -35,6 +35,8 @@ def _post(detail: str) -> Post:
                 detail=detail,
                 source_name="OpenAI",
                 source_url="https://openai.com/index/decisions-api",
+                category="MODEL",
+                tier="lead",
             )
         ],
         caption="OpenAI shipped the Decisions API today.",

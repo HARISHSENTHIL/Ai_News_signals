@@ -137,11 +137,46 @@ class RankedCluster:
 # --- Call 2: the post ------------------------------------------------------
 
 
+# The card's left column. A fixed vocabulary, because the column is a fixed width
+# and the CSS is tuned to the longest member - a free-text label would either
+# wrap or push the headlines out of alignment. NEWS is the catch-all, so the
+# model always has somewhere to put a story that fits nothing else.
+CATEGORIES = (
+    "MODEL",
+    "TOOLS",
+    "RESEARCH",
+    "FUNDING",
+    "POLICY",
+    "SECURITY",
+    "BUSINESS",
+    "NEWS",
+)
+
+LEAD = "lead"
+BRIEF = "brief"
+
+
 class StoryBlock(BaseModel):
     headline: str = Field(description="Punchy, under 70 characters, no clickbait.")
     detail: str = Field(description="One sentence of substance, under 160 characters.")
     source_name: str = Field(description="Who reported it, e.g. 'Anthropic' or 'TechCrunch'.")
     source_url: str = Field(description="Must be one of the cluster's primary_url values.")
+    # Neither field is constrained in the schema: the values travel through
+    # OpenRouter to whichever provider serves the model, and strict modes there
+    # are unreliable about enums the same way they are about numeric bounds. The
+    # vocabulary is stated here and repaired in write.py instead.
+    category: str = Field(
+        description="Exactly one of: " + ", ".join(CATEGORIES) + ". Uppercase."
+    )
+    tier: str = Field(
+        description="'lead' for a story that earns the card's full treatment, "
+        "'brief' for one that only earns a one-line mention."
+    )
+
+    @property
+    def is_lead(self) -> bool:
+        """Anything not explicitly a brief gets the full treatment."""
+        return self.tier != BRIEF
 
 
 class Post(BaseModel):

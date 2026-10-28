@@ -10,9 +10,9 @@ from __future__ import annotations
 import json
 import logging
 
-from .config import STORIES_PER_POST, WRITE_EFFORT, WRITE_MODEL
+from .config import BRIEFS_MAX, LEADS_MAX, LEADS_MIN, WRITE_EFFORT, WRITE_MODEL
 from .llm import ask
-from .models import Post, RankedCluster
+from .models import BRIEF, CATEGORIES, LEAD, Post, RankedCluster, StoryBlock
 
 log = logging.getLogger(__name__)
 
@@ -35,11 +35,58 @@ price, model name, benchmark result or quote that is not there.
 `primary_url`, and `source_name` must match that source.
 - If a cluster is thin, say less about it. Do not pad.
 
-The caption lists each story with its source named in plain text, then closes with \
-one short line. Hashtags go in the separate field, not the caption."""
+The caption lists every story - leads and briefs alike - with its source named in \
+plain text, then closes with one short line. Hashtags go in the separate field, \
+not the caption.
+
+Two things to decide per story:
+
+`tier` - how much room the story earns on the card.
+- "lead" for a story a reader would want to know about today: a real launch, a \
+funding round, a policy change, a security finding, a result that moves something.
+- "brief" for a story that is genuine but minor: a routine version bump, an \
+incremental addition, a story that only matters to people already following it.
+- Judge each story on its own merit, not against a quota. Some days are heavy and \
+some are thin; say so with the split rather than promoting filler or demoting \
+real news to hit a number.
+
+`category` - the card's left column. Exactly one of: MODEL, TOOLS, RESEARCH, \
+FUNDING, POLICY, SECURITY, BUSINESS, NEWS. Use NEWS only when nothing else fits."""
 
 
-def write_post(ranked: list[RankedCluster], limit: int = STORIES_PER_POST) -> Post:
+def _shelve(stories: list[StoryBlock]) -> list[StoryBlock]:
+    """Force the model's split into the shelf sizes the card can render.
+
+    No JSON schema can say "3 to 5 leads and at most 4 briefs", so the model is
+    asked in the prompt and corrected here. Stories arrive in the running order
+    curate ranked them in, so promoting the first brief takes the strongest one
+    available and demoting the last lead gives up the weakest - which is what
+    makes a repair cheaper than a re-ask.
+    """
+    leads = [s for s in stories if s.is_lead]
+    briefs = [s for s in stories if not s.is_lead]
+
+    while len(leads) < LEADS_MIN and briefs:
+        promoted = briefs.pop(0)
+        promoted.tier = LEAD
+        leads.append(promoted)
+    while len(leads) > LEADS_MAX:
+        demoted = leads.pop()
+        demoted.tier = BRIEF
+        briefs.insert(0, demoted)
+
+    if len(briefs) > BRIEFS_MAX:
+        log.info("dropping %d brief(s) past the card's room", len(briefs) - BRIEFS_MAX)
+        briefs = briefs[:BRIEFS_MAX]
+
+    log.info("shelved %d lead(s) and %d brief(s)", len(leads), len(briefs))
+    return leads + briefs
+
+
+def write_post(ranked: list[RankedCluster], limit: int = 0) -> Post:
+    # Enough for a full card on a heavy day. Anything past this was ranked below
+    # nine other stories and is not going to earn a line.
+    limit = limit or LEADS_MAX + BRIEFS_MAX
     chosen = [r.cluster for r in ranked[:limit]]
     if not chosen:
         raise RuntimeError("No clusters to write about - the collection stage came up empty.")
@@ -59,7 +106,10 @@ def write_post(ranked: list[RankedCluster], limit: int = STORIES_PER_POST) -> Po
 
     prompt = (
         f"Write today's post from these {len(payload)} stories, most important first.\n"
-        f"Produce exactly {len(payload)} story blocks, in this order.\n\n"
+        f"Produce exactly {len(payload)} story blocks, in this order, each with a "
+        f"`tier` and a `category`.\n"
+        f"Aim for {LEADS_MIN}-{LEADS_MAX} leads and at most {BRIEFS_MAX} briefs; "
+        f"anything beyond that is dropped, so put the weakest stories last.\n\n"
         f"{json.dumps(payload, ensure_ascii=False, indent=1)}"
     )
 
@@ -78,6 +128,17 @@ def write_post(ranked: list[RankedCluster], limit: int = STORIES_PER_POST) -> Po
             raise RuntimeError(
                 f"Model cited a url that was not in its input: {story.source_url}"
             )
+
+    # Same reason the tier split is repaired rather than trusted: the vocabulary
+    # lives in a field description, which is guidance, not a constraint.
+    for story in post.stories:
+        upper = story.category.strip().upper()
+        if upper not in CATEGORIES:
+            log.info("unknown category %r on %r - using NEWS", story.category, story.headline[:40])
+            upper = "NEWS"
+        story.category = upper
+
+    post.stories = _shelve(post.stories)
 
     log.info("write: %d story blocks, caption %d chars", len(post.stories), len(post.caption))
     return post

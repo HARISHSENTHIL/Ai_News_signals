@@ -17,7 +17,6 @@ link when one exists, and the publisher's domain when none does.
 import json
 
 import httpx
-import pytest
 
 from newsletter.config import PRIMARY, REPORTED
 from newsletter.curate import curate

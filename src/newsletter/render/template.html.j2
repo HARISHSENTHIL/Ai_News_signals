@@ -129,15 +129,25 @@
     flex: 1;
     padding: calc(30px * var(--s)) 0;
   }
-  .story { display: flex; gap: 26px; align-items: flex-start; }
-  .num {
+  .story { display: flex; gap: calc(22px * var(--s)); align-items: flex-start; }
+  /* Fixed width so every headline starts on the same vertical line. Measured
+     against every member of models.CATEGORIES: the widest rendered label is
+     RESEARCH at 119px, so 136px leaves room for font-fallback variation. A
+     longer label would break that alignment, which is why the vocabulary is
+     closed and a test pins its character width. */
+  .cat {
     flex: 0 0 auto;
-    font-size: calc(29px * var(--s));
-    font-weight: 900;
+    width: calc(136px * var(--s));
+    padding-top: calc(9px * var(--s));
+    font-size: calc(19px * var(--s));
+    font-weight: 800;
+    letter-spacing: 0.09em;
     color: var(--accent);
-    width: calc(48px * var(--s));
-    padding-top: calc(6px * var(--s));
-    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    /* A wrapped label would push its headline down and break the alignment the
+       fixed width exists to create. The vocabulary is closed and no member is
+       wide enough to wrap, so this only ever matters if one is added. */
+    white-space: nowrap;
   }
   .story-body { flex: 1; min-width: 0; }
   .story h2 {
@@ -161,6 +171,42 @@
     font-weight: 600;
     letter-spacing: 0.1em; text-transform: uppercase;
     color: rgba(125, 211, 252, 0.86);
+  }
+
+  /* The overflow shelf. A brief is a headline and nothing else, so it costs
+     about a third of a lead block - which is what lets a heavy day show nine
+     stories without the leads shrinking into illegibility. */
+  .also {
+    margin-top: calc(24px * var(--s));
+    padding-top: calc(22px * var(--s));
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .also-label {
+    font-size: calc(18px * var(--s));
+    font-weight: 800;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .also-item {
+    display: flex;
+    /* Matches .story's gap so a brief headline starts on the same vertical
+       line as a lead headline - the two shelves read as one column. */
+    gap: calc(22px * var(--s));
+    margin-top: calc(11px * var(--s));
+    font-size: calc(24px * var(--s));
+    line-height: 1.26;
+    color: var(--dim);
+  }
+  .also-cat {
+    flex: 0 0 auto;
+    width: calc(136px * var(--s));
+    white-space: nowrap;
+    padding-top: calc(3px * var(--s));
+    font-size: calc(16px * var(--s));
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: rgba(125, 211, 252, 0.8);
   }
 
   .footer {
@@ -197,9 +243,9 @@
     <div class="rule"></div>
 
     <div class="stories">
-      {% for story in post.stories %}
+      {% for story in leads %}
       <div class="story">
-        <div class="num">{{ "%02d"|format(loop.index) }}</div>
+        <div class="cat">{{ story.category }}</div>
         <div class="story-body">
           <h2>{{ story.headline }}</h2>
           <p>{{ story.detail }}</p>
@@ -208,6 +254,18 @@
       </div>
       {% endfor %}
     </div>
+
+    {% if briefs %}
+    <div class="also">
+      <div class="also-label">Also today</div>
+      {% for story in briefs %}
+      <div class="also-item">
+        <span class="also-cat">{{ story.category }}</span>
+        <span>{{ story.headline }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
 
     <div class="footer">
       <span class="handle">{{ handle }}</span>

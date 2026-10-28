@@ -214,15 +214,56 @@ reliably, and the brand drifts between runs.
 | | Card (the image) | Caption |
 |---|---|---|
 | Hook + subhook | ✅ | — |
-| **5 stories** | headline + one-line detail | headline + detail |
+| **Leads** (3–5) | category tag + headline + one-line detail + source | headline + detail |
+| **Briefs** (0–4) | category tag + headline, under `ALSO TODAY` | headline + detail |
 | Source | **name only** (`Anthropic`) | **name + full URL** |
 | Hashtags | — | 5, as LinkedIn `{hashtag\|\#\|tag}` templates |
 
-Five is the ceiling at which 1080×1350 stays readable on a phone feed. Measured
-against real copy: 5 stories render at 84% scale (22px body text), 6 at 74%
-(19px), and past 8 the fit drops below `MIN_SCALE` and the render is rejected.
-`STORIES_PER_POST` sets it. Citations live in the caption only — a card full of
-URLs nobody can tap is wasted space.
+**Two shelves, because a fixed count is wrong in both directions.** A heavy day
+should not be cut to five, and a thin day should not be padded to five. The
+model marks each story `lead` or `brief`; `write._shelve` forces the result into
+the sizes the card can render.
+
+The split is the model's call, not a score cutoff, because a cutoff cannot make
+it. Two consecutive days of `score`:
+
+```
+2026-10-27   8.2 6.4 5.4 4.8 4.8 4.4 4.4 4.4
+2026-10-28   9.0 7.6 7.2 6.4 5.8 5.6 5.4 5.4
+```
+
+A threshold of 6.0 selects 2 stories on the 27th and 4 on the 28th; 5.0 selects
+3 and 8. Importance is scored relative to each day's own pool rather than on an
+absolute scale, and the scores bunch — four of the 28th's sit within 0.4 of one
+another — so any arithmetic cut swings the count by several stories.
+
+Shelf sizes come from a render measurement against real copy (fit scale, leads
+using the model's own 160-char detail lines):
+
+| leads \ briefs | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|
+| **3** | 100% | 92% | 90% | 90% |
+| **4** | 88% | 82% | 80% | 78% |
+| **5** | 76% | 74% | 74% | 74% |
+
+A lead costs ~6 points of scale, a brief 1–2. That asymmetry is the point:
+**3 leads + 3 briefs puts 6 stories on the card at 90%, more legible than 5
+leads alone at 76%.** Nothing can fall below `MIN_SCALE`, where the render is
+rejected outright.
+
+**The left column is a category, not a number.** `01 02 03` carried no
+information; `MODEL` / `SECURITY` / `POLICY` uses the same pixels to tell the
+reader what kind of news it is. The vocabulary is closed (`models.CATEGORIES`,
+`NEWS` as the catch-all) because the column is a fixed 136px — the widest
+rendered label is `RESEARCH` at 119px — and a longer label would break the
+alignment every headline depends on.
+
+Citations live in the caption only. LinkedIn's `little` text format has exactly
+four element types — `TextElement`, `MentionElement`, `HashtagElement`,
+`HashtagTemplate` — and **none attaches a URL to custom anchor text**, so a
+"source" word cannot be made clickable. Raw URLs auto-linkify, which is why the
+caption carries them in full. On Instagram caption links are not clickable at
+all.
 
 ### 07:00–09:20 IST — `publish.yml`, the approval poller
 

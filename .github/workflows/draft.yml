@@ -49,6 +49,9 @@ jobs:
           BRAND_NAME: ${{ vars.BRAND_NAME }}
           BRAND_HANDLE: ${{ vars.BRAND_HANDLE }}
           STORIES_PER_POST: ${{ vars.STORIES_PER_POST }}
+          LEADS_MIN: ${{ vars.LEADS_MIN }}
+          LEADS_MAX: ${{ vars.LEADS_MAX }}
+          BRIEFS_MAX: ${{ vars.BRIEFS_MAX }}
           DESTINATIONS: ${{ vars.DESTINATIONS }}
         run: |
           python -m newsletter.pipeline draft \

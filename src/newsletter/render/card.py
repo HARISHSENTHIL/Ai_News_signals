@@ -52,8 +52,13 @@ _env = Environment(
 
 def build_html(post: Post, background: Background, run_date: date) -> str:
     template = _env.get_template("template.html.j2")
+    # Split here rather than in the template: a Jinja `selectattr` would hide the
+    # one fact worth seeing from a caller, which is that the card renders two
+    # different shapes depending on the day.
     return template.render(
         post=post,
+        leads=[s for s in post.stories if s.is_lead],
+        briefs=[s for s in post.stories if not s.is_lead],
         bg=background,
         date_label=run_date.strftime("%d %b %Y").upper(),
         brand=BRAND_NAME,

@@ -53,12 +53,39 @@ TITLE_JACCARD_THRESHOLD = 0.72
 # ranked by tier, weight and votes before being cut, so what gets dropped is
 # always the least promising rather than whatever happened to fetch last.
 MAX_CANDIDATES = 160
-# Stories that end up on the card. The template auto-shrinks to fit, so this is
-# bounded by legibility rather than space: measured against real copy, 5 stories
-# render at 84% (22px body text) and 6 at 74% (19px), which is roughly 7px once
-# the 1080px card is scaled into a phone feed. Past 8 the fit falls below
-# MIN_SCALE and the render is rejected outright.
-STORIES_PER_POST = int(env("STORIES_PER_POST", "5"))
+# The card has two shelves, because a fixed count is wrong in both directions: a
+# day with nine real stories should not be cut to five, and a quiet day should
+# not be padded to five. The model marks each story `lead` or `brief`, and the
+# card gives them different amounts of room.
+#
+# The split is the model's call rather than a score cutoff, because a cutoff
+# cannot make it. Measured on two consecutive days:
+#
+#   2026-10-27  8.2 6.4 5.4 4.8 4.8 4.4 4.4 4.4
+#   2026-10-28  9.0 7.6 7.2 6.4 5.8 5.6 5.4 5.4
+#
+# A threshold of 6.0 selects 2 stories on the 27th and 4 on the 28th; 5.0 selects
+# 3 and 8. Importance is scored relative to each day's own pool, not on an
+# absolute scale, and the scores bunch - four of the 28th's sat within 0.4 of one
+# another - so any arithmetic cut swings the count by several stories.
+#
+# The shelf sizes come from a render measurement, not a guess. Fit scale against
+# the real 2026-10-28 copy, leads using the model's own 160-char detail lines:
+#
+#   leads  briefs 0    1    2    3
+#       3        100%  92%  90%  90%
+#       4         88%  82%  80%  78%
+#       5         76%  74%  74%  74%
+#
+# A lead costs about 6 points of scale; a brief costs 1 to 2. That asymmetry is
+# the whole point of the second shelf: 3 leads plus 3 briefs puts 6 stories on
+# the card at 90%, which is more legible than 5 leads alone at 76%. Nothing here
+# can fall below render.card.MIN_SCALE, where the render is rejected outright.
+LEADS_MIN = int(env("LEADS_MIN", "3"))
+# STORIES_PER_POST was this value's name before the split existed; it is still
+# read so an existing deployment's Actions variable keeps working.
+LEADS_MAX = int(env("LEADS_MAX", env("STORIES_PER_POST", "5")))
+BRIEFS_MAX = int(env("BRIEFS_MAX", "4"))
 
 # --- brand -----------------------------------------------------------------
 

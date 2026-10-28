@@ -17,7 +17,7 @@ import pytest
 
 from newsletter.config import PRIMARY, REPORTED, SIGNAL
 from newsletter.curate import _priority, curate
-from newsletter.models import Item, Post, RankedCluster, StoryBlock
+from newsletter.models import Item, Post, StoryBlock
 from newsletter.verify import unsupported_terms
 
 
@@ -135,7 +135,8 @@ def test_signal_items_cannot_ground_a_claim():
         hook="Zylox enters the race",
         subhook="Anthropic ships Opus 5.5",
         stories=[StoryBlock(headline="Opus 5.5 lands", detail="Anthropic cut pricing.",
-                            source_name="Anthropic", source_url="https://anthropic.com/a")],
+                            source_name="Anthropic", source_url="https://anthropic.com/a",
+                            category="MODEL", tier="lead")],
         caption="Anthropic shipped Opus 5.5. Zylox is said to be next.",
         hashtags=["ai"],
         image_query="server racks",
