@@ -1,15 +1,16 @@
-# AI Daily
+# AI Signals
 
-An autonomous daily AI-news post for Instagram. It reads ~20 free sources, collapses
-the same story arriving from several of them, writes a card and a caption, renders a
-1080×1350 JPEG, and asks you on Telegram before anything goes public.
+An autonomous daily AI-news post for LinkedIn (Instagram when Meta approves it). It
+reads 37 free sources, collapses the same story arriving from several of them, writes
+a card and a caption, renders a 1080×1350 JPEG, and asks you on Telegram before
+anything goes public.
 
 Runs entirely on GitHub Actions. Everything except the LLM is free.
 
 ```
-sources ──► dedup ──► cluster + rank ──► write ──► render ──► Telegram ──► Instagram
- 20 feeds   url/title     LLM call 1    LLM call 2  Playwright   you tap      Graph API
- + HN       matching     (OpenRouter)  (OpenRouter)              a button
+sources ──► dedup ──► cluster + rank ──► write ──► render ──► Telegram ──► LinkedIn 
+ 37 feeds   url/title     LLM call 1    LLM call 2  Playwright   you tap      versioned
+ + HN       matching     (OpenRouter)  (OpenRouter)              a button       API
 ```
 
 ## Cost
@@ -146,7 +147,7 @@ cp .env.example .env          # then fill it in
 python -m newsletter.pipeline draft --dry-run   # renders to out/dry-run/, sends nothing
 python -m newsletter.pipeline draft             # real run: Telegram, state, commit
 python -m newsletter.pipeline publish           # acts on whichever button you pressed
-pytest                                          # 35 tests, no network, no API key
+pytest                                          # 84 tests, no network, no API key
 ```
 
 `--dry-run` touches no state, so you can run it as often as you like while tuning.
@@ -159,14 +160,91 @@ pytest                                          # 35 tests, no network, no API k
 | `publish.yml` | every 10 min, 01:30–03:50 | 07:00–09:20 | Pick up your decision, publish |
 | `refresh-token.yml` | Mondays 04:00 | Mon 09:30 | Refresh the 60-day Instagram token |
 
-The card reaches you around 06:18 IST and the first publish check runs at 07:00,
-so a post approved over breakfast goes live on the hour. The last check is 09:20;
-approve after that and nothing posts until you trigger `publish.yml` by hand.
-
 Two workflows rather than one because Actions cannot receive a webhook: the draft job
 exits after asking, and a separate job reads the answer from `getUpdates`.
 
-Actions cron fires 5–30 minutes late under load. Don't promise an exact post time.
+### Don't trust the clock
+
+GitHub's `schedule` trigger is best-effort, and the docs say so plainly: *"The schedule
+event can be delayed during periods of high loads"* and *"if the load is sufficiently
+high enough, some queued jobs may be dropped."* Measured here, not guessed:
+
+| Date | `draft` scheduled | `draft` actually ran | Late by |
+|---|---|---|---|
+| 2026-10-28 | 00:45 UTC | 06:16 UTC | **5h 31m** |
+
+That one delay broke the whole day, because `publish.yml`'s window closes at 03:50 UTC
+— two and a half hours *before* the draft it was meant to publish existed. The two
+workflows are coupled by wall-clock time with no causal link, so a late draft is an
+unrecoverable day. `publish.yml` has never once fired usefully on cron.
+
+**So: treat the schedule as a convenience, not a guarantee.** If no card has arrived by
+mid-morning, the automation has missed and the runbook below is the fix. The planned
+repair is to merge both workflows into one job that long-polls Telegram for the
+decision in-process, so a late start just means a late post instead of no post.
+
+## When automation fails — run it by hand
+
+Everything the workflows do, you can do locally. The whole fallback is five commands.
+
+```bash
+cd ~/Documents/PERSONAL/Ai_news_letter
+source .venv/bin/activate
+
+git pull --rebase --autostash            # 1. ALWAYS first — see below
+python -m newsletter.pipeline draft      # 2. builds the post, sends card to Telegram
+
+#    ... tap a button in Telegram, wait a few seconds ...
+
+python -m newsletter.pipeline publish    # 3. acts on your tap, posts to LinkedIn
+
+git add out/ state/                      # 4. record it
+git commit -m "publish $(date -u +%F)"
+git push                                 # 5.
+```
+
+**Step 1 is not optional.** The workflows commit `state/seen.json` and
+`state/posted.jsonl` back to the repo — that state is the database. Skip the pull and
+you draft from a stale `seen.json`, risk re-posting stories the bot already used, and
+your push collides with the bot's commit.
+
+**Step 5 is not optional either.** Without it the next run has no record that today
+happened, and tomorrow's ranker may serve the same five stories again.
+
+### Things that go wrong, and what they mean
+
+| What you see | What it means | Do this |
+|---|---|---|
+| `no decision yet for <date>` | Telegram hasn't registered your tap yet, or you haven't tapped | Wait ~5s, run `publish` again |
+| `no draft for <date> - nothing to publish` | No draft exists locally for today | `git pull`, then run `draft` |
+| `nothing new today - every candidate was already seen` | Every story was used on an earlier day | Normal if you re-run days later; otherwise check `state/seen.json` |
+| `could not answer callback: query is too old` | Only the button spinner expired | Ignore — the post went out |
+| `linkedin ... N days left` where N < 10 | The 60-day token is expiring | `python scripts/linkedin_auth.py` |
+
+### Useful variants
+
+```bash
+python -m newsletter.pipeline draft --dry-run        # renders to out/dry-run/, sends nothing,
+                                                     # touches no state — safe to repeat
+python -m newsletter.pipeline publish --date 2026-10-28   # act on a specific day
+python scripts/check_linkedin.py                     # token, scope and URN agree?
+python scripts/linkedin_auth.py                      # re-mint the 60-day token
+```
+
+### Did the automation actually run?
+
+The Actions tab shows this, but the API is faster and unambiguous — a *scheduled* run
+that fired hours late looks identical to an on-time one in the UI:
+
+```bash
+curl -s "https://api.github.com/repos/HARISHSENTHIL/Ai_News_signals/actions/runs?per_page=10" \
+  | python3 -c "import json,sys
+for r in json.load(sys.stdin)['workflow_runs']:
+    print(f\"{r['name']:9} #{r['run_number']:<3} {r['event']:17} {str(r['conclusion']):10} {r['created_at']}\")"
+```
+
+Compare `created_at` against the cron in the table above. `event=schedule` means cron
+fired it; `event=workflow_dispatch` means a human did.
 
 ## Tuning
 
@@ -185,8 +263,10 @@ assuming a fixed amount of text.
 
 - **Carousel.** The template system is built for it; the renderer is single-card.
 - **LinkedIn company pages.** Posting as *you* is built and needs no review.
-  Posting as a *company page* needs `w_organization_social`, which comes through
-  the partner-gated Community Management API — a different application entirely.
+  Posting as a *company page* needs `w_organization_social` from the Community
+  Management API. That API is **open to all developers** through the standard
+  application — not partner-gated — at 500 calls/app/day on the development tier.
+  The publisher takes an author URN, so this is a config change plus that approval.
 - **A LinkedIn-shaped card.** Both platforms currently get the same 1080×1350
   portrait image. LinkedIn's feed favours 1200×1200 or 1200×628, so the card is
   taller than ideal there. The renderer takes a size, so this is a small change.
