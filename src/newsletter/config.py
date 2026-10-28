@@ -157,12 +157,24 @@ FEEDS: list[Feed] = [
     Feed("https://blog.google/technology/ai/rss/", "Google AI", 1.4, 8, PRIMARY),
     Feed("https://research.google/blog/rss/", "Google Research", 1.3, 6, PRIMARY),
     Feed("https://mistral.ai/rss.xml", "Mistral", 1.3, 6, PRIMARY),
-    Feed("https://qwenlm.github.io/blog/index.xml", "Qwen", 1.3, 6, PRIMARY),
     Feed("https://huggingface.co/blog/feed.xml", "Hugging Face", 1.2, 8, PRIMARY),
     Feed("https://allenai.org/rss.xml", "Allen AI", 1.2, 6, PRIMARY),
+    # about.fb.com is Meta's real announcement channel; ai.meta.com/blog/rss is
+    # 404. Measured 2026-10-28: live, newest entry the same day.
+    Feed("https://about.fb.com/news/feed/", "Meta Newsroom", 1.3, 5, PRIMARY),
     Feed("https://engineering.fb.com/category/ai-research/feed/", "Meta Engineering", 1.2, 6, PRIMARY),
     Feed("https://www.microsoft.com/en-us/research/feed/", "Microsoft Research", 1.1, 6, PRIMARY),
     Feed("https://blogs.nvidia.com/feed/", "NVIDIA", 1.1, 6, PRIMARY),
+    # The newsroom carries the compute deals - Vera Rubin availability, gigawatt
+    # partnerships - that blogs.nvidia.com treats as marketing and often skips.
+    Feed("https://nvidianews.nvidia.com/releases.xml", "NVIDIA Newsroom", 1.2, 5, PRIMARY),
+    # Compute and trend datasets nobody else publishes, with citable numbers.
+    Feed("https://epoch.ai/atom.xml", "Epoch AI", 1.2, 4, PRIMARY),
+    # Pre-deployment dangerous-capability evaluations: the only source that says
+    # what a frontier model can *do* rather than that it shipped. Roughly one
+    # post a week, and a 4MB full-content feed - the heaviest fetch in the list,
+    # kept because nothing else covers the tier.
+    Feed("https://metr.org/feed.xml", "METR", 1.2, 3, PRIMARY),
 
     # Shipped versions are the hardest facts available: a release either exists
     # or it does not, and these Atom feeds are keyless and unthrottled. Capped
@@ -173,13 +185,29 @@ FEEDS: list[Feed] = [
     Feed("https://github.com/huggingface/transformers/releases.atom", "Transformers", 1.1, 3, PRIMARY),
 
     # --- Reported: press and analysis -----------------------------------------
-    # Anthropic and Meta publish no working public RSS (both 404 as of Oct 2026),
-    # so they are covered by targeted Google News queries, which need no key.
-    # These are REPORTED, not PRIMARY: the content is other outlets' coverage.
+    # Anthropic publishes no working public RSS (/rss.xml, /news/rss.xml and
+    # alignment.anthropic.com/feed.xml all 404 as of Oct 2026), so it is covered
+    # by a targeted Google News query, which needs no key. REPORTED, not
+    # PRIMARY: the content is other outlets' coverage, not the announcement.
     Feed("https://news.google.com/rss/search?q=Anthropic+Claude+when:2d&hl=en-US&gl=US&ceid=US:en",
          "Anthropic/news", 1.4, 10, REPORTED),
     Feed("https://news.google.com/rss/search?q=%22Meta+AI%22+OR+Llama+when:2d&hl=en-US&gl=US&ceid=US:en",
          "Meta AI/news", 1.2, 8, REPORTED),
+    # The Chinese labs are the largest uncovered share of real model releases and
+    # none of them has a feed: DeepSeek, Moonshot, Zhipu, MiniMax and Baidu were
+    # each checked for a rel=alternate link and have none, and Qwen's own blog
+    # stopped publishing in Sep 2025. Google News is the only keyless route, and
+    # it measured 50 and 65 AI-relevant items inside the 48h window.
+    Feed("https://news.google.com/rss/search?q=DeepSeek+OR+Moonshot+OR+Zhipu+OR+MiniMax+AI+when:2d&hl=en-US&gl=US&ceid=US:en",
+         "China labs/news", 1.3, 8, REPORTED),
+    Feed("https://news.google.com/rss/search?q=Qwen+OR+Alibaba+AI+model+when:2d&hl=en-US&gl=US&ceid=US:en",
+         "Qwen/news", 1.3, 8, REPORTED),
+    # Policy is the one beat where a query beats the primary sources: the Federal
+    # Register AI search, whitehouse.gov presidential actions, NIST news and the
+    # EU digital-strategy feed are all live and all returned nothing inside 48h,
+    # while this query returned 27 AI-relevant items out of 32.
+    Feed("https://news.google.com/rss/search?q=%22AI+Act%22+OR+%22AI+regulation%22+OR+%22AI+executive+order%22+when:2d&hl=en-US&gl=US&ceid=US:en",
+         "AI policy/news", 1.2, 8, REPORTED),
     # Techmeme is already clustered by a human editor, which makes it an unusually
     # dense signal of what the tech press collectively decided mattered today.
     Feed("https://www.techmeme.com/feed.xml", "Techmeme", 1.1, 10, REPORTED),
@@ -191,14 +219,24 @@ FEEDS: list[Feed] = [
     Feed("https://the-decoder.com/feed/", "The Decoder", 0.9, 8, REPORTED),
     Feed("https://www.technologyreview.com/feed/", "MIT Tech Review", 0.9, 6, REPORTED),
     Feed("https://www.theguardian.com/technology/artificialintelligenceai/rss", "The Guardian", 0.8, 6, REPORTED),
+    # Datacentre and power buildout, which is upstream of most AI news and which
+    # nothing else here covers. Measured at 14KB for 7 AI items - the best yield
+    # per byte of anything tested.
+    Feed("https://www.datacenterdynamics.com/en/rss/", "DCD", 1.0, 6, REPORTED),
+    Feed("https://www.nextplatform.com/feed/", "The Next Platform", 1.0, 5, REPORTED),
+    # English-language desks on the Chinese AI ecosystem, which the Western tech
+    # press reports late and partially.
+    Feed("https://pandaily.com/feed/", "Pandaily", 0.9, 6, REPORTED),
+    Feed("https://www.scmp.com/rss/36/feed", "SCMP Tech", 0.9, 6, REPORTED),
 
     # Analysis and practitioner newsletters: low volume, high signal per item.
     Feed("https://importai.substack.com/feed", "Import AI", 1.2, 4, REPORTED),
     Feed("https://www.interconnects.ai/feed", "Interconnects", 1.2, 4, REPORTED),
-    Feed("https://semianalysis.com/feed/", "SemiAnalysis", 1.1, 4, REPORTED),
     Feed("https://simonwillison.net/atom/everything/", "Simon Willison", 1.1, 6, REPORTED),
     Feed("https://www.latent.space/feed", "Latent Space", 1.0, 4, REPORTED),
-    Feed("https://news.smol.ai/rss.xml", "AI News", 1.0, 5, REPORTED),
+    # Daily AI policy and safety journalism; the closest thing to a dedicated
+    # governance desk, and it overlaps none of the newsletters above.
+    Feed("https://www.transformernews.ai/feed", "Transformer", 1.1, 4, REPORTED),
 
     # --- Signal: what people are talking about --------------------------------
     # These exist to raise a story's rank, never to supply a fact or a citation.

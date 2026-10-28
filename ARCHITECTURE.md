@@ -7,7 +7,7 @@ a linear pipeline run twice a day by GitHub Actions cron.
 ```
                                   06:15 IST  draft.yml
   ┌──────────┐   ┌───────┐   ┌─────────┐   ┌───────┐   ┌────────┐   ┌──────────┐
-  │ 39 srcs  │──▶│ dedup │──▶│ curate  │──▶│ write │──▶│ render │──▶│ Telegram │
+  │ 48 srcs  │──▶│ dedup │──▶│ curate  │──▶│ write │──▶│ render │──▶│ Telegram │
   │ keyless  │   │ 3 way │   │ LLM #1  │   │ LLM#2 │   │ JPEG   │   │  ✅🔁❌   │
   └──────────┘   └───────┘   └─────────┘   └───────┘   └────────┘   └──────────┘
       ~32s          0.1s        ~40s         ~20s        ~8s             │
@@ -29,7 +29,7 @@ answer. That single constraint shapes the whole runtime.
 
 ## 1. Where the news comes from
 
-**39 sources — 37 RSS feeds plus two keyless JSON APIs. Every one is free.** No API key, no signup, no quota
+**48 sources — 46 RSS feeds plus two keyless JSON APIs. Every one is free.** No API key, no signup, no quota
 to manage. They are not treated as equals — each carries a *tier* that decides
 what it is allowed to do.
 
@@ -42,11 +42,19 @@ what it is allowed to do.
 This is enforced in code, not in a prompt: `verify.py` builds its fact corpus
 from PRIMARY + REPORTED only, and `curate.py` refuses to cite a SIGNAL item.
 
-### PRIMARY — 17 feeds, the labs' own words
+### PRIMARY — 20 feeds, the labs' own words
 
-OpenAI · Google DeepMind · Google AI · Google Research · Mistral · Qwen ·
-Hugging Face · Allen AI · Meta Engineering · Microsoft Research · NVIDIA ·
+OpenAI · Google DeepMind · Google AI · Google Research · Mistral ·
+Hugging Face · Allen AI · Meta Newsroom · Meta Engineering ·
+Microsoft Research · NVIDIA · NVIDIA Newsroom · Epoch AI · METR ·
 arXiv cs.AI · arXiv cs.CL
+
+**Meta Newsroom** (`about.fb.com/news/feed/`) is Meta's real announcement
+channel — `ai.meta.com/blog/rss/` is 404, which is why this was previously
+covered only by a Google News proxy. **Epoch AI** publishes compute and trend
+datasets with citable numbers; **METR** publishes pre-deployment
+dangerous-capability evaluations, the only source here that reports what a
+frontier model *can do* rather than that it shipped.
 
 Plus **GitHub release feeds** — vLLM, Ollama, llama.cpp, Transformers. A
 shipped version is the hardest fact available: the release either exists or it
@@ -56,21 +64,44 @@ Plus **Hugging Face Hub JSON** (keyless): papers ranked by community upvotes
 (≥20) and models by likes (≥80). This is the one source that surfaces a model
 *on the day it lands*, before any journalist writes it up.
 
-### REPORTED — 17 feeds, press and analysis
+### REPORTED — 23 feeds, press and analysis
 
 Techmeme · TechCrunch · The Verge · Ars Technica · WIRED · The Register ·
 The Decoder · MIT Tech Review · The Guardian
 
-Analysis newsletters, low volume and high signal per item: Import AI ·
-Interconnects · SemiAnalysis · Simon Willison · Latent Space · AI News
+Compute and datacentre buildout, which is upstream of most AI news:
+**DCD** · **The Next Platform**
 
-**Two Google News queries**, because Anthropic and Meta publish no working
-public RSS (both 404 as of Oct 2026):
+The Chinese AI ecosystem, reported in English on the day: **Pandaily** ·
+**SCMP Tech**
+
+Analysis newsletters, low volume and high signal per item: Import AI ·
+Interconnects · Simon Willison · Latent Space · **Transformer**
+
+**Five Google News queries.** Google News is used where a publisher has no
+feed at all, and the entries are relabelled with the real publisher's name
+from the feed's `<source>` element — so a story collected here is cited as
+TechCrunch or Reuters, never as "Google News".
 
 ```
 news.google.com/rss/search?q=Anthropic+Claude+when:2d
 news.google.com/rss/search?q="Meta AI"+OR+Llama+when:2d
+news.google.com/rss/search?q=DeepSeek+OR+Moonshot+OR+Zhipu+OR+MiniMax+AI+when:2d
+news.google.com/rss/search?q=Qwen+OR+Alibaba+AI+model+when:2d
+news.google.com/rss/search?q="AI Act" OR "AI regulation" OR "AI executive order"
 ```
+
+Anthropic has no feed (`/rss.xml`, `/news/rss.xml` and
+`alignment.anthropic.com/feed.xml` all 404). Neither do **DeepSeek, Moonshot,
+Zhipu, MiniMax or Baidu** — each was checked for a `rel=alternate` link and has
+none — and Qwen's own blog stopped publishing in September 2025. Those labs are
+the largest uncovered share of real model releases, so the queries are the only
+keyless route to them.
+
+Policy is the one beat where a query beats the primary sources outright: the
+Federal Register AI search, whitehouse.gov presidential actions, NIST news and
+the EU digital-strategy feed are all live and all returned **zero** items inside
+the 48h window, while the policy query returned 27 AI-relevant items out of 32.
 
 ### SIGNAL — 3 feeds + Hacker News
 
@@ -117,7 +148,7 @@ cost for quality without a code change.
 
 | Source group | Items | Seconds |
 |---|---|---|
-| RSS (37 feeds, concurrent) | 134 | 28.2 |
+| RSS (46 feeds, concurrent) | 210 | 28.2 |
 | Hacker News | 5 | 2.4 |
 | Hugging Face | 7 | 1.0 |
 | **raw total** | **146** | **31.6** |
