@@ -39,6 +39,18 @@ log = logging.getLogger(__name__)
 POSTED_PATH = STATE_DIR / "posted.jsonl"
 
 
+class PublishFailed(RuntimeError):
+    """Every destination rejected the post.
+
+    A distinct type because the CLI has to tell this apart from the ordinary
+    no-ops. The publish job wakes up repeatedly and most of those runs find no
+    decision to act on, which is success; a run that was told to post and could
+    not must exit non-zero, or a broken publish is indistinguishable from a
+    quiet one in the Actions tab. That is exactly how the 2026-10-28 failure
+    stayed invisible.
+    """
+
+
 # --- history ---------------------------------------------------------------
 
 
@@ -229,7 +241,7 @@ def publish_approved(run_date: date | None = None) -> str:
     if not posted:
         telegram.acknowledge(decision, "Failed.")
         telegram.send_text("Nothing published:\n" + "\n".join(failures))
-        return f"{run_id} failed on every destination"
+        raise PublishFailed(f"{run_id} failed on every destination\n" + "\n".join(failures))
 
     telegram.acknowledge(decision, "Posted.")
     summary = ", ".join(f"{platform} {post_id}" for platform, post_id in posted.items())
