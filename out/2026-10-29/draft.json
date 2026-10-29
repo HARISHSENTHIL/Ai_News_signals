@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-29",
+  "post": {
+    "hook": "Gemini 4 Carbon ships to cyber defenders first",
+    "subhook": "Plus: AI agents reach Anthropic data through third-party software",
+    "stories": [
+      {
+        "headline": "Google DeepMind releases Gemini 4 Carbon",
+        "detail": "Reported to top the Artificial Analysis Intelligence Index v5; access starts with selected cyber defenders.",
+        "source_name": "Google DeepMind",
+        "source_url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "AI agents reach Anthropic systems via third-party software",
+        "detail": "In a Cathedral bug bounty test, Anthropic confirmed access to sales, HR and IT data but disputes how deep it went.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/ai-agents-hacked-anthropic-maker-of-arguably-the-most-capable-ai-models-for-cyberdefense",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Reports: DeepSeek, Moonshot trained on GPT-6 Astra outputs",
+        "detail": "If confirmed, Chinese labs distilled a frontier OpenAI model, raising questions about reuse of model outputs.",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com",
+        "category": "NEWS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Android Studio opens to third-party AI coding agents",
+        "detail": "More than 40 agents, including Claude Agent and Codex, work inside the IDE; Google also unveiled new Gemini APIs.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Nvidia releases open Nemotron 3.5 Transcribe",
+        "detail": "Free open model for transcription, translation and speaker recognition in up to 40 languages; works on recordings, not live audio.",
+        "source_name": "Hugging Face",
+        "source_url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Google opens Gemini and Search to more third-party apps",
+        "detail": "A new developer platform lets businesses bring their services into Google's AI experiences.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Anthropic launches Claude for Legal",
+        "detail": "Pre-built interactive tools and database integrations for routine legal work like contract review.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/claude-for-legal-now-verifies-sources-automatically-then-hands-the-file-to-a-lawyer",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "OpenAI and ServiceNow expand their partnership",
+        "detail": "OpenAI models and agents get closer integration with ServiceNow workflows, in both directions.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Google takes AI Search and AI Mode ads global",
+        "detail": "Google is betting AI search can open new ad revenue as core search growth slows.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows",
+        "category": "BUSINESS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Google DeepMind's new frontier model goes to security experts before anyone else. Here's what changed today.\n\n1. Google DeepMind releases Gemini 4 Carbon. It is reported to top the Artificial Analysis Intelligence Index v5, with access initially limited to trusted cyber defenders. (Source: Google DeepMind)\n\n2. In a bug bounty test, Cathedral used AI agents to reach parts of Anthropic's internal systems through third-party software. Anthropic confirmed access to sales, HR and IT data but disputes how deep it went. (Source: The Decoder)\n\n3. Reports say DeepSeek and Moonshot used outputs from OpenAI's GPT-6 Astra to train their latest models. This is not yet confirmed. (Source: Reuters)\n\n4. Android Studio now supports more than 40 third-party coding agents, including Claude Agent and Codex. Google also unveiled new Gemini APIs. (Source: The Decoder)\n\n5. Nvidia released Nemotron 3.5 Transcribe, a free, open model for transcription, translation and speaker recognition in up to 40 languages. It works on recordings, not live audio. (Source: Hugging Face)\n\n6. Google is opening Gemini and Search to more third-party apps through a new developer platform. (Source: TechCrunch)\n\n7. Anthropic launched Claude for Legal, with pre-built tools and database integrations for work like contract review. (Source: The Decoder)\n\n8. OpenAI and ServiceNow expanded their partnership to bring OpenAI models and agents into ServiceNow workflows. (Source: OpenAI)\n\n9. Google is expanding ads in AI Search and AI Mode to global markets as core ad growth slows. (Source: TechCrunch)\n\nThat's the day. See you tomorrow.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "AINews",
+      "Gemini",
+      "GoogleDeepMind",
+      "Anthropic",
+      "OpenAI",
+      "Cybersecurity",
+      "AIAgents",
+      "Nvidia",
+      "AndroidDev",
+      "MachineLearning"
+    ],
+    "image_query": "server racks"
+  },
+  "clusters": [
+    {
+      "headline": "Google DeepMind releases Gemini 4 Carbon frontier model, with access initially limited to trusted cyber defenders",
+      "member_ids": [
+        3,
+        91,
+        111,
+        129
+      ],
+      "primary_url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+      "importance": 9,
+      "why_it_matters": "Reports say it tops the Artificial Analysis Intelligence Index v5, and access is initially restricted to selected security experts.",
+      "sources": [
+        "Google DeepMind",
+        "The Verge",
+        "Latent Space",
+        "The Decoder"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Reports say DeepSeek and Moonshot used outputs from OpenAI's GPT-6 Astra to train their latest models",
+      "member_ids": [
+        18,
+        19,
+        20,
+        23,
+        24,
+        25
+      ],
+      "primary_url": "https://www.reuters.com",
+      "importance": 6,
+      "why_it_matters": "If confirmed, rival Chinese labs distilled a frontier OpenAI model, raising questions about model-output reuse and competitive pressure on US labs.",
+      "sources": [
+        "shattered.io",
+        "ET Enterprise AI",
+        "Reuters",
+        "TradingView",
+        "FourWeekMBA",
+        "The Information"
+      ],
+      "corroboration": 6
+    },
+    {
+      "headline": "Nvidia releases open Nemotron 3.5 Transcribe for multilingual speech transcription, translation and speaker recognition",
+      "member_ids": [
+        36,
+        78,
+        106,
+        138
+      ],
+      "primary_url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+      "importance": 5,
+      "why_it_matters": "It is a free, open model that handles up to 40 languages, but it works on recordings rather than live audio.",
+      "sources": [
+        "Hugging Face",
+        "r/LocalLLaMA",
+        "TechCrunch",
+        "The Decoder"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Cathedral uses AI agents to access parts of Anthropic's internal systems through third-party software in a bug bounty test",
+      "member_ids": [
+        119
+      ],
+      "primary_url": "https://the-decoder.com/ai-agents-hacked-anthropic-maker-of-arguably-the-most-capable-ai-models-for-cyberdefense",
+      "importance": 6,
+      "why_it_matters": "Anthropic confirmed access to sales, HR and IT data but disputes how deep it went, showing that external software dependencies expose even leading AI labs.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Anthropic launches Claude for Legal tools with pre-built templates and integrations",
+      "member_ids": [
+        6,
+        9,
+        124
+      ],
+      "primary_url": "https://the-decoder.com/claude-for-legal-now-verifies-sources-automatically-then-hands-the-file-to-a-lawyer",
+      "importance": 5,
+      "why_it_matters": "Legal teams get pre-built interactive tools and connections to their own databases for routine work like contract review.",
+      "sources": [
+        "Law.com",
+        "Reuters",
+        "The Decoder"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow workflows",
+      "member_ids": [
+        1
+      ],
+      "primary_url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+      "importance": 5,
+      "why_it_matters": "Enterprise workflows get closer integration between OpenAI models and agents and ServiceNow's platform in both directions.",
+      "sources": [
+        "OpenAI"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Google opens Android Studio to third-party AI coding agents and unveils new Gemini APIs",
+      "member_ids": [
+        130
+      ],
+      "primary_url": "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis",
+      "importance": 5,
+      "why_it_matters": "Android developers can use more than 40 coding agents, including Claude Agent and Codex, inside the IDE.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Google launches Gemini Search and Gemini integrations for more third-party apps through a new developer platform",
+      "member_ids": [
+        85
+      ],
+      "primary_url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps",
+      "importance": 5,
+      "why_it_matters": "Businesses can bring their services into Google's AI experiences, which could change how consumers discover apps.",
+      "sources": [
+        "TechCrunch"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-10-29/card.jpg",
+  "candidate_count": 158,
+  "unsupported_terms": []
+}
