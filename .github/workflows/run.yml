@@ -1,0 +1,202 @@
+name: run
+
+# One workflow, because the approval sits in the middle of it. `draft` renders
+# the card and sends it; `publish` is gated on the `publish` environment's
+# required reviewer, so it parks in "Waiting" until you approve - for up to 30
+# days. Nothing polls Telegram.
+#
+# The old split had a second workflow polling getUpdates inside a fixed
+# wall-clock window, which only works if a check happens to run after you tap.
+# On 2026-10-29 GitHub delivered 2 of 15 scheduled checks and both ran ~4 hours
+# past the last slot, after the card had arrived - so the day was unrecoverable.
+on:
+  schedule:
+    # 02:00 UTC = 07:30 IST. Collecting this late closes the US working day:
+    # 02:00 UTC is 7pm Pacific the previous day, where the old 00:45 UTC was
+    # 5:45pm and missed the late-afternoon announcements. It also leaves ~90
+    # minutes to approve before a 09:00 IST post.
+    - cron: "0 2 * * *"
+    # 04:30 UTC = 10:00 IST. Scheduled runs get dropped outright under load and
+    # this is the only thing that recovers from that. It no-ops if the day
+    # already has a draft, so running it every day is free.
+    - cron: "30 4 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Render locally without sending to Telegram or publishing"
+        type: boolean
+        default: false
+      regen:
+        description: "Reject the standing draft and rebuild it"
+        type: boolean
+        default: false
+
+# Deliberately keyed to the run, not a shared name. A publish job waiting on
+# review holds its run open for hours, and a shared group would queue the next
+# day's run behind it until someone noticed.
+concurrency:
+  group: run-${{ github.run_id }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      ready: ${{ steps.gate.outputs.ready }}
+      date: ${{ steps.plan.outputs.date }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          pip install -e .
+          playwright install --with-deps chromium
+
+      # Read before anything is written, so the catch-up cron can tell "today
+      # was never drafted" from "today was drafted and is awaiting approval".
+      - name: Plan this run
+        id: plan
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          from datetime import datetime, timezone
+
+          day = datetime.now(timezone.utc).date().isoformat()
+          drafted = os.path.exists(f"out/{day}/draft.json")
+          published = False
+          try:
+              with open("state/posted.jsonl") as handle:
+                  for line in handle:
+                      if not line.strip():
+                          continue
+                      entry = json.loads(line)
+                      if entry.get("date") == day and entry.get("status") == "published":
+                          published = True
+          except FileNotFoundError:
+              pass
+
+          print(f"date={day}")
+          print(f"drafted={str(drafted).lower()}")
+          print(f"published={str(published).lower()}")
+          PY
+
+      - name: Draft
+        # Skipped when the day already has a draft, which is what makes the
+        # 10:00 catch-up safe. A regenerate overrides that on purpose.
+        if: ${{ inputs.regen || steps.plan.outputs.drafted != 'true' }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CURATE_MODEL: ${{ vars.CURATE_MODEL }}
+          WRITE_MODEL: ${{ vars.WRITE_MODEL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          BRAND_NAME: ${{ vars.BRAND_NAME }}
+          BRAND_HANDLE: ${{ vars.BRAND_HANDLE }}
+          STORIES_PER_POST: ${{ vars.STORIES_PER_POST }}
+          LEADS_MIN: ${{ vars.LEADS_MIN }}
+          LEADS_MAX: ${{ vars.LEADS_MAX }}
+          BRIEFS_MAX: ${{ vars.BRIEFS_MAX }}
+          DESTINATIONS: ${{ vars.DESTINATIONS }}
+        run: |
+          python -m newsletter.pipeline draft \
+            ${{ inputs.dry_run && '--dry-run' || '' }} \
+            ${{ inputs.regen && '--regen' || '' }}
+
+      - name: Commit card and state
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "ai-newsletter[bot]"
+          git config user.email "noreply@github.com"
+          git add out/ state/
+          git diff --staged --quiet || git commit -m "draft ${{ steps.plan.outputs.date }}"
+          git pull --rebase --autostash || true
+          git push
+
+      - name: Upload card
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: card-${{ github.run_id }}
+          path: out/
+          retention-days: 7
+          if-no-files-found: ignore
+
+      # Whether the publish job should exist at all. A draft that was never
+      # published still needs it, which is how a dispatch rescues a card that
+      # got stranded on an earlier day.
+      - name: Decide whether to ask for approval
+        id: gate
+        run: |
+          if [ '${{ inputs.dry_run }}' = 'true' ]; then
+            echo "dry run: nothing to approve"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          elif [ ! -f 'out/${{ steps.plan.outputs.date }}/draft.json' ]; then
+            echo "no draft on disk for ${{ steps.plan.outputs.date }}"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          elif [ '${{ steps.plan.outputs.published }}' = 'true' ]; then
+            echo "${{ steps.plan.outputs.date }} was already published"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "awaiting your review"
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  publish:
+    needs: draft
+    if: needs.draft.outputs.ready == 'true'
+    runs-on: ubuntu-latest
+    # Only the running time; the wait for review is not counted against it.
+    timeout-minutes: 15
+    # The gate. The job sits in "Waiting" until a required reviewer approves,
+    # and this environment's secrets are not placed on the runner until then.
+    environment: publish
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      # No Chromium: publishing never renders. Nothing here calls the model
+      # either - a regenerate is a dispatch of this workflow, not a branch here.
+      - name: Install
+        run: pip install -e .
+
+      # The draft job pushed the card after this run was created, so the
+      # checkout above predates it.
+      - name: Fetch the draft this run produced
+        run: git pull --ff-only
+
+      - name: Publish
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          LINKEDIN_TOKEN_EXPIRES_AT: ${{ vars.LINKEDIN_TOKEN_EXPIRES_AT }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
+          DESTINATIONS: ${{ vars.DESTINATIONS }}
+        run: python -m newsletter.pipeline publish --date '${{ needs.draft.outputs.date }}'
+
+      - name: Commit state
+        run: |
+          git config user.name "ai-newsletter[bot]"
+          git config user.email "noreply@github.com"
+          git add out/ state/
+          git diff --staged --quiet || git commit -m "publish ${{ needs.draft.outputs.date }}"
+          git pull --rebase --autostash || true
+          git push

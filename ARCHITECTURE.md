@@ -1,29 +1,37 @@
 # Architecture
 
 One daily LinkedIn post about AI news, drafted by two LLM calls and published
-only after you tap ✅ on Telegram. No server, no database, no agent framework —
-a linear pipeline run twice a day by GitHub Actions cron.
+only after you approve it. No server, no database, no agent framework — a
+linear pipeline run once a day by GitHub Actions cron.
 
 ```
-                                  06:15 IST  draft.yml
+                               07:30 IST   run.yml · job: draft
   ┌──────────┐   ┌───────┐   ┌─────────┐   ┌───────┐   ┌────────┐   ┌──────────┐
   │ 48 srcs  │──▶│ dedup │──▶│ curate  │──▶│ write │──▶│ render │──▶│ Telegram │
-  │ keyless  │   │ 3 way │   │ LLM #1  │   │ LLM#2 │   │ JPEG   │   │  ✅🔁❌   │
+  │ keyless  │   │ 3 way │   │ LLM #1  │   │ LLM#2 │   │ JPEG   │   │ card+link│
   └──────────┘   └───────┘   └─────────┘   └───────┘   └────────┘   └──────────┘
       ~32s          0.1s        ~40s         ~20s        ~8s             │
-                                                                        │ you tap
+                                                                        │
    ┌────────────────────────────────────────────────────────────────────┘
-   │  07:00–09:20 IST  publish.yml, every 10 min
+   │  run.yml · job: publish   ──  parks in "Waiting" until you approve
    ▼
   ┌────────────┐   ┌──────────┐   ┌──────────────┐
-  │ getUpdates │──▶│ LinkedIn │──▶│ posted.jsonl │
-  │  decision  │   │ 3 calls  │   │   history    │
+  │ env review │──▶│ LinkedIn │──▶│ posted.jsonl │
+  │  30 days   │   │ 3 calls  │   │   history    │
   └────────────┘   └──────────┘   └──────────────┘
 ```
 
-Why two workflows and not one: **GitHub Actions cannot receive a webhook.** The
-draft job asks and exits. A second job wakes up repeatedly and collects the
-answer. That single constraint shapes the whole runtime.
+Why one workflow and not two: **GitHub Actions cannot receive a webhook**, so
+the approval used to be a Telegram button that a second scheduled job polled
+for. That job could only see a press if it happened to run *after* you tapped.
+On 2026-10-29 GitHub delivered 2 of its 15 scheduled checks and both ran hours
+after the window had closed; two days of posts were lost that way.
+
+The fix was to stop simulating a webhook. A GitHub **environment review** is a
+first-class pause: the `publish` job sits in `Waiting` until a required
+reviewer approves, for up to 30 days, and that environment's secrets are not
+placed on a runner until then. Telegram still shows you the card — it just no
+longer decides anything.
 
 ---
 
@@ -142,7 +150,7 @@ cost for quality without a code change.
 
 ## 2. How it runs, with real times
 
-### 06:15 IST — `draft.yml`
+### 07:30 IST — `run.yml` · job `draft`
 
 **Step 1 · Collect (~32 seconds, measured)**
 
@@ -236,9 +244,14 @@ gradient, so the renderer never hard-depends on a third party.
 AI image generation was rejected: it costs per image, it can't render text
 reliably, and the brand drifts between runs.
 
-**Step 6 · Ask (~2s)** — Telegram `sendPhoto` with an inline keyboard.
+**Step 6 · Send (~2s)** — Telegram `sendPhoto`, then the caption as copyable
+text, then a link to the run that is waiting for your review. No buttons: the
+decision is not Telegram's to take.
 
-**Card on your phone by about 06:18.**
+**Card on your phone by about 07:35.** Collection sits this late on purpose —
+02:00 UTC is 7pm US Pacific the previous day, so it closes the US working day.
+The old 00:45 UTC cut off at 5:45pm Pacific and missed the late-afternoon
+announcements.
 
 ### What's on the card vs. in the caption
 
@@ -296,24 +309,39 @@ four element types — `TextElement`, `MentionElement`, `HashtagElement`,
 caption carries them in full. On Instagram caption links are not clickable at
 all.
 
-### 07:00–09:20 IST — `publish.yml`, the approval poller
+### The approval — `run.yml` · job `publish`
 
-15 wake-ups: 07:00, 07:10, 07:20 … 09:20. Each is a ~30-second job:
+Not a schedule at all. The job declares `environment: publish`, which carries a
+required reviewer, so GitHub holds it:
 
 ```
-read state/tg_offset  →  Telegram getUpdates  →  nothing? print and exit
-                                              →  ✅  publish, reply "Posted."
-                                              →  ❌  record as skipped
-                                              →  🔁  regenerate the draft
+draft job finishes  ──▶  publish job enters "Waiting"
+                           │
+                           │  GitHub push notification on your phone
+                           │  (plus the card and link already on Telegram)
+                           │
+                           ▼  you tap Approve
+                         LinkedIn  ──▶  posted.jsonl  ──▶  commit
 ```
 
-**Approve at 07:04 and it posts at 07:10** — the next check, not instantly.
-That's the price of having no webhook. At most one of the 15 checks ever
-publishes; the rest are no-ops.
+**Approve and it posts in about 20 seconds.** The job starts on approval and
+all it does is install the package and make three LinkedIn calls — no Chromium,
+no model call, which is why it is so much lighter than the draft job.
 
-**09:20 is the last check.** Approve later and the ✅ is not lost (the offset
-is persisted) but there is no run left to collect it until tomorrow — trigger
-`publish.yml` by hand from the Actions tab.
+**There is no last check.** The window is 30 days. A card that arrives at noon
+because cron ran late is still publishable at noon, and one you ignore until
+tomorrow is still there tomorrow. The only thing that expires is the run
+itself, after 30 days, at which point the job fails.
+
+Rejecting instead of approving fails the run — that is how a day gets skipped,
+and the red entry in the Actions tab is cosmetic. Regenerating is a
+`workflow_dispatch` of `run.yml` with `regen: true`: it records the standing
+draft's headlines as rejected, so the ranker will not serve them back, then
+rebuilds.
+
+A second cron at 10:00 IST exists only to recover a run GitHub dropped
+outright. It checks whether the day already has a draft and exits if so, so it
+costs nothing to leave running every day.
 
 ---
 
@@ -373,14 +401,18 @@ attempted, then reported together.
 
 ## 4. State and stack
 
-No database. Four files committed back to the repo by the workflow:
+No database. Three files committed back to the repo by the workflow:
 
 | Path | Role |
 |---|---|
 | `state/seen.json` | 30-day URL memory — **this is what prevents repeats** |
 | `state/posted.jsonl` | History; also fed to the ranker |
-| `state/tg_offset` | Telegram cursor, so a decision is read exactly once |
 | `out/<date>/card.jpg` | The card. For Instagram this path *is* the public URL |
+
+There used to be a fourth, `state/tg_offset`, holding the Telegram cursor. It
+is gone with the polling it existed for — and it was itself a liability: the
+cursor advanced past presses it declined to match, which deleted them from
+Telegram permanently while the run reported success.
 
 | Layer | Choice | Why |
 |---|---|---|
@@ -390,11 +422,14 @@ No database. Four files committed back to the repo by the workflow:
 | Schemas | Pydantic → strict JSON schema | No numeric bounds (strict mode rejects them); ranges are stated in descriptions and clamped in code. |
 | Runtime | Actions cron, public repo | Free minutes + free image hosting. |
 | Rendering | Playwright + Jinja2 | Full CSS control, any webfont, ~2s. |
-| Approval | Telegram bot | Free, instant, works from your phone. |
-| Tests | pytest, 83 passing | Dedup, canonicalisation, LinkedIn escaping, citation fallback. |
+| Approval | GitHub environment review | Free on public repos, 30-day window, approvable from the mobile app with push notifications. Environment secrets stay off the runner until approval. |
+| Notification | Telegram bot | Free, instant, shows the card where you actually look. Send-only. |
+| Tests | pytest, 103 passing | Dedup, canonicalisation, LinkedIn escaping, citation fallback, card shelving, publish exit codes. |
 
-**Known rough edges:** Actions cron fires 5–30 min late under load, which the
-45-minute head start absorbs. Google News hands out opaque redirects, so we
+**Known rough edges:** Actions cron is best-effort and badly so — measured here
+at 5h41m late, with 13 of 15 scheduled checks dropped in a single day. No head
+start absorbs that, which is why the approval window is 30 days rather than
+timed, and why a 10:00 IST catch-up run exists. Google News hands out opaque redirects, so we
 cite the publisher domain from the feed's `<source>` element instead — and
 prefer a sibling feed's deep link when one exists. Meta's docs contradict
 themselves on the daily publish cap, so we read `content_publishing_limit` live

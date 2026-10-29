@@ -1,10 +1,13 @@
 """The two entry points, and the CLI that GitHub Actions calls.
 
-    draft    collect -> dedup -> cluster/rank -> write -> render -> ask for approval
-    publish  read the decision -> publish or skip
+    draft    collect -> dedup -> cluster/rank -> write -> render -> send for review
+    publish  publish the day's approved draft
 
-They are separate processes because Actions cannot receive a webhook: the draft
-job exits after asking, and a second scheduled job picks the answer up.
+They are separate processes because the approval sits between them. `draft`
+sends the card and exits; `publish` runs in a job gated on a GitHub environment
+review, so it does not start until the review is granted. Nothing here polls
+for a decision - GitHub holds the job until you act on it, for up to 30 days,
+which is why a late cron now costs a late post rather than a lost one.
 """
 
 from __future__ import annotations
@@ -42,12 +45,11 @@ POSTED_PATH = STATE_DIR / "posted.jsonl"
 class PublishFailed(RuntimeError):
     """Every destination rejected the post.
 
-    A distinct type because the CLI has to tell this apart from the ordinary
-    no-ops. The publish job wakes up repeatedly and most of those runs find no
-    decision to act on, which is success; a run that was told to post and could
-    not must exit non-zero, or a broken publish is indistinguishable from a
-    quiet one in the Actions tab. That is exactly how the 2026-10-28 failure
-    stayed invisible.
+    A distinct type because the CLI has to tell this apart from the one ordinary
+    no-op, which is there being no draft for the day. A run that was approved
+    and still could not post must exit non-zero, or a broken publish is
+    indistinguishable from a quiet one in the Actions tab. That is exactly how
+    the 2026-10-28 failure stayed invisible.
     """
 
 
@@ -82,9 +84,39 @@ def run_dir(run_date: date, dry_run: bool = False) -> Path:
 # --- draft -----------------------------------------------------------------
 
 
-def draft(run_date: date | None = None, dry_run: bool = False, notify: bool = True) -> dict:
+def _record_rejected(run_date: date) -> None:
+    """Mark the standing draft as turned down before rebuilding it.
+
+    The ranker is shown recent headlines and told not to repeat them, and
+    nothing else marks a rejected draft as rejected - so without this a
+    regenerate can hand back the same stories it was just asked to replace.
+    """
+    draft_path = run_dir(run_date) / "draft.json"
+    if not draft_path.exists():
+        log.info("no standing draft for %s to reject", run_date.isoformat())
+        return
+    rejected = json.loads(draft_path.read_text())["post"]
+    append_history(
+        {
+            "date": run_date.isoformat(),
+            "status": "rejected",
+            "headlines": [story["headline"] for story in rejected["stories"]],
+        }
+    )
+    log.info("recorded %d rejected headline(s)", len(rejected["stories"]))
+
+
+def draft(
+    run_date: date | None = None,
+    dry_run: bool = False,
+    notify: bool = True,
+    regen: bool = False,
+) -> dict:
     run_date = run_date or date.today()
     out = run_dir(run_date, dry_run)
+
+    if regen and not dry_run:
+        _record_rejected(run_date)
 
     # 1. collect
     items = fetch_rss() + fetch_hn() + fetch_hf(run_date)
@@ -148,8 +180,23 @@ def draft(run_date: date | None = None, dry_run: bool = False, notify: bool = Tr
             run_date.isoformat(),
             len(items),
             suspect,
+            approval_url=_approval_url(),
         )
     return draft_record
+
+
+def _approval_url() -> str:
+    """Link to the run whose publish job is waiting for review.
+
+    Built from the variables Actions sets, so it comes back empty on a local run
+    and the message simply leaves the line out.
+    """
+    server = env("GITHUB_SERVER_URL")
+    repo = env("GITHUB_REPOSITORY")
+    run_id = env("GITHUB_RUN_ID")
+    if not (server and repo and run_id):
+        return ""
+    return f"{server}/{repo}/actions/runs/{run_id}"
 
 
 # --- publish ---------------------------------------------------------------
@@ -183,40 +230,19 @@ def _publishers() -> list:
     return [known[name]() for name in DESTINATIONS]
 
 
-def publish_approved(run_date: date | None = None) -> str:
-    """Act on whatever button was pressed. Returns a one-line status."""
+def publish_now(run_date: date | None = None) -> str:
+    """Publish the day's draft. Returns a one-line status.
+
+    Reaching this function is the approval: the job it runs in is gated on a
+    GitHub environment review, so the process does not start until that review
+    has been granted. There is nothing left to ask.
+    """
     run_date = run_date or date.today()
     run_id = run_date.isoformat()
     draft_path = run_dir(run_date) / "draft.json"
 
     if not draft_path.exists():
         return f"no draft for {run_id} - nothing to publish"
-
-    decision = telegram.poll_decision(run_id)
-    if decision is None:
-        return f"no decision yet for {run_id}"
-
-    if decision.action == "skip":
-        telegram.acknowledge(decision, "Skipped.")
-        append_history({"date": run_id, "status": "skipped", "headlines": []})
-        return f"{run_id} skipped by request"
-
-    if decision.action == "regen":
-        telegram.acknowledge(decision, "Regenerating...")
-        # Record what was turned down before rebuilding. The ranker is shown
-        # recent headlines and told not to repeat them, and nothing else marks
-        # a rejected draft as rejected - so without this a regenerate can hand
-        # back the same four stories it was just asked to replace.
-        rejected = json.loads(draft_path.read_text())["post"]
-        append_history(
-            {
-                "date": run_id,
-                "status": "rejected",
-                "headlines": [s["headline"] for s in rejected["stories"]],
-            }
-        )
-        record = draft(run_date)
-        return f"{run_id} regenerated with {record['candidate_count']} candidates"
 
     record = json.loads(draft_path.read_text())
     post = record["post"]
@@ -239,11 +265,9 @@ def publish_approved(run_date: date | None = None) -> str:
             failures.append(f"{publisher.name}: {exc}")
 
     if not posted:
-        telegram.acknowledge(decision, "Failed.")
         telegram.send_text("Nothing published:\n" + "\n".join(failures))
         raise PublishFailed(f"{run_id} failed on every destination\n" + "\n".join(failures))
 
-    telegram.acknowledge(decision, "Posted.")
     summary = ", ".join(f"{platform} {post_id}" for platform, post_id in posted.items())
     message = f"Published to {summary}"
     if failures:
@@ -295,6 +319,11 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="draft only: render locally, touch no state and send nothing",
     )
+    parser.add_argument(
+        "--regen",
+        action="store_true",
+        help="draft only: record the standing draft as rejected, then rebuild it",
+    )
     parser.add_argument("--date", help="override the run date, YYYY-MM-DD")
     args = parser.parse_args(argv)
 
@@ -313,12 +342,12 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         if args.command == "draft":
-            record = draft(run_date, dry_run=args.dry_run)
+            record = draft(run_date, dry_run=args.dry_run, regen=args.regen)
             print(f"\nhook:    {record['post']['hook']}")
             print(f"stories: {len(record['post']['stories'])}")
             print(f"card:    {record['card_path']}")
         else:
-            print(publish_approved(run_date))
+            print(publish_now(run_date))
     except Exception as exc:  # noqa: BLE001 - the CLI is the top of the stack
         log.error("%s: %s", type(exc).__name__, exc)
         return 1

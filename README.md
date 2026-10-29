@@ -1,16 +1,18 @@
 # AI Signals
 
 An autonomous daily AI-news post for LinkedIn (Instagram when Meta approves it). It
-reads 37 free sources, collapses the same story arriving from several of them, writes
-a card and a caption, renders a 1080×1350 JPEG, and asks you on Telegram before
+reads 46 free sources, collapses the same story arriving from several of them, writes
+a card and a caption, renders a 1080×1350 JPEG, and waits for your approval before
 anything goes public.
 
 Runs entirely on GitHub Actions. Everything except the LLM is free.
 
 ```
-sources ──► dedup ──► cluster + rank ──► write ──► render ──► Telegram ──► LinkedIn 
- 37 feeds   url/title     LLM call 1    LLM call 2  Playwright   you tap      versioned
- + HN       matching     (OpenRouter)  (OpenRouter)              a button       API
+sources ──► dedup ──► cluster + rank ──► write ──► render ──► review ──► LinkedIn
+ 46 feeds   url/title     LLM call 1    LLM call 2  Playwright  card on      versioned
+ + HN       matching     (OpenRouter)  (OpenRouter)             Telegram,       API
+                                                                you approve
+                                                                on GitHub
 ```
 
 ## Cost
@@ -146,8 +148,8 @@ cp .env.example .env          # then fill it in
 
 python -m newsletter.pipeline draft --dry-run   # renders to out/dry-run/, sends nothing
 python -m newsletter.pipeline draft             # real run: Telegram, state, commit
-python -m newsletter.pipeline publish           # acts on whichever button you pressed
-pytest                                          # 84 tests, no network, no API key
+python -m newsletter.pipeline publish           # publishes the day's draft
+pytest                                          # 103 tests, no network, no API key
 ```
 
 `--dry-run` touches no state, so you can run it as often as you like while tuning.
@@ -156,12 +158,19 @@ pytest                                          # 84 tests, no network, no API k
 
 | Workflow | When (UTC) | When (IST) | What |
 |---|---|---|---|
-| `draft.yml` | 00:45 daily | 06:15 | Build the post, send it to you |
-| `publish.yml` | every 10 min, 01:30–03:50 | 07:00–09:20 | Pick up your decision, publish |
+| `run.yml` | 02:00 daily | 07:30 | Build the post, send it, then wait for your approval |
+| `run.yml` | 04:30 daily | 10:00 | Catch-up — no-ops if the day already has a draft |
 | `refresh-token.yml` | Mondays 04:00 | Mon 09:30 | Refresh the 60-day Instagram token |
 
-Two workflows rather than one because Actions cannot receive a webhook: the draft job
-exits after asking, and a separate job reads the answer from `getUpdates`.
+**One workflow, two jobs.** `draft` builds the post and sends it to Telegram; `publish`
+is a second job in the same run, gated on the `publish` environment's required reviewer,
+so it parks in **Waiting** until you approve — for up to 30 days. GitHub holds the
+decision. Nothing polls for it, and there is no window to miss.
+
+Collection runs at 07:30 IST rather than earlier because that is what closes the US
+working day: 02:00 UTC is 7pm Pacific the previous day, where the old 00:45 UTC was
+5:45pm and missed the late-afternoon announcements. The post goes out ~20 seconds after
+you approve, so approving around 09:00 IST lands it in the Indian morning.
 
 ### Don't trust the clock
 
@@ -169,19 +178,21 @@ GitHub's `schedule` trigger is best-effort, and the docs say so plainly: *"The s
 event can be delayed during periods of high loads"* and *"if the load is sufficiently
 high enough, some queued jobs may be dropped."* Measured here, not guessed:
 
-| Date | `draft` scheduled | `draft` actually ran | Late by |
+| Date | Scheduled | Actually ran | Late by |
 |---|---|---|---|
-| 2026-10-28 | 00:45 UTC | 06:16 UTC | **5h 31m** |
+| 2026-10-28 | `draft`, 00:45 UTC | 06:16 UTC | **5h 31m** |
+| 2026-10-29 | `draft`, 00:45 UTC | 06:26 UTC | **5h 41m** |
+| 2026-10-29 | `publish`, 15 checks 01:30–03:50 UTC | 2 checks, 07:29 and 07:57 UTC | 13 dropped; the 2 that ran were ~4h past the last slot |
 
-That one delay broke the whole day, because `publish.yml`'s window closes at 03:50 UTC
-— two and a half hours *before* the draft it was meant to publish existed. The two
-workflows are coupled by wall-clock time with no causal link, so a late draft is an
-unrecoverable day. `publish.yml` has never once fired usefully on cron.
+Both days lost their post. Not because anything errored — every run was green — but
+because the old `publish.yml` polled Telegram inside a wall-clock window that had
+closed hours *before* the card it was meant to publish existed.
 
-**So: treat the schedule as a convenience, not a guarantee.** If no card has arrived by
-mid-morning, the automation has missed and the runbook below is the fix. The planned
-repair is to merge both workflows into one job that long-polls Telegram for the
-decision in-process, so a late start just means a late post instead of no post.
+**That is fixed, and it is fixed by not depending on the clock at all.** The approval is
+now a GitHub environment review with a 30-day window, so a late start means a late post
+rather than no post. The 10:00 IST catch-up cron covers the other failure mode — a run
+dropped outright — and no-ops when the day already has a draft. The schedule is still
+only a convenience; the difference is that missing it no longer costs the day.
 
 ## When automation fails — run it by hand
 
@@ -193,10 +204,7 @@ source .venv/bin/activate
 
 git pull --rebase --autostash            # 1. ALWAYS first — see below
 python -m newsletter.pipeline draft      # 2. builds the post, sends card to Telegram
-
-#    ... tap a button in Telegram, wait a few seconds ...
-
-python -m newsletter.pipeline publish    # 3. acts on your tap, posts to LinkedIn
+python -m newsletter.pipeline publish    # 3. posts it to LinkedIn
 
 git add out/ state/                      # 4. record it
 git commit -m "publish $(date -u +%F)"
@@ -211,14 +219,15 @@ your push collides with the bot's commit.
 **Step 5 is not optional either.** Without it the next run has no record that today
 happened, and tomorrow's ranker may serve the same five stories again.
 
+There is no approval gate locally — running `publish` yourself *is* the approval. The
+gate only exists in CI, where it is the `publish` environment's required reviewer.
+
 ### Things that go wrong, and what they mean
 
 | What you see | What it means | Do this |
 |---|---|---|
-| `no decision yet for <date>` | Telegram hasn't registered your tap yet, or you haven't tapped | Wait ~5s, run `publish` again |
 | `no draft for <date> - nothing to publish` | No draft exists locally for today | `git pull`, then run `draft` |
 | `nothing new today - every candidate was already seen` | Every story was used on an earlier day | Normal if you re-run days later; otherwise check `state/seen.json` |
-| `could not answer callback: query is too old` | Only the button spinner expired | Ignore — the post went out |
 | `linkedin ... N days left` where N < 10 | The 60-day token is expiring | `python scripts/linkedin_auth.py` |
 
 ### Useful variants
@@ -249,8 +258,8 @@ fired it; `event=workflow_dispatch` means a human did.
 ## Tuning
 
 Nearly everything lives in `src/newsletter/config.py`: the feed list with per-source
-weights and caps, the dedup thresholds, `STORIES_PER_POST`, and the model plus effort
-level for each call. Any OpenRouter model works as long as its `supported_parameters`
+weights and caps, the dedup thresholds, `LEADS_MIN` / `LEADS_MAX` / `BRIEFS_MAX`, and
+the model plus effort level for each call. Any OpenRouter model works as long as its `supported_parameters`
 include `structured_outputs` — check before switching:
 `curl -s https://openrouter.ai/api/v1/models | jq '.data[] | select(.id=="<id>")'`. Voice and editorial judgement live in the `SYSTEM` prompts in
 `curate.py` (what counts as important) and `write.py` (how it reads).

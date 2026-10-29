@@ -1,3 +1,3 @@
-from .telegram import TelegramError, poll_decision, send_draft, send_text
+from .telegram import TelegramError, send_draft, send_text
 
-__all__ = ["TelegramError", "poll_decision", "send_draft", "send_text"]
+__all__ = ["TelegramError", "send_draft", "send_text"]
