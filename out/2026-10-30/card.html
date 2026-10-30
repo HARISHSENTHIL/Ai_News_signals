@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* Fixed 1080x1350 canvas. Instagram portrait, 4:5.
+     Every size that can overflow is multiplied by --s, which card.py shrinks
+     until the content fits. Copy length varies run to run, so the layout has to
+     absorb it rather than assume it. */
+  :root {
+    --s: 1;
+    --g1: #10061f;
+    --g2: #3a1259;
+    --g3: #6b1f4d;
+    --ink: #ffffff;
+    --dim: rgba(255, 255, 255, 0.66);
+    --accent: #7dd3fc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; }
+  body {
+    height: 1350px;
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    background: var(--g1);
+    color: var(--ink);
+    position: relative;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Layer 1: the photo, or nothing when we fell back to the gradient. */
+  .photo {
+    position: absolute; inset: 0;
+    
+  }
+
+  /* Layer 2: the mesh gradient. The whole background when there is no photo,
+     a colour wash over it when there is. */
+  .mesh {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(62% 54% at 12% 6%, var(--g2) 0%, transparent 60%),
+      radial-gradient(58% 48% at 92% 20%, var(--g3) 0%, transparent 56%),
+      radial-gradient(74% 56% at 46% 104%, var(--g2) 0%, transparent 62%),
+      radial-gradient(40% 30% at 78% 62%, rgba(125, 211, 252, 0.10) 0%, transparent 70%),
+      var(--g1);
+    opacity: 1.0;
+  }
+
+  /* Layer 3: the scrim. Heavy over a photo, light over the gradient - otherwise
+     it flattens the mesh into a grey rectangle. */
+  .scrim {
+    position: absolute; inset: 0;
+    
+    background: linear-gradient(180deg,
+      rgba(4, 6, 14, 0.20) 0%, rgba(4, 6, 14, 0.06) 38%,
+      rgba(4, 6, 14, 0.34) 78%, rgba(4, 6, 14, 0.52) 100%);
+    
+  }
+
+  .content {
+    position: relative;
+    height: 100%;
+    padding: calc(80px * var(--s)) 76px calc(64px * var(--s));
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eyebrow {
+    display: flex; align-items: center; gap: 14px;
+    font-size: 25px; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  .eyebrow .dot {
+    width: 11px; height: 11px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 18px var(--accent);
+  }
+  .eyebrow .date {
+    margin-left: auto;
+    color: var(--dim);
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  .hook {
+    margin-top: calc(40px * var(--s));
+    font-size: calc(74px * var(--s));
+    font-weight: 900;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
+  }
+  .subhook {
+    margin-top: calc(20px * var(--s));
+    font-size: calc(32px * var(--s));
+    font-weight: 500;
+    line-height: 1.32;
+    color: var(--dim);
+    max-width: 86%;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .rule {
+    margin: calc(40px * var(--s)) 0 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent) 0%, transparent 72%);
+  }
+
+  .stories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: calc(32px * var(--s));
+    flex: 1;
+    padding: calc(30px * var(--s)) 0;
+  }
+  .story { display: flex; gap: calc(22px * var(--s)); align-items: flex-start; }
+  /* Fixed width so every headline starts on the same vertical line. Measured
+     against every member of models.CATEGORIES: the widest rendered label is
+     RESEARCH at 119px, so 136px leaves room for font-fallback variation. A
+     longer label would break that alignment, which is why the vocabulary is
+     closed and a test pins its character width. */
+  .cat {
+    flex: 0 0 auto;
+    width: calc(136px * var(--s));
+    padding-top: calc(9px * var(--s));
+    font-size: calc(19px * var(--s));
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    color: var(--accent);
+    text-transform: uppercase;
+    /* A wrapped label would push its headline down and break the alignment the
+       fixed width exists to create. The vocabulary is closed and no member is
+       wide enough to wrap, so this only ever matters if one is added. */
+    white-space: nowrap;
+  }
+  .story-body { flex: 1; min-width: 0; }
+  .story h2 {
+    font-size: calc(39px * var(--s));
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: -0.015em;
+    text-wrap: pretty;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+  }
+  .story p {
+    margin-top: calc(9px * var(--s));
+    font-size: calc(26px * var(--s));
+    font-weight: 400;
+    line-height: 1.38;
+    color: var(--dim);
+  }
+  .story .src {
+    margin-top: calc(10px * var(--s));
+    font-size: calc(20px * var(--s));
+    font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(125, 211, 252, 0.86);
+  }
+
+  /* The overflow shelf. A brief is a headline and nothing else, so it costs
+     about a third of a lead block - which is what lets a heavy day show nine
+     stories without the leads shrinking into illegibility. */
+  .also {
+    margin-top: calc(24px * var(--s));
+    padding-top: calc(22px * var(--s));
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .also-label {
+    font-size: calc(18px * var(--s));
+    font-weight: 800;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .also-item {
+    display: flex;
+    /* Matches .story's gap so a brief headline starts on the same vertical
+       line as a lead headline - the two shelves read as one column. */
+    gap: calc(22px * var(--s));
+    margin-top: calc(11px * var(--s));
+    font-size: calc(24px * var(--s));
+    line-height: 1.26;
+    color: var(--dim);
+  }
+  .also-cat {
+    flex: 0 0 auto;
+    width: calc(136px * var(--s));
+    white-space: nowrap;
+    padding-top: calc(3px * var(--s));
+    font-size: calc(16px * var(--s));
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: rgba(125, 211, 252, 0.8);
+  }
+
+  .footer {
+    display: flex; align-items: baseline; gap: 16px;
+    padding-top: calc(28px * var(--s));
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    font-size: calc(24px * var(--s));
+  }
+  .handle { font-weight: 700; }
+  .tagline { color: var(--dim); font-weight: 400; }
+  .credit {
+    margin-left: auto;
+    font-size: calc(16px * var(--s));
+    color: rgba(255, 255, 255, 0.38);
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+  <div class="photo"></div>
+  <div class="mesh"></div>
+  <div class="scrim"></div>
+
+  <div class="content">
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span>AI Signals</span>
+      <span class="date">30 OCT 2026</span>
+    </div>
+
+    <h1 class="hook">Mistral goes 1T open as AI security slips</h1>
+    <p class="subhook">Three security findings, an Anthropic deal and OpenAI policy updates</p>
+
+    <div class="rule"></div>
+
+    <div class="stories">
+      
+      <div class="story">
+        <div class="cat">MODEL</div>
+        <div class="story-body">
+          <h2>Mistral opens weights for Large 4, a 1T-parameter multimodal MoE</h2>
+          <p>Mistral claims it beats open rivals at coding; independent testing puts it behind top Chinese models.</p>
+          <div class="src">Mistral</div>
+        </div>
+      </div>
+      
+      <div class="story">
+        <div class="cat">SECURITY</div>
+        <div class="story-body">
+          <h2>CrowdStrike: China-linked hackers used DeepSeek in attacks</h2>
+          <p>State-linked attackers used DeepSeek and other AI tools against 200+ organizations, including governments and businesses.</p>
+          <div class="src">Techmeme</div>
+        </div>
+      </div>
+      
+      <div class="story">
+        <div class="cat">SECURITY</div>
+        <div class="story-body">
+          <h2>GLM 5.3 turned unshipped Firefox fixes into working exploits</h2>
+          <p>Epoch AI reports one-click exploits at about $1,000 each, suggesting AI can exploit the gap between patch and update.</p>
+          <div class="src">Epoch AI</div>
+        </div>
+      </div>
+      
+      <div class="story">
+        <div class="cat">SECURITY</div>
+        <div class="story-body">
+          <h2>Contractor&#39;s personal Claude agent sat on a Pentagon network</h2>
+          <p>The agent ran for two months before it was discovered; the vulnerability has since been patched.</p>
+          <div class="src">Wired</div>
+        </div>
+      </div>
+      
+      <div class="story">
+        <div class="cat">BUSINESS</div>
+        <div class="story-body">
+          <h2>Anthropic acquires one-person biotech that ran a drug program</h2>
+          <p>The company ran its drug program using Claude, a sign of AI labs moving into drug development.</p>
+          <div class="src">Forbes</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <div class="also">
+      <div class="also-label">Also today</div>
+      
+      <div class="also-item">
+        <span class="also-cat">POLICY</span>
+        <span>OpenAI updates its Model Spec around five core values</span>
+      </div>
+      
+      <div class="also-item">
+        <span class="also-cat">BUSINESS</span>
+        <span>OpenAI doubles usage limits across paid plans</span>
+      </div>
+      
+      <div class="also-item">
+        <span class="also-cat">RESEARCH</span>
+        <span>Global AI compute additions doubling every nine months</span>
+      </div>
+      
+      <div class="also-item">
+        <span class="also-cat">POLICY</span>
+        <span>New York enacts ban on unsafe chatbots for kids</span>
+      </div>
+      
+    </div>
+    
+
+    <div class="footer">
+      <span class="handle">@aisignals</span>
+      <span class="tagline">links in caption</span>
+      
+    </div>
+  </div>
+</body>
+</html>

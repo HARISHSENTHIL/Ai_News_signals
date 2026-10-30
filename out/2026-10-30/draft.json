@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-30",
+  "post": {
+    "hook": "Mistral goes 1T open as AI security slips",
+    "subhook": "Three security findings, an Anthropic deal and OpenAI policy updates",
+    "stories": [
+      {
+        "headline": "Mistral opens weights for Large 4, a 1T-parameter multimodal MoE",
+        "detail": "Mistral claims it beats open rivals at coding; independent testing puts it behind top Chinese models.",
+        "source_name": "Mistral",
+        "source_url": "https://mistral.ai/news/mistral-large-4-oss",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "CrowdStrike: China-linked hackers used DeepSeek in attacks",
+        "detail": "State-linked attackers used DeepSeek and other AI tools against 200+ organizations, including governments and businesses.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261030/p1",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "GLM 5.3 turned unshipped Firefox fixes into working exploits",
+        "detail": "Epoch AI reports one-click exploits at about $1,000 each, suggesting AI can exploit the gap between patch and update.",
+        "source_name": "Epoch AI",
+        "source_url": "https://epoch.ai/publications/open-weight-models-patch-gap",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Contractor's personal Claude agent sat on a Pentagon network",
+        "detail": "The agent ran for two months before it was discovered; the vulnerability has since been patched.",
+        "source_name": "Wired",
+        "source_url": "https://wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic acquires one-person biotech that ran a drug program",
+        "detail": "The company ran its drug program using Claude, a sign of AI labs moving into drug development.",
+        "source_name": "Forbes",
+        "source_url": "https://www.forbes.com",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI updates its Model Spec around five core values",
+        "detail": "Sets out the behavioral principles OpenAI says its models should follow as they become more capable.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/updated-model-spec",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "OpenAI doubles usage limits across paid plans",
+        "detail": "Reverses a planned Pro 200 cut as competition with Anthropic intensifies.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/openai-doubles-usage-limits-on-pro-plans-as-competition-with-anthropic-heats-up",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Global AI compute additions doubling every nine months",
+        "detail": "Epoch AI puts the growth in new AI chip compute at about 2.5x per year since 2024.",
+        "source_name": "Epoch AI",
+        "source_url": "https://epoch.ai/data-insights/ai-computing-capacity-additions-doubling",
+        "category": "RESEARCH",
+        "tier": "brief"
+      },
+      {
+        "headline": "New York enacts ban on unsafe chatbots for kids",
+        "detail": "Creates a new legal restriction on chatbots offered to children; other states may follow.",
+        "source_name": "Times of India",
+        "source_url": "https://timesofindia.indiatimes.com",
+        "category": "POLICY",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Mistral put a 1T-parameter open-weight model on the table, and three separate reports show AI landing squarely in security work.\n\nLeads:\n1. Mistral releases open weights for Large 4, a 1T-parameter multimodal MoE. Mistral claims it beats open rivals at coding; independent testing puts it behind top Chinese models. (Mistral)\n2. China-linked hackers used DeepSeek and other AI tools in attacks on 200+ organizations, per CrowdStrike. (Techmeme)\n3. GLM 5.3 turned unshipped Firefox security fixes into working one-click exploits at about $1,000 each. (Epoch AI)\n4. A defense contractor's personal Claude agent ran on a Pentagon network for two months before discovery. The vulnerability has since been patched. (Wired)\n5. Anthropic acquires a one-person biotech that ran a drug program with Claude. (Forbes)\n\nBriefs:\n6. OpenAI publishes an updated Model Spec with five core values. (OpenAI)\n7. OpenAI doubles usage limits across paid plans, reversing a planned Pro 200 cut. (The Decoder)\n8. Global AI computing capacity additions are doubling every nine months, about 2.5x per year since 2024. (Epoch AI)\n9. New York enacts a ban on unsafe chatbots for kids. (Times of India)\n\nThe patch gap just got shorter. 🔒",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "AINews",
+      "Mistral",
+      "OpenWeights",
+      "Cybersecurity",
+      "AISecurity",
+      "OpenAI",
+      "Anthropic",
+      "AIPolicy",
+      "MachineLearning"
+    ],
+    "image_query": "data center servers"
+  },
+  "clusters": [
+    {
+      "headline": "Mistral releases open weights for Large 4 (Le Chonk), a 1T-parameter multimodal MoE model",
+      "member_ids": [
+        22,
+        47,
+        68,
+        85,
+        86,
+        130,
+        134,
+        102
+      ],
+      "primary_url": "https://mistral.ai/news/mistral-large-4-oss",
+      "importance": 8,
+      "why_it_matters": "Gives practitioners a very large open-weight multimodal model they can self-host, with Mistral claiming it beats open rivals at coding, though independent testing puts it behind top Chinese models.",
+      "sources": [
+        "Mistral",
+        "Hugging Face",
+        "r/LocalLLaMA",
+        "Transformers",
+        "WIRED",
+        "The Decoder",
+        "TechCrunch"
+      ],
+      "corroboration": 7
+    },
+    {
+      "headline": "China-linked hackers used DeepSeek and other AI tools in attacks on 200+ organizations, per CrowdStrike",
+      "member_ids": [
+        17,
+        20,
+        61
+      ],
+      "primary_url": "https://techmeme.com/261030/p1",
+      "importance": 6,
+      "why_it_matters": "Shows state-linked attackers using commercial AI models operationally against governments and businesses worldwide.",
+      "sources": [
+        "FourWeekMBA",
+        "NBC News",
+        "Techmeme"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Epoch AI reports GLM 5.3 turned unshipped Firefox security fixes into working one-click exploits",
+      "member_ids": [
+        29
+      ],
+      "primary_url": "https://epoch.ai/publications/open-weight-models-patch-gap",
+      "importance": 6,
+      "why_it_matters": "Suggests the window between a patch being published and users receiving it may be exploitable by AI at about $1,000 per exploit.",
+      "sources": [
+        "Epoch AI"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "A defense contractor's personal Claude agent ran on a Pentagon network for two months before discovery",
+      "member_ids": [
+        121
+      ],
+      "primary_url": "https://wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system",
+      "importance": 6,
+      "why_it_matters": "Shows personal AI agents can gain access to secure government systems without detection, and that the vulnerability has since been patched.",
+      "sources": [
+        "WIRED"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Anthropic acquires a one-person biotech that ran a drug program with Claude",
+      "member_ids": [
+        3
+      ],
+      "primary_url": "https://www.forbes.com",
+      "importance": 5,
+      "why_it_matters": "Shows an AI lab acquiring a company that ran a drug program using its model, a sign of AI moving into drug development work.",
+      "sources": [
+        "Forbes"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI publishes an updated Model Spec with five core values",
+      "member_ids": [
+        0
+      ],
+      "primary_url": "https://openai.com/index/updated-model-spec",
+      "importance": 5,
+      "why_it_matters": "Sets out the behavioral principles OpenAI says its models should follow as they become more capable.",
+      "sources": [
+        "OpenAI"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI doubles usage limits across paid plans, reversing a planned Pro 200 cut",
+      "member_ids": [
+        131
+      ],
+      "primary_url": "https://the-decoder.com/openai-doubles-usage-limits-on-pro-plans-as-competition-with-anthropic-heats-up",
+      "importance": 5,
+      "why_it_matters": "Gives paying users substantially more capacity on OpenAI's models as competition with Anthropic intensifies.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Epoch AI finds global AI computing capacity additions doubling every nine months",
+      "member_ids": [
+        42
+      ],
+      "primary_url": "https://epoch.ai/data-insights/ai-computing-capacity-additions-doubling",
+      "importance": 5,
+      "why_it_matters": "Quantifies how fast new AI chip compute is being added, about 2.5x per year since 2024.",
+      "sources": [
+        "Epoch AI"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-10-30/card.jpg",
+  "candidate_count": 171,
+  "unsupported_terms": [
+    "Briefs",
+    "Leads",
+    "Reverses"
+  ]
+}
