@@ -1,0 +1,239 @@
+{
+  "date": "2026-10-31",
+  "post": {
+    "hook": "Tampered extension hits Cursor's marketplace",
+    "subhook": "Plus Apple Intelligence in China and an AI-run mouse surgery",
+    "stories": [
+      {
+        "headline": "Tampered Claude Code extension live on Cursor for about 12 hours",
+        "detail": "Up to 5,000 users may have installed it, risking data theft or remote access. Cursor took its marketplace offline to investigate.",
+        "source_name": "Ars Technica",
+        "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Apple Intelligence launches in China, powered by Qwen",
+        "detail": "A beta arrives Nov. 4, with the full rollout in iOS 27.3 in December. Qwen powers the models in Siri.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude model picks a gene therapy, operates on a mouse brain",
+        "detail": "The agent chose and delivered a treatment with no human decision-making, and refused to continue after a calibration error.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Tech stocks sell off on doubts about AI payback",
+        "detail": "Nearly $1tn was reportedly wiped from US markets, which may pressure AI companies' funding and capital spending plans.",
+        "source_name": "The Guardian",
+        "source_url": "https://theguardian.com/technology/2026/oct/30/tech-stocks-drop-earnings-report",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI, Google, Microsoft, Anthropic back AI opt-out standard",
+        "detail": "Publishers can set AI training preferences across several AI companies at once instead of one by one.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI expands ChatGPT violence-prevention safeguards",
+        "detail": "Adds earlier interventions, new protections for teens and a commitment to public safety reporting.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "OpenAI reportedly secures about $11B of a $30B target",
+        "detail": "A smaller-than-planned round at a lower valuation, read as a sign of investor pullback from AI spending.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261030/p31",
+        "category": "FUNDING",
+        "tier": "brief"
+      },
+      {
+        "headline": "Reddit says Google AI Mode is cutting web referrals",
+        "detail": "Reddit reports losing over one million Google referrals per week in October.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/googles-ai-mode-doesnt-drive-traffic-for-anybody-reddit-ceo-huffman-warns-the-entire-web",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Google's satellite TPUs run Gemma 4 in orbit",
+        "detail": "The on-board model produced its first response from space, a first demonstration of running AI on chips in orbit.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
+        "category": "RESEARCH",
+        "tier": "brief"
+      }
+    ],
+    "caption": "A tampered Claude Code extension sat on Cursor's marketplace for about 12 hours today. Here's what changed in AI.\n\n1. Tampered Claude Code extension reached up to 5,000 Cursor users; Cursor took its marketplace offline to investigate (Ars Technica)\n2. Apple Intelligence launches in China with Qwen powering Siri's models: beta Nov. 4, full iOS 27.3 in December (The Verge)\n3. A Claude model chose a gene therapy and operated on a mouse brain with no human decision-making, then refused to continue after a calibration error (The Decoder)\n4. Tech stocks sold off over doubts AI spending pays back quickly, with nearly $1tn reportedly wiped from US markets (The Guardian)\n5. OpenAI, Google, Microsoft and Anthropic back a shared standard for publishers to opt out of AI training (OpenAI)\n6. OpenAI expands ChatGPT violence-prevention safeguards and teen protections, and commits to public safety reporting (OpenAI)\n7. OpenAI reportedly secures about $11B toward a round targeted at $30B (Techmeme)\n8. Reddit says Google AI Mode and AI Overviews cost it over one million referrals per week in October (The Decoder)\n9. Google's satellite TPUs booted and Gemma 4 produced its first response from orbit (The Verge)\n\nIf you installed extensions from Cursor's marketplace recently, check what you're running. 🔒",
+    "hashtags": [
+      "AI",
+      "AINews",
+      "ArtificialIntelligence",
+      "Cybersecurity",
+      "SupplyChainSecurity",
+      "Cursor",
+      "ClaudeCode",
+      "OpenAI",
+      "AppleIntelligence",
+      "Developers",
+      "TechNews",
+      "MachineLearning"
+    ],
+    "image_query": "laptop code screen"
+  },
+  "clusters": [
+    {
+      "headline": "A tampered Claude Code extension on Cursor's marketplace was live for about 12 hours, reaching up to 5,000 users",
+      "member_ids": [
+        3,
+        9,
+        10,
+        12,
+        58,
+        120,
+        130
+      ],
+      "primary_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
+      "importance": 7,
+      "why_it_matters": "Developers who installed the tampered extension could have had data stolen or remote access set up, and Cursor took its marketplace offline while it investigated.",
+      "sources": [
+        "WIRED",
+        "BankInfoSecurity",
+        "Reuters",
+        "Step Security",
+        "Techmeme",
+        "Ars Technica",
+        "The Decoder"
+      ],
+      "corroboration": 7
+    },
+    {
+      "headline": "Apple Intelligence launches in China with Qwen, with a beta on Nov. 4 and full iOS 27.3 in December",
+      "member_ids": [
+        15,
+        16,
+        22,
+        86
+      ],
+      "primary_url": "https://theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
+      "importance": 6,
+      "why_it_matters": "Apple's AI features become available to Chinese users, with Qwen powering the models in Siri.",
+      "sources": [
+        "Global Times",
+        "BigGo Finance",
+        "China Daily",
+        "The Verge"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "A Claude model autonomously chose a gene therapy and operated on a mouse brain with no human decision-making",
+      "member_ids": [
+        116
+      ],
+      "primary_url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making",
+      "importance": 6,
+      "why_it_matters": "It shows an AI agent selecting and delivering a treatment to a living animal, and refusing to continue after a calibration error.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Tech stocks sell off sharply over doubts that AI spending will pay back quickly",
+      "member_ids": [
+        48,
+        55,
+        141,
+        119
+      ],
+      "primary_url": "https://theguardian.com/technology/2026/oct/30/tech-stocks-drop-earnings-report",
+      "importance": 5,
+      "why_it_matters": "Nearly $1tn was reportedly wiped from US markets, which may pressure AI companies' funding and capital spending plans.",
+      "sources": [
+        "Hacker News",
+        "The Guardian",
+        "SCMP Tech"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "OpenAI and Google, Microsoft and Anthropic back a shared standard for publishers to opt out of AI scraping",
+      "member_ids": [
+        2,
+        108
+      ],
+      "primary_url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+      "importance": 5,
+      "why_it_matters": "Publishers can apply AI training preferences across several AI companies at once instead of setting them one by one.",
+      "sources": [
+        "OpenAI",
+        "The Verge"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "OpenAI expands violence-prevention safeguards for ChatGPT and commits to public safety reporting",
+      "member_ids": [
+        0
+      ],
+      "primary_url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+      "importance": 5,
+      "why_it_matters": "It adds earlier interventions and new protections for teens in ChatGPT.",
+      "sources": [
+        "OpenAI"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI reportedly secures about $11B toward a round that was targeted at $30B",
+      "member_ids": [
+        51,
+        72,
+        73
+      ],
+      "primary_url": "https://techmeme.com/261030/p31",
+      "importance": 4,
+      "why_it_matters": "A smaller-than-planned round at a lower valuation signals investor pullback from AI spending.",
+      "sources": [
+        "Hacker News",
+        "Techmeme"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Reddit says Google AI Mode and AI Overviews are driving away search referrals to the open web",
+      "member_ids": [
+        113,
+        127
+      ],
+      "primary_url": "https://the-decoder.com/googles-ai-mode-doesnt-drive-traffic-for-anybody-reddit-ceo-huffman-warns-the-entire-web",
+      "importance": 4,
+      "why_it_matters": "Reddit reports losing over one million Google referrals per week in October, a sign that AI answers reduce traffic to content sites.",
+      "sources": [
+        "Latent Space",
+        "The Decoder"
+      ],
+      "corroboration": 2
+    }
+  ],
+  "card_path": "out/2026-10-31/card.jpg",
+  "candidate_count": 149,
+  "unsupported_terms": [
+    "AI-run",
+    "Adds"
+  ]
+}
