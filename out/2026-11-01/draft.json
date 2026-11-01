@@ -1,0 +1,234 @@
+{
+  "date": "2026-11-01",
+  "post": {
+    "hook": "DeepSeek takes aim at Claude Code",
+    "subhook": "Plus ChatGPT exploits, LLM-driven malware and OpenAI's funding gap",
+    "stories": [
+      {
+        "headline": "DeepSeek open-sources a coding agent aimed at Claude Code",
+        "detail": "The research prototype is a proactive agent that can monitor group chats for coding issues.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261101/p2",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "ChatGPT accounts taken over via artifact sandbox exploit",
+        "detail": "Parameter Labs describe a flaw in ChatGPT's sandboxed HTML previews that could compromise user accounts.",
+        "source_name": "Simon Willison",
+        "source_url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic bars Claude from cloning and reverse-engineering games",
+        "detail": "Reporting says the restrictions also catch legitimate developers and basic troubleshooting tasks.",
+        "source_name": "Tom's Hardware",
+        "source_url": "https://www.tomshardware.com",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Volta-Autodoxer malware uses LLMs to rank victims",
+        "detail": "The infostealer uses AI tools to collect and rank victim data, including credentials and payment details.",
+        "source_name": "Wired",
+        "source_url": "https://wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI raises about $11B against a $30B target",
+        "detail": "The shortfall is being read as a sign that major investors are pulling back from AI funding.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round",
+        "category": "FUNDING",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude Duet research preview opens to US Pro, Max and Ultra",
+        "detail": "Eligible US subscribers on those plans can now try Claude Duet.",
+        "source_name": "TechMyMoney",
+        "source_url": "https://techmymoney.com",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Claude Cowork arrives on mobile and web",
+        "detail": "Anthropic widens where users can run its Cowork agent product.",
+        "source_name": "Mashable",
+        "source_url": "https://mashable.com",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Deepgram acquires Daily, maker of Pipecat",
+        "detail": "Voice AI consolidates as Deepgram buys the company behind the open-source Pipecat framework.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261101/p3",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "ChatGPT share-link bug could run attacker code",
+        "detail": "Opening a malicious share link could run attacker code in the viewer's logged-in ChatGPT session.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261031/p11",
+        "category": "SECURITY",
+        "tier": "brief"
+      }
+    ],
+    "caption": "DeepSeek has open-sourced a coding agent pitched squarely at Claude Code, and ChatGPT had a rough day on security.\n\n1. DeepSeek releases a research prototype of a proactive coding agent that can monitor group chats for coding issues (Techmeme)\n2. Claude Duet research preview opens to eligible US Pro, Max and Ultra subscribers (TechMyMoney)\n3. Claude Cowork comes to mobile and web (Mashable)\n4. Parameter Labs describe taking over ChatGPT accounts through its sandboxed HTML previews (Simon Willison)\n5. Anthropic restricts Claude from cloning and reverse-engineering video games, and reporting says legitimate developers are caught too (Tom's Hardware)\n6. The Volta-Autodoxer infostealer uses AI tools to collect and rank victim data, including credentials and payment details (Wired)\n7. OpenAI raises about $11B of a $30B target, a shortfall read as investors pulling back (TechCrunch)\n8. Deepgram acquires Daily, the company behind the open-source Pipecat voice framework (Techmeme)\n9. A ChatGPT share-link bug could run attacker code in a viewer's logged-in session (Techmeme)\n\nBe careful which ChatGPT links you open today. 🔒",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "DeepSeek",
+      "ClaudeCode",
+      "Anthropic",
+      "ChatGPT",
+      "OpenAI",
+      "Cybersecurity",
+      "VoiceAI",
+      "AIAgents",
+      "DevTools"
+    ],
+    "image_query": "code on screen"
+  },
+  "clusters": [
+    {
+      "headline": "DeepSeek open-sources a Super-Agent prototype and coding agent to challenge Claude Code",
+      "member_ids": [
+        4,
+        6,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        51
+      ],
+      "primary_url": "https://techmeme.com/261101/p2",
+      "importance": 6,
+      "why_it_matters": "DeepSeek released a research prototype of a proactive coding agent that can monitor group chats for coding issues, a direct challenge to Anthropic's Claude Code.",
+      "sources": [
+        "Investing.com",
+        "Stocktwits",
+        "Bloomberg.com",
+        "BusinessToday Malaysia",
+        "Startup Fortune",
+        "FourWeekMBA",
+        "Pasquale Pillitteri",
+        "Global Times",
+        "Techmeme"
+      ],
+      "corroboration": 9
+    },
+    {
+      "headline": "Claude Duet research preview opens to US Pro, Max and Ultra users",
+      "member_ids": [
+        3,
+        5
+      ],
+      "primary_url": "https://techmymoney.com",
+      "importance": 5,
+      "why_it_matters": "Eligible US subscribers can now try Claude Duet in a research preview.",
+      "sources": [
+        "Tech My Money",
+        "Engadget"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Anthropic brings Claude Cowork to mobile and web",
+      "member_ids": [
+        0
+      ],
+      "primary_url": "https://mashable.com",
+      "importance": 5,
+      "why_it_matters": "Claude Cowork becomes available on mobile and web, widening where users can run the agent product.",
+      "sources": [
+        "Mashable"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Researchers take over ChatGPT accounts through an artifact sandbox exploit",
+      "member_ids": [
+        53
+      ],
+      "primary_url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
+      "importance": 5,
+      "why_it_matters": "Parameter Labs describe an exploit in ChatGPT's sandboxed HTML previews that could compromise user accounts.",
+      "sources": [
+        "Simon Willison"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Anthropic restricts Claude from cloning video games and reverse-engineering them",
+      "member_ids": [
+        1,
+        37
+      ],
+      "primary_url": "https://www.tomshardware.com",
+      "importance": 4,
+      "why_it_matters": "The new restrictions also affect legitimate developers and basic troubleshooting tasks, according to the reporting.",
+      "sources": [
+        "Tom's Hardware",
+        "Hacker News"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Malware uses LLMs to rank victims and autodox them",
+      "member_ids": [
+        36,
+        91
+      ],
+      "primary_url": "https://wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware",
+      "importance": 4,
+      "why_it_matters": "The Volta-Autodoxer infostealer uses AI tools to collect and rank victim data, including credentials and payment details.",
+      "sources": [
+        "Hacker News",
+        "WIRED"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "OpenAI raises about $11B of a $30B target in latest funding round",
+      "member_ids": [
+        75,
+        87
+      ],
+      "primary_url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round",
+      "importance": 4,
+      "why_it_matters": "The shortfall against the $30B target signals that major investors are pulling back from AI funding.",
+      "sources": [
+        "TechCrunch",
+        "The Decoder"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Deepgram acquires Daily, maker of the Pipecat voice AI framework",
+      "member_ids": [
+        52
+      ],
+      "primary_url": "https://techmeme.com/261101/p3",
+      "importance": 4,
+      "why_it_matters": "Consolidation in voice AI as Deepgram buys the company behind the open-source Pipecat framework.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-01/card.jpg",
+  "candidate_count": 103,
+  "unsupported_terms": [
+    "Eligible",
+    "LLM-driven",
+    "Opening",
+    "TechMyMoney"
+  ]
+}
