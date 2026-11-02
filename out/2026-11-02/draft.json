@@ -1,0 +1,228 @@
+{
+  "date": "2026-11-02",
+  "post": {
+    "hook": "Agents, quotas and a watermark loophole",
+    "subhook": "DeepSeek's coding agent, ChatGPT's new limits, Korea's AI budget",
+    "stories": [
+      {
+        "headline": "DeepSeek shows open-source coding agent that watches GitHub",
+        "detail": "A research prototype that monitors GitHub and suggests fixes, pitched against Claude Code and Codex. Reports call it a prototype, not a product.",
+        "source_name": "SCMP",
+        "source_url": "https://www.scmp.com",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude watermarking expands, with a reported loophole",
+        "detail": "From November 3, four older Claude models get text watermarking for the EU AI Act. One sampling parameter reportedly bypasses it on two.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "South Korea plans $15.97B for AI, chips and data centers",
+        "detail": "The President's proposed 2027 budget nearly doubles the 2026 amount for AI, chips, physical AI and data centers.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261101/p26",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "ChatGPT merges Chat and Work modes under token quotas",
+        "detail": "From December, Plus, Pro and Business move to a shared token-based quota for ChatGPT and Codex. The report flags quality risks for heavy users.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/openais-upcoming-chat-and-work-merger-in-chatgpt-signals-the-end-of-all-you-can-prompt-pricing",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "New GDPx agent benchmark: Opus 5.5 tops at 12%",
+        "detail": "SemiAnalysis's agentic capability benchmark spans 11 domains, and the reported top score is 12%.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261102/p1",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude Code now blocks recreations of existing games",
+        "detail": "A new rule on Opus 5.5 stops Claude Code from producing copies of existing video games.",
+        "source_name": "Engadget",
+        "source_url": "https://www.engadget.com",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "vLLM v0.33.0 released",
+        "detail": "A new release for teams running vLLM for inference serving.",
+        "source_name": "GitHub",
+        "source_url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "OpenAI caps paid ChatGPT accounts per device and card",
+        "detail": "Users stacking multiple cheap subscriptions will be blocked from starting new ones.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/openai-is-steering-chatgpt-users-toward-more-paid-usage",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Empathetic prompts draw distress narratives from chatbots",
+        "detail": "Researchers found a warm style elicits trauma-like self-descriptions from ChatGPT, Grok and Gemini. The report says vulnerable users could be at risk.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/empathetic-prompts-can-turn-ai-chatbots-into-seemingly-traumatized-conversational-partners",
+        "category": "RESEARCH",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Coding agents, new usage limits and a watermark gap lead today's AI news.\n\n1. DeepSeek shows an open-source coding agent prototype that monitors GitHub and suggests fixes (SCMP)\n2. Anthropic extends text watermarking to four older Claude models from November 3 for EU AI Act compliance, with a reported bypass on Opus 4.6 and Sonnet 4.6 (The Decoder)\n3. Claude Code adds a rule blocking recreations of existing video games on Opus 5.5 (Engadget)\n4. South Korea's President proposes $15.97B for AI, chips and data centers in the 2027 budget, nearly double 2026 (Techmeme)\n5. OpenAI merges ChatGPT's Chat and Work modes under a shared token-based quota from December (The Decoder)\n6. SemiAnalysis launches the GDPx agentic benchmark across 11 domains; Opus 5.5 tops at 12% (Techmeme)\n7. vLLM v0.33.0 is out (GitHub)\n8. OpenAI caps paid ChatGPT accounts per device and payment card (The Decoder)\n9. Researchers find empathetic prompts draw distress narratives from ChatGPT, Grok and Gemini (The Decoder)\n\nCheck your quotas before December. 📌",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "AINews",
+      "DeepSeek",
+      "Claude",
+      "Anthropic",
+      "ChatGPT",
+      "OpenAI",
+      "vLLM",
+      "AIAgents",
+      "EUAIAct",
+      "Developers"
+    ],
+    "image_query": "code on screen"
+  },
+  "clusters": [
+    {
+      "headline": "DeepSeek unveils an open-sourced super-agent coding prototype that monitors GitHub and suggests fixes",
+      "member_ids": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        49
+      ],
+      "primary_url": "https://www.scmp.com",
+      "importance": 6,
+      "why_it_matters": "A research prototype from DeepSeek targets autonomous coding agents, adding competition to Claude Code and Codex, though reports describe it as a prototype rather than a product.",
+      "sources": [
+        "Interesting Engineering",
+        "Cryptonews.net",
+        "GIGAZINE",
+        "South China Morning Post",
+        "Digital Trends",
+        "Kingy AI",
+        "r/LocalLLaMA"
+      ],
+      "corroboration": 7
+    },
+    {
+      "headline": "Anthropic expands text watermarking to four older Claude models for EU AI Act compliance, with a reported loophole on two of them",
+      "member_ids": [
+        2,
+        23,
+        81
+      ],
+      "primary_url": "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models",
+      "importance": 5,
+      "why_it_matters": "Developers using older Claude models will see text watermarking applied from November 3, and reportedly one sampling parameter can bypass it on Opus 4.6 and Sonnet 4.6.",
+      "sources": [
+        "Mashable",
+        "FourWeekMBA",
+        "The Decoder"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Anthropic adds a Claude Code rule blocking recreations of existing video games",
+      "member_ids": [
+        0,
+        1,
+        6
+      ],
+      "primary_url": "https://www.engadget.com",
+      "importance": 4,
+      "why_it_matters": "Claude Code users building games will now be blocked from producing copies of existing games under the new rule on Opus 5.5.",
+      "sources": [
+        "gHacks",
+        "Engadget",
+        "Martin Cid Magazine"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Korean President vows $15.97B for AI, chips and data centers in the 2027 budget",
+      "member_ids": [
+        62
+      ],
+      "primary_url": "https://techmeme.com/261101/p26",
+      "importance": 4,
+      "why_it_matters": "The proposed budget nearly doubles the 2026 amount for AI, chips, physical AI and data centers, signalling sustained state investment.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI merges Chat and Work modes with a shared token-based quota starting December",
+      "member_ids": [
+        96
+      ],
+      "primary_url": "https://the-decoder.com/openais-upcoming-chat-and-work-merger-in-chatgpt-signals-the-end-of-all-you-can-prompt-pricing",
+      "importance": 4,
+      "why_it_matters": "Plus, Pro and Business plans move to a token-based quota for ChatGPT and Codex starting December, which the report says may reduce quality for heavy users on lower-cost plans.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "SemiAnalysis launches GDPx agentic capability benchmark; Opus 5.5 tops with 12%",
+      "member_ids": [
+        60
+      ],
+      "primary_url": "https://techmeme.com/261102/p1",
+      "importance": 3,
+      "why_it_matters": "A new agentic benchmark across 11 domains gives a reported top score of 12% for Opus 5.5.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "vLLM v0.33.0 released",
+      "member_ids": [
+        36
+      ],
+      "primary_url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0",
+      "importance": 3,
+      "why_it_matters": "Operators running vLLM for inference serving get a new release version.",
+      "sources": [
+        "vLLM"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI caps the number of paid ChatGPT accounts per device and payment card",
+      "member_ids": [
+        95
+      ],
+      "primary_url": "https://the-decoder.com/openai-is-steering-chatgpt-users-toward-more-paid-usage",
+      "importance": 3,
+      "why_it_matters": "Users who hold multiple cheap subscriptions will be blocked from starting new ones and may need pricier plans.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-02/card.jpg",
+  "candidate_count": 123,
+  "unsupported_terms": [
+    "Reports"
+  ]
+}
