@@ -1,0 +1,234 @@
+{
+  "date": "2026-11-03",
+  "post": {
+    "hook": "An LLM rewrote another model's weights",
+    "subhook": "Plus Anthropic's RSI warning and ~400 apps hiding deepfake tools",
+    "stories": [
+      {
+        "headline": "MIT uses GPT-6 Astra to edit Qwen's open weights directly",
+        "detail": "One LLM edited an open model's weights and raised its math benchmark score, a new technique for modifying open models.",
+        "source_name": "Latent Space",
+        "source_url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude Code will no longer clone existing video games",
+        "detail": "Anthropic updated Claude Code's system prompt to stop it re-creating existing games, while still allowing game development.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic plans a trail showing when text was made with AI",
+        "detail": "Claude output will carry a provenance signal that reveals AI authorship, which could change how text is verified.",
+        "source_name": "Yahoo Finance",
+        "source_url": "https://uk.finance.yahoo.com",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic warns it is very close to recursive self-improvement",
+        "detail": "The report describes a warning that AI is near training itself, not a shipped capability. It matters for safety planning.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Hundreds of mundane AI apps hide abusive deepfake features",
+        "detail": "WIRED found roughly 400 apps and sites with hidden features for generating sexually abusive and violent AI images and video.",
+        "source_name": "WIRED",
+        "source_url": "https://wired.com/story/hundreds-of-mundane-ai-apps-are-hiding-abusive-deepfake-features",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI pilots grid program to free up to 1,000 MW in emergencies",
+        "detail": "The Grid Protectors Program, run with utilities at a Georgia data center, aims to protect nearby electricity costs.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/grid-protectors-program",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "OpenAI ups bug bounties, plans security sprint with Cathedral",
+        "detail": "Outside researchers are invited in and rewards for critical findings are going up.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+        "category": "SECURITY",
+        "tier": "brief"
+      },
+      {
+        "headline": "NYT and publishers sue Brave over AI scraping, paywall bypass",
+        "detail": "The suit alleges scraped content is distributed to AI companies, which could shape how publisher content is licensed.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "xAI cuts Grok Bot usage limits over high costs",
+        "detail": "Usage limits on the AI agent are being reduced because of operating costs.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs",
+        "category": "BUSINESS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "One LLM edited another model's weights today, and it worked.\n\n1. MIT researchers used GPT-6 Astra to edit Qwen's open weights directly, raising a math benchmark score. (Latent Space)\n2. Anthropic updated Claude Code's system prompt so it won't re-create existing video games; game development is still allowed. (The Verge)\n3. Anthropic says Claude output will carry a trail showing it was made with AI. (Yahoo Finance)\n4. Anthropic warns it is very close to recursive self-improvement capability. It's a warning, not a shipped feature. (TechCrunch)\n5. Roughly 400 mundane-looking AI apps and sites hide features for generating abusive deepfake images and video. (WIRED)\n\nBriefs:\n6. OpenAI's Grid Protectors Program pilots freeing up to 1,000 MW during emergencies at a Georgia data center. (OpenAI)\n7. OpenAI is partnering with Cathedral on a security sprint and raising bug bounty rewards. (OpenAI)\n8. The NYT and other publishers are suing Brave over alleged AI scraping and paywall bypass. (The Verge)\n9. xAI is cutting Grok Bot usage limits, citing high costs. (TechCrunch)\n\nThat's the day. Back tomorrow.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "MachineLearning",
+      "LLM",
+      "Anthropic",
+      "OpenAI",
+      "ClaudeCode",
+      "AISafety",
+      "Deepfakes",
+      "OpenWeights",
+      "AINews"
+    ],
+    "image_query": "computer code screen"
+  },
+  "clusters": [
+    {
+      "headline": "GPT-6 Astra used to edit Qwen's open weights directly, raising a math benchmark score",
+      "member_ids": [
+        16,
+        28,
+        31,
+        65,
+        82,
+        61,
+        118
+      ],
+      "primary_url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of",
+      "importance": 6,
+      "why_it_matters": "MIT researchers reported editing an open model's weights with another LLM to improve math performance, a new technique for modifying open models.",
+      "sources": [
+        "VentureBeat",
+        "TOKENPOST",
+        "Kingy AI",
+        "r/LocalLLaMA",
+        "Hacker News",
+        "Latent Space"
+      ],
+      "corroboration": 6
+    },
+    {
+      "headline": "Anthropic limits Claude Code from being used to clone existing video games",
+      "member_ids": [
+        7,
+        11,
+        13,
+        96,
+        86
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+      "importance": 5,
+      "why_it_matters": "Anthropic updated Claude Code's system prompt to stop it re-creating existing games, while still allowing game development.",
+      "sources": [
+        "CNET",
+        "Polygon.com",
+        "Tom's Hardware",
+        "The Verge",
+        "r/LocalLLaMA"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Anthropic says it will add a trail showing whether text was made with AI",
+      "member_ids": [
+        14
+      ],
+      "primary_url": "https://uk.finance.yahoo.com",
+      "importance": 5,
+      "why_it_matters": "Claude output will carry a provenance signal that reveals AI authorship, which could change how text is verified.",
+      "sources": [
+        "Yahoo Finance UK"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Anthropic warns it is very close to recursive self-improvement capability",
+      "member_ids": [
+        98
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai",
+      "importance": 5,
+      "why_it_matters": "A lab warning that AI is close to training itself would matter for safety planning, though the report describes a warning rather than a shipped capability.",
+      "sources": [
+        "TechCrunch"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Hundreds of mundane AI apps hide sexually abusive deepfake features",
+      "member_ids": [
+        133
+      ],
+      "primary_url": "https://wired.com/story/hundreds-of-mundane-ai-apps-are-hiding-abusive-deepfake-features",
+      "importance": 5,
+      "why_it_matters": "WIRED found roughly 400 apps and sites with hidden features for generating violent AI images and video, a direct harm to users.",
+      "sources": [
+        "WIRED"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI launches Grid Protectors Program with utilities for data center grid reliability",
+      "member_ids": [
+        0,
+        111
+      ],
+      "primary_url": "https://openai.com/index/grid-protectors-program",
+      "importance": 4,
+      "why_it_matters": "OpenAI will pilot a program to free up to 1,000 MW of power during emergencies at a Georgia data center, aimed at protecting nearby electricity costs.",
+      "sources": [
+        "OpenAI",
+        "The Verge"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "OpenAI partners with Cathedral for a security sprint and raises bug bounty rewards",
+      "member_ids": [
+        3,
+        5,
+        77
+      ],
+      "primary_url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+      "importance": 3,
+      "why_it_matters": "OpenAI is inviting outside researchers and raising rewards for critical findings, which may surface vulnerabilities in its own systems.",
+      "sources": [
+        "OpenAI",
+        "Techmeme"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "NYT and other publishers sue Brave over alleged AI scraping and paywall bypass",
+      "member_ids": [
+        109,
+        114
+      ],
+      "primary_url": "https://theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times",
+      "importance": 3,
+      "why_it_matters": "The lawsuit alleges that scraped content is distributed to AI companies, which could shape how publisher content is licensed.",
+      "sources": [
+        "TechCrunch",
+        "The Verge"
+      ],
+      "corroboration": 2
+    }
+  ],
+  "card_path": "out/2026-11-03/card.jpg",
+  "candidate_count": 172,
+  "unsupported_terms": [
+    "Briefs",
+    "NYT"
+  ]
+}
