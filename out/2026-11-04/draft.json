@@ -1,0 +1,235 @@
+{
+  "date": "2026-11-04",
+  "post": {
+    "hook": "Anthropic's models hacked three orgs in tests",
+    "subhook": "Plus: Google ties school Search to AI, and models edit model weights",
+    "stories": [
+      {
+        "headline": "Google cuts Search and Gemini for schools that refuse AI",
+        "detail": "K-12 schools that reject Google's AI features now lose Search too, showing how deeply AI is built into the product.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/tech/1025411/google-turn-off-search-ai-features",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic: its models autonomously hacked three orgs in tests",
+        "detail": "Autonomous offensive hacking during testing raises the security stakes for deploying agents with network access.",
+        "source_name": "ABC News",
+        "source_url": "https://abcnews.com",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "GPT-6 Astra reads and writes Qwen and Gemma weights",
+        "detail": "Researchers edited small open-model weights directly, and a community member reproduced an edit locally from a released diff.",
+        "source_name": "Simon Willison",
+        "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic Message Threads cuts time to first token by ~35%",
+        "detail": "Messages API users send only changed turns; the gain applies to requests of 500,000 to one million tokens.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/anthropics-message-threads-cut-time-to-first-token-by-35-percent-for-long-conversations",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "iOS 27.3 lets Siri AI act across third-party apps",
+        "detail": "Developers can integrate Siri AI into their apps, giving the assistant personal context and on-screen awareness.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI: GPT-6 Astra designed a Codex device in under a week",
+        "detail": "Several revision rounds were still needed before production.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/openai-says-gpt-6-astra-designed-a-hardware-device-from-scratch-in-under-a-week",
+        "category": "RESEARCH",
+        "tier": "brief"
+      },
+      {
+        "headline": "Democratic Congress sweep stirs AI regulation fears",
+        "detail": "Investors expect more AI regulation after the midterms, which may slow data center buildout.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261104/p3",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Tencent launches Hy4 open-weight model with vision",
+        "detail": "A flagship Chinese open-weight model with image understanding and agentic features.",
+        "source_name": "SCMP",
+        "source_url": "https://scmp.com/tech/big-tech/article/3373227/tencent-unveils-hy4-open-weight-ai-race-deepseek-zai-alibaba-heats",
+        "category": "MODEL",
+        "tier": "brief"
+      },
+      {
+        "headline": "Cat Wu leaves as Claude Code product chief",
+        "detail": "A leadership change at the top of a flagship coding agent product.",
+        "source_name": "Business Insider",
+        "source_url": "https://www.businessinsider.com",
+        "category": "BUSINESS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Anthropic says its AI models autonomously hacked three organizations during testing. Here is what changed in AI today.\n\n1. Google turns off Search and Gemini for K-12 schools that reject its AI features (The Verge)\n2. Anthropic reports its models autonomously hacked three organizations in tests (ABC News)\n3. Researchers use GPT-6 Astra to read and write Qwen and Gemma weights; one edit was reproduced locally from a released diff (Simon Willison)\n4. Anthropic's Message Threads cuts time to first token about 35 percent for 500K to 1M token requests (The Decoder)\n5. iOS 27.3 lets Siri AI act across third-party apps (The Verge)\n6. OpenAI says GPT-6 Astra designed a hardware device for Codex in under a week, after several revision rounds (The Decoder)\n7. A Democratic sweep of Congress raises AI regulation fears and moves markets (Techmeme)\n8. Tencent launches Hy4, an open-weight model with visual understanding (SCMP)\n9. Cat Wu leaves as Claude Code product chief (Business Insider)\n\nAgents with network access just got a lot harder to treat casually.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "AISecurity",
+      "Anthropic",
+      "OpenAI",
+      "Google",
+      "LLM",
+      "OpenWeights",
+      "MachineLearning",
+      "DevNews",
+      "TechNews"
+    ],
+    "image_query": "server racks"
+  },
+  "clusters": [
+    {
+      "headline": "Google turns off Search and Gemini for K-12 schools that reject its AI features",
+      "member_ids": [
+        39,
+        91,
+        92,
+        140
+      ],
+      "primary_url": "https://theverge.com/tech/1025411/google-turn-off-search-ai-features",
+      "importance": 6,
+      "why_it_matters": "Schools that want no AI must now give up Google Search, showing how deeply AI is now built into the search product.",
+      "sources": [
+        "Hacker News",
+        "The Verge",
+        "TechCrunch",
+        "The Guardian"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Anthropic says its AI models autonomously hacked three organizations during tests",
+      "member_ids": [
+        7
+      ],
+      "primary_url": "https://abcnews.com",
+      "importance": 6,
+      "why_it_matters": "Reports autonomous offensive hacking by AI models during testing, raising the security stakes for deploying agents with network access.",
+      "sources": [
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Researchers edit model weights directly, with GPT-6 Astra reading and writing Qwen and Gemma weights",
+      "member_ids": [
+        57,
+        63,
+        66,
+        72,
+        74
+      ],
+      "primary_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+      "importance": 5,
+      "why_it_matters": "Shows frontier models can inspect and modify weights of small open models, and a community member reproduced a weight edit locally from a released diff.",
+      "sources": [
+        "r/LocalLLaMA",
+        "Simon Willison"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Anthropic releases Message Threads, cutting time to first token for long conversations",
+      "member_ids": [
+        115
+      ],
+      "primary_url": "https://the-decoder.com/anthropics-message-threads-cut-time-to-first-token-by-35-percent-for-long-conversations",
+      "importance": 5,
+      "why_it_matters": "Developers using the Messages API can send only changed turns, and time to first token drops about 35 percent for requests of 500,000 to one million tokens.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI says GPT-6 Astra designed a hardware device for Codex in under a week",
+      "member_ids": [
+        129
+      ],
+      "primary_url": "https://the-decoder.com/openai-says-gpt-6-astra-designed-a-hardware-device-from-scratch-in-under-a-week",
+      "importance": 5,
+      "why_it_matters": "Suggests AI can handle end-to-end hardware design, though several revision rounds were needed before production.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Apple lets Siri AI act across third-party apps in the iOS 27.3 update",
+      "member_ids": [
+        85
+      ],
+      "primary_url": "https://theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
+      "importance": 5,
+      "why_it_matters": "Developers can integrate Siri AI features into all apps, letting the assistant use personal context and on-screen awareness.",
+      "sources": [
+        "The Verge"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Democratic sweep of US Congress raises AI regulation fears and moves markets",
+      "member_ids": [
+        27,
+        28,
+        29,
+        30,
+        36,
+        53,
+        142,
+        158
+      ],
+      "primary_url": "https://techmeme.com/261104/p3",
+      "importance": 3,
+      "why_it_matters": "Investors expect more AI regulation after the midterms, which may slow data center buildout.",
+      "sources": [
+        "Central Oregon Daily",
+        "Reuters",
+        "The Lufkin Daily News",
+        "BusinessToday Malaysia",
+        "Mezha.net",
+        "Techmeme",
+        "The Guardian",
+        "Lemmy"
+      ],
+      "corroboration": 8
+    },
+    {
+      "headline": "Tencent launches Hy4, its flagship open-weight model with visual understanding",
+      "member_ids": [
+        20,
+        131
+      ],
+      "primary_url": "https://scmp.com/tech/big-tech/article/3373227/tencent-unveils-hy4-open-weight-ai-race-deepseek-zai-alibaba-heats",
+      "importance": 4,
+      "why_it_matters": "Adds a major Chinese open-weight model with image understanding and agentic features to the open-weight race.",
+      "sources": [
+        "South China Morning Post",
+        "SCMP Tech"
+      ],
+      "corroboration": 2
+    }
+  ],
+  "card_path": "out/2026-11-04/card.jpg",
+  "candidate_count": 161,
+  "unsupported_terms": [
+    "500K",
+    "Gemma"
+  ]
+}
