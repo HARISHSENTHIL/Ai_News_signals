@@ -1,0 +1,230 @@
+{
+  "date": "2026-11-05",
+  "post": {
+    "hook": "AI patched 948 Linux kernel root bugs",
+    "subhook": "Plus open Kimi weights, Google's school AI rule and midterm fallout",
+    "stories": [
+      {
+        "headline": "OpenAI pipeline patches 948 Linux kernel root bugs",
+        "detail": "An autonomous pipeline found, validated and patched 948 privilege-escalation bugs in the Linux kernel.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "GPT-6 Astra edits another model's weights directly",
+        "detail": "Per MIT researchers, it lifted a Qwen model's math accuracy from 7.9 to 48.1% by changing 0.016% of weights; critics cite standard ML work.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/gpt-6-astra-sees-the-matrix-and-reprograms-other-ai-models-directly-through-their-weights",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Schools that block Google's AI will lose Search in 2027",
+        "detail": "Google is moving AI Overviews into school products, drawing backlash from educators and parents.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/schools-that-turn-off-googles-ai-will-lose-search-too-starting-in-2027",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Moonshot opens weights for 2.8T-parameter Kimi K3.1 Pro",
+        "detail": "Alibaba Cloud says its SuperPoD runs the model on day zero via vLLM and SGLang.",
+        "source_name": "Pandaily",
+        "source_url": "https://pandaily.com/alibaba-cloud-lingjun-zhenwu-m890-day-zero-kimi-k3-1-pro-zhongwei-panmai-920",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI Images 2.6 adds GIFs and finer editing",
+        "detail": "Faster generation, GIF creation and new editing controls roll out across ChatGPT, Codex and the API.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/introducing-images-2-6",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI to acquire Pierre to expand Codex tooling",
+        "detail": "Pierre's code-tooling libraries already power Codex and will join OpenAI's coding-agent infrastructure.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/openai-to-acquire-pierre",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Midterm winners back data center moratoriums",
+        "detail": "Newly elected officials favor moratoriums and stricter building rules, which could slow the AI data center buildout.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/policy/1026365/data-centers-midterms-results",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Korean markets hit circuit breakers on AI rule fears",
+        "detail": "Seoul shares fell over 5 percent as KOSPI and KOSDAQ halted on fears a Democratic sweep brings stricter AI regulation.",
+        "source_name": "Yonhap",
+        "source_url": "https://en.yna.co.kr",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Analysts: Democratic sweep could slow US AI, aid China",
+        "detail": "Analysts expect stricter AI oversight from the new Congress to slow US AI development while China gains ground.",
+        "source_name": "SCMP",
+        "source_url": "https://scmp.com/tech/big-tech/article/3373295/how-democratic-sweep-could-slow-ai-growth-us-and-help-chinas-ambitions",
+        "category": "POLICY",
+        "tier": "brief"
+      }
+    ],
+    "caption": "An autonomous OpenAI pipeline found, validated and patched 948 Linux kernel privilege-escalation bugs. Here's what else changed today.\n\n1. OpenAI's pipeline patched 948 Linux kernel root bugs (OpenAI)\n2. MIT researchers say GPT-6 Astra lifted a Qwen model's math accuracy from 7.9 to 48.1 percent by editing 0.016 percent of its weights; critics say it was standard ML engineering (The Decoder)\n3. Starting in 2027, schools that block Google's AI will lose Search too (The Decoder)\n4. Moonshot released open weights for the 2.8T-parameter Kimi K3.1 Pro, with day-zero Alibaba Cloud support via vLLM and SGLang (Pandaily)\n5. OpenAI launched Images 2.6 with GIF creation and finer editing across ChatGPT, Codex and the API (OpenAI)\n6. OpenAI is acquiring Pierre, whose libraries already power Codex (OpenAI)\n7. Newly elected officials favor data center moratoriums and building limits (The Verge)\n8. Korean markets hit circuit breakers on US AI regulation fears (Yonhap)\n9. Analysts say the Democratic sweep could slow US AI and help China (SCMP)\n\nSecurity work got faster today; the politics got harder. 🔐",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "OpenAI",
+      "Linux",
+      "Cybersecurity",
+      "OpenWeights",
+      "MachineLearning",
+      "AIPolicy",
+      "DataCenters",
+      "DevNews"
+    ],
+    "image_query": "linux terminal code"
+  },
+  "clusters": [
+    {
+      "headline": "OpenAI's autonomous pipeline found, validated and patched 948 Linux kernel privilege-escalation bugs",
+      "member_ids": [
+        0
+      ],
+      "primary_url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+      "importance": 7,
+      "why_it_matters": "An AI pipeline produced validated patches for 948 kernel privilege-escalation vulnerabilities, which could speed up security fixes for Linux users.",
+      "sources": [
+        "OpenAI"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "MIT researchers show GPT-6 Astra can edit the weights of other AI models",
+      "member_ids": [
+        133,
+        20
+      ],
+      "primary_url": "https://the-decoder.com/gpt-6-astra-sees-the-matrix-and-reprograms-other-ai-models-directly-through-their-weights",
+      "importance": 6,
+      "why_it_matters": "GPT-6 Astra reportedly raised a Qwen model's math accuracy from 7.9 to 48.1 percent by changing 0.016 percent of its weights, a possible shortcut to model optimization that critics say relied on standard ML engineering.",
+      "sources": [
+        "The Decoder",
+        "R&D World"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Google moves AI Overviews into school products, and schools that block AI lose Search",
+      "member_ids": [
+        142,
+        100,
+        134,
+        159,
+        98
+      ],
+      "primary_url": "https://the-decoder.com/schools-that-turn-off-googles-ai-will-lose-search-too-starting-in-2027",
+      "importance": 5,
+      "why_it_matters": "Starting in 2027, schools that block AI on their devices will also lose Google Search, drawing backlash from educators and parents.",
+      "sources": [
+        "The Decoder",
+        "TechCrunch",
+        "WIRED",
+        "The Guardian"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Moonshot releases open weights for Kimi K3.1 Pro, with Alibaba Cloud day-zero support",
+      "member_ids": [
+        125
+      ],
+      "primary_url": "https://pandaily.com/alibaba-cloud-lingjun-zhenwu-m890-day-zero-kimi-k3-1-pro-zhongwei-panmai-920",
+      "importance": 6,
+      "why_it_matters": "Open weights for the 2.8T-parameter Kimi K3.1 Pro are now available, and Alibaba Cloud says its SuperPoD runs the model on day zero via vLLM and SGLang.",
+      "sources": [
+        "Pandaily"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI launches Images 2.6 with GIF creation and new editing and API controls",
+      "member_ids": [
+        3,
+        96,
+        128
+      ],
+      "primary_url": "https://openai.com/index/introducing-images-2-6",
+      "importance": 5,
+      "why_it_matters": "Images 2.6 adds faster generation, GIF creation and finer editing across ChatGPT, Codex and the API, so users and developers get new image tools now.",
+      "sources": [
+        "OpenAI",
+        "The Verge",
+        "The Decoder"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "OpenAI to acquire Pierre Computer Company to expand Codex tooling",
+      "member_ids": [
+        4,
+        140
+      ],
+      "primary_url": "https://openai.com/index/openai-to-acquire-pierre",
+      "importance": 5,
+      "why_it_matters": "The deal adds Pierre's code-tooling libraries, which already power Codex, to OpenAI's developer infrastructure for coding agents.",
+      "sources": [
+        "OpenAI",
+        "The Decoder"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Data centers lose ground in the US midterms, with voters backing moratoriums and building limits",
+      "member_ids": [
+        97,
+        149,
+        145,
+        92
+      ],
+      "primary_url": "https://theverge.com/policy/1026365/data-centers-midterms-results",
+      "importance": 4,
+      "why_it_matters": "Newly elected officials favor moratoriums and stricter building rules, which could slow the data center buildout that AI depends on.",
+      "sources": [
+        "The Verge",
+        "WIRED",
+        "MIT Tech Review",
+        "TechCrunch"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Markets in Korea drop after the US midterm results raise AI regulation fears",
+      "member_ids": [
+        38,
+        44
+      ],
+      "primary_url": "https://en.yna.co.kr",
+      "importance": 4,
+      "why_it_matters": "Seoul shares fell over 5 percent and KOSPI and KOSDAQ hit circuit breakers on fears that a Democratic sweep will bring stricter AI regulation.",
+      "sources": [
+        "조선일보",
+        "Yonhap News Agency"
+      ],
+      "corroboration": 2
+    }
+  ],
+  "card_path": "out/2026-11-05/card.jpg",
+  "candidate_count": 178,
+  "unsupported_terms": [
+    "Korean",
+    "Newly"
+  ]
+}
