@@ -1,0 +1,269 @@
+{
+  "date": "2026-11-06",
+  "post": {
+    "hook": "AI stocks slide as regulation fears grow",
+    "subhook": "Plus GPT-6 Cyber, Claude for finance and data center pushback",
+    "stories": [
+      {
+        "headline": "Nasdaq has worst day in 19 months on AI rule fears",
+        "detail": "Roughly $2tn was shaved off Nasdaq value as investors bet on tougher AI data center rules after the Democratic midterm win.",
+        "source_name": "The Guardian",
+        "source_url": "https://theguardian.com/business/2026/nov/05/nasdaq-heading-for-worst-day-in-18-months-as-wall-street-sustains-widespread-losses",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI releases GPT-6 Cyber for vulnerability work",
+        "detail": "OpenAI says it found 81 unknown Firefox vulnerabilities and built 948 working Linux kernel exploits, with stated scope limits.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/introducing-gpt-6-cyber",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI pledges no NDAs with officials on data centers",
+        "detail": "As voters reject AI data centers, OpenAI's voluntary commitments cover only facilities it operates. Meta warns of backlash.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude adds Personal Finance with bank connections",
+        "detail": "Anthropic's feature can analyze spending and connect to bank accounts, a consumer capability with privacy implications.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Midterm result clouds US AI data center buildout",
+        "detail": "Analysts warn moratoria and tighter oversight could slow the buildout. Wall Street cut Big Tech infrastructure spend forecasts.",
+        "source_name": "SCMP",
+        "source_url": "https://scmp.com/tech/big-tech/article/3373506/does-democratic-midterm-victory-spell-end-us-ai-data-centre-boom",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Moonshot AI reportedly seeks Blackwell GPUs via Europe",
+        "detail": "Reports say it wants inference and possibly training capacity abroad, testing how US chip export curbs are enforced.",
+        "source_name": "CNBC",
+        "source_url": "https://www.cnbc.com",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Meta adds voice and expressive avatars to Muse",
+        "detail": "Users can hold real-time voice conversations with Muse, and US users can video chat with an animated avatar.",
+        "source_name": "Meta",
+        "source_url": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Gemini Omni 1.2 Flash: 15-second clips, 30% cheaper",
+        "detail": "Available via the Gemini API and AI Studio with better reference adherence. The Decoder puts it at $0.07 per second at 720p.",
+        "source_name": "Google DeepMind",
+        "source_url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips",
+        "category": "MODEL",
+        "tier": "brief"
+      },
+      {
+        "headline": "METR: Anthropic is accelerating AI R&D",
+        "detail": "An independent assessment from METR says Anthropic's AI development is speeding up.",
+        "source_name": "METR",
+        "source_url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment",
+        "category": "RESEARCH",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Markets reacted hard to the prospect of tighter AI rules today 📉\n\n1. Nasdaq had its worst day in 19 months, with roughly $2tn shaved off as investors bet on tougher AI data center rules after the Democratic midterm win. (The Guardian)\n2. OpenAI released GPT-6 Cyber, a model that finds vulnerabilities, develops exploits and proposes fixes. OpenAI says it found 81 unknown Firefox vulnerabilities and built 948 working Linux kernel exploits. (OpenAI)\n3. Voters are rejecting AI data centers. OpenAI announced community commitments, including no NDAs with public officials, covering only facilities it operates. Meta warns of backlash. (The Verge)\n4. Anthropic rolled out Personal Finance for Claude, which can analyze spending and connect to bank accounts. (TechCrunch)\n5. Analysts say the midterm result could slow the US AI data center buildout, and Wall Street cut Big Tech infrastructure spending forecasts. (SCMP)\n6. Moonshot AI is reportedly seeking Nvidia Blackwell access through European data centers despite US chip curbs. (CNBC)\n7. Meta added voice conversations and expressive avatars to Muse, including video chat for US users. (Meta)\n8. Google rolled out Gemini Omni 1.2 Flash with 15-second clips, better reference adherence and a 30% lower price. (Google DeepMind)\n9. An independent METR assessment says Anthropic is accelerating AI R&D. (METR)\n\nPolicy moved the market today, and the models kept shipping.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "AINews",
+      "AIRegulation",
+      "DataCenters",
+      "Cybersecurity",
+      "OpenAI",
+      "Anthropic",
+      "Claude",
+      "Gemini",
+      "TechStocks"
+    ],
+    "image_query": "stock market screen"
+  },
+  "clusters": [
+    {
+      "headline": "Global tech stocks sell off as Nasdaq has its worst day in 19 months on fears of AI regulation after the Democratic midterm win",
+      "member_ids": [
+        42,
+        44,
+        48,
+        51,
+        63,
+        153,
+        154,
+        155,
+        57,
+        34
+      ],
+      "primary_url": "https://theguardian.com/business/2026/nov/05/nasdaq-heading-for-worst-day-in-18-months-as-wall-street-sustains-widespread-losses",
+      "importance": 8,
+      "why_it_matters": "Reporting says roughly $2tn was shaved off Nasdaq value as investors bet on tougher AI data center rules and an AI slowdown, which could affect AI company valuations and funding.",
+      "sources": [
+        "The Tech Buzz",
+        "Japan Wire by Kyodo News",
+        "KTSM 9 News",
+        "Yahoo Finance",
+        "Techmeme",
+        "The Guardian",
+        "Hacker News",
+        "Benzinga"
+      ],
+      "corroboration": 8
+    },
+    {
+      "headline": "OpenAI releases GPT-6 Cyber, a model that finds vulnerabilities, develops exploits and proposes fixes, with stated scope limits",
+      "member_ids": [
+        4,
+        109,
+        110,
+        145
+      ],
+      "primary_url": "https://openai.com/index/introducing-gpt-6-cyber",
+      "importance": 7,
+      "why_it_matters": "Security teams gain a model that can find and fix vulnerabilities; OpenAI says it found 81 previously unknown Firefox vulnerabilities and built 948 working Linux kernel exploits, which also raises dual-use concerns.",
+      "sources": [
+        "OpenAI",
+        "TechCrunch",
+        "The Verge",
+        "The Decoder"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Voters reject AI data centers; OpenAI announces community commitments including no NDAs with public officials; Meta warns of backlash",
+      "member_ids": [
+        61,
+        105,
+        107,
+        127,
+        39,
+        6
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
+      "importance": 6,
+      "why_it_matters": "OpenAI's voluntary pledges apply only to facilities it operates itself, while local opposition is growing and could slow AI infrastructure expansion.",
+      "sources": [
+        "Hacker News",
+        "TechCrunch",
+        "The Verge",
+        "The Decoder",
+        "Yahoo Finance",
+        "OpenAI"
+      ],
+      "corroboration": 6
+    },
+    {
+      "headline": "Anthropic rolls out a Personal Finance feature for Claude that can analyze spending and connect to bank accounts",
+      "member_ids": [
+        11,
+        12,
+        14,
+        15,
+        16
+      ],
+      "primary_url": "https://techcrunch.com",
+      "importance": 6,
+      "why_it_matters": "Claude users can now have their bank and spending data analyzed by the assistant, a consumer capability with privacy implications.",
+      "sources": [
+        "Reuters",
+        "9to5Mac",
+        "The Verge",
+        "Decrypt",
+        "TechCrunch"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Democrats' midterm victory raises questions about tighter AI regulation and the US AI data center buildout",
+      "member_ids": [
+        33,
+        50,
+        116,
+        134
+      ],
+      "primary_url": "https://scmp.com/tech/big-tech/article/3373506/does-democratic-midterm-victory-spell-end-us-ai-data-centre-boom",
+      "importance": 6,
+      "why_it_matters": "Analysts warn that proposed project moratoria and tighter oversight could slow the AI data center buildout, and Wall Street cut its Big Tech infrastructure spending forecasts.",
+      "sources": [
+        "The National Law Review",
+        "Ticker News",
+        "The Verge",
+        "SCMP Tech"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Moonshot AI reportedly seeks Nvidia Blackwell GPU access through European data centers despite US chip curbs",
+      "member_ids": [
+        18,
+        19,
+        20,
+        25
+      ],
+      "primary_url": "https://www.cnbc.com",
+      "importance": 5,
+      "why_it_matters": "Reports say Moonshot is looking for inference capacity and possibly training clusters abroad, which would test how US chip export curbs are enforced.",
+      "sources": [
+        "Yahoo Finance",
+        "Tom's Hardware",
+        "CNBC",
+        "Brave New Coin"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Meta expands Muse AI agent with voice conversations and expressive avatars, including video chat for US users",
+      "member_ids": [
+        23,
+        40,
+        104,
+        106
+      ],
+      "primary_url": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars",
+      "importance": 5,
+      "why_it_matters": "Users can now hold real-time voice conversations with Muse and video chat with an animated avatar in the US.",
+      "sources": [
+        "Meta Newsroom",
+        "Mashable SEA",
+        "TechCrunch",
+        "The Verge"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Google rolls out Gemini Omni 1.2 Flash: 15-second clips, better reference adherence and 30% lower price",
+      "member_ids": [
+        7,
+        69,
+        137
+      ],
+      "primary_url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips",
+      "importance": 5,
+      "why_it_matters": "Developers get longer AI video clips at lower cost through the Gemini API and AI Studio, at $0.07 per second at 720p according to The Decoder.",
+      "sources": [
+        "Google DeepMind",
+        "Techmeme",
+        "The Decoder"
+      ],
+      "corroboration": 3
+    }
+  ],
+  "card_path": "out/2026-11-06/card.jpg",
+  "candidate_count": 171,
+  "unsupported_terms": [
+    "Roughly"
+  ]
+}
