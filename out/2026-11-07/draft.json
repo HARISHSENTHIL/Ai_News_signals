@@ -1,0 +1,230 @@
+{
+  "date": "2026-11-07",
+  "post": {
+    "hook": "OpenAI's $1.25T round, Claude meets your bank",
+    "subhook": "Plus a 594B open-weight model and an audit of Anthropic's pace",
+    "stories": [
+      {
+        "headline": "OpenAI reportedly raising $11B at a $1.25T valuation",
+        "detail": "The reported round would put OpenAI among the world's most valuable companies; the report says it has not closed yet.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation",
+        "category": "FUNDING",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude can now connect to your bank and card accounts",
+        "detail": "Anthropic's new Personal Finance feature lets users ask Claude about their spending, bringing sensitive financial data into the assistant.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/anthropic-adds-bank-account-access-to-claude-so-users-can-track-their-spending",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Thinking Machines releases Inkling 2 Small, a 594B open-weight MoE",
+        "detail": "The lab says it leads western open-weight models, though its token usage rises sharply on agentic tasks.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/thinking-machines-inkling-2-small-claims-top-spot-among-western-open-weight-models",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "METR: Anthropic may have crossed its own acceleration threshold",
+        "detail": "METR says Anthropic's development pace roughly doubled, about 80% from AI-assisted research; Anthropic redacted key evidence.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/metr-finds-anthropic-may-have-crossed-its-own-ai-acceleration-warning-threshold-back-in-july",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "800+ exposed copies of ARTEX AI hacking tool found online",
+        "detail": "Censys found the exposed copies of the AI pentesting tool, which researchers link to several attacks including bank breaches.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic IPO valuation expectations reportedly fall to $1.1T-$1.3T",
+        "detail": "Investor pushback after a tech sell-off could affect the listing's timing and terms.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/anthropics-1-5-trillion-ipo-hits-resistance-as-investors-balk-at-valuation",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Free Chinese models near a top US model in hacking tests",
+        "detail": "DeepSeek and GLM came close to a top US cyber model in simulated network hacking tests.",
+        "source_name": "Wired",
+        "source_url": "https://wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking",
+        "category": "SECURITY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Meta rolls out Muse Wonder-trained models to all Meta AI users",
+        "detail": "Specialized models, including Active Memory and Active Focus, reach every Muse and Meta AI user starting Friday.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261106/p28",
+        "category": "MODEL",
+        "tier": "brief"
+      },
+      {
+        "headline": "US charges three in $100M+ AI CEO impersonation scheme",
+        "detail": "The three foreign nationals are accused of using AI voice and image fakes of executives to steal over $100M.",
+        "source_name": "The Guardian",
+        "source_url": "https://theguardian.com/us-news/2026/nov/06/ai-ceo-impersonation-theft",
+        "category": "SECURITY",
+        "tier": "brief"
+      }
+    ],
+    "caption": "OpenAI's reported $1.25T valuation leads a day heavy on money and security.\n\n1. OpenAI is reportedly raising another $11B at a $1.25T valuation; the round has not closed yet. (TechCrunch)\n2. Anthropic adds Personal Finance to Claude, letting users connect bank and card accounts and ask about their spending. (The Decoder)\n3. Thinking Machines releases Inkling 2 Small, a 594B-parameter open-weight MoE it says leads western open-weight models. Token usage rises sharply on agentic tasks. (The Decoder)\n4. A METR audit suggests Anthropic may have crossed its own AI acceleration warning threshold in July, with about 80% of the speedup from AI-assisted research. Anthropic redacted key evidence. (The Decoder)\n5. Censys found 800+ publicly exposed copies of the ARTEX AI pentesting tool, which researchers link to bank breaches. (TechCrunch)\n6. Investor expectations for Anthropic's IPO valuation have reportedly dropped to $1.1T-$1.3T. (The Decoder)\n7. Free Chinese models including DeepSeek and GLM come close to a top US cyber model in simulated hacking tests. (Wired)\n8. Meta brings Muse Wonder-trained specialized models, including Active Memory and Active Focus, to all Muse and Meta AI users. (Techmeme)\n9. Three foreign nationals are charged in the US with using AI impersonation of CEOs to steal over $100M. (The Guardian)\n\nVerify payment requests out of band.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "OpenAI",
+      "Anthropic",
+      "Claude",
+      "OpenWeights",
+      "LLM",
+      "Cybersecurity",
+      "AISafety",
+      "MetaAI",
+      "TechNews"
+    ],
+    "image_query": "stock market screen"
+  },
+  "clusters": [
+    {
+      "headline": "OpenAI reportedly raises another $11B at a $1.25T valuation, round not yet closed",
+      "member_ids": [
+        97,
+        98
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation",
+      "importance": 7,
+      "why_it_matters": "The reported round would value OpenAI among the world's most valuable companies, though the funding has not closed yet according to the report.",
+      "sources": [
+        "TechCrunch",
+        "The Verge"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Anthropic adds Personal Finance to Claude, letting users connect bank and card accounts",
+      "member_ids": [
+        2,
+        4,
+        116
+      ],
+      "primary_url": "https://the-decoder.com/anthropic-adds-bank-account-access-to-claude-so-users-can-track-their-spending",
+      "importance": 6,
+      "why_it_matters": "Claude users can now connect bank and card accounts and ask questions about their spending, which extends a consumer AI assistant into sensitive financial data.",
+      "sources": [
+        "PYMNTS.com",
+        "24/7 Wall St.",
+        "The Decoder"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Thinking Machines releases Inkling 2 Small, a 594B-parameter MoE open-weight model it says leads western open-weight models",
+      "member_ids": [
+        133,
+        108
+      ],
+      "primary_url": "https://the-decoder.com/thinking-machines-inkling-2-small-claims-top-spot-among-western-open-weight-models",
+      "importance": 6,
+      "why_it_matters": "A large new open-weight model from a western lab gives developers a new option to run locally or fine-tune, though its token usage rises sharply on agentic tasks.",
+      "sources": [
+        "The Decoder",
+        "Latent Space"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "METR audit suggests Anthropic may have crossed its own AI acceleration warning threshold in July",
+      "member_ids": [
+        128,
+        40
+      ],
+      "primary_url": "https://the-decoder.com/metr-finds-anthropic-may-have-crossed-its-own-ai-acceleration-warning-threshold-back-in-july",
+      "importance": 6,
+      "why_it_matters": "METR reports the pace of Anthropic's model development has roughly doubled, with about 80 percent of the speedup driven by AI-assisted research, though Anthropic redacted key evidence.",
+      "sources": [
+        "The Decoder",
+        "Hacker News"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Hundreds of publicly exposed copies of the ARTEX AI penetration testing tool, linked to bank breaches",
+      "member_ids": [
+        11,
+        53,
+        91
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web",
+      "importance": 5,
+      "why_it_matters": "Censys found 800+ exposed copies of an AI-powered hacking tool that researchers have linked to several attacks, so defenders should check their own exposure.",
+      "sources": [
+        "CyberSecurityNews",
+        "Techmeme",
+        "TechCrunch"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Reports say Anthropic IPO investor valuation expectations have dropped to as low as $1.1T to $1.3T",
+      "member_ids": [
+        117,
+        41,
+        46
+      ],
+      "primary_url": "https://the-decoder.com/anthropics-1-5-trillion-ipo-hits-resistance-as-investors-balk-at-valuation",
+      "importance": 5,
+      "why_it_matters": "Investor pushback on Anthropic's listing valuation after a tech sell-off could affect the company's IPO timing and terms.",
+      "sources": [
+        "The Decoder",
+        "Hacker News"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Free Chinese AI models, including DeepSeek and GLM, come close to a top US cyber model in simulated network hacking tests",
+      "member_ids": [
+        123,
+        19
+      ],
+      "primary_url": "https://wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking",
+      "importance": 5,
+      "why_it_matters": "Openly available models are approaching frontier performance on offensive cyber tasks, which raises the risk profile of anyone who can run them.",
+      "sources": [
+        "WIRED",
+        "Mezha.net"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Meta brings specialized models trained with Muse Wonder to all Muse and Meta AI users, including Active Memory and Active Focus",
+      "member_ids": [
+        63,
+        27
+      ],
+      "primary_url": "https://techmeme.com/261106/p28",
+      "importance": 5,
+      "why_it_matters": "Every Muse and Meta AI user gets new specialized models starting Friday, changing the default assistant experience for a large user base.",
+      "sources": [
+        "Techmeme",
+        "Meta AI"
+      ],
+      "corroboration": 2
+    }
+  ],
+  "card_path": "out/2026-11-07/card.jpg",
+  "candidate_count": 147,
+  "unsupported_terms": [
+    "$1.1",
+    "$1.3",
+    "Wonder-trained"
+  ]
+}
