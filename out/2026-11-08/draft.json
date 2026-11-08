@@ -1,0 +1,213 @@
+{
+  "date": "2026-11-08",
+  "post": {
+    "hook": "Anthropic's AI is now building its AI",
+    "subhook": "Plus offshore GPUs, cuffless blood pressure, open-model cyber risk",
+    "stories": [
+      {
+        "headline": "METR: Anthropic uses AI to speed up AI development",
+        "detail": "A METR report finds Anthropic is using AI to accelerate its own AI work, with models improving about twice as fast.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Moonshot AI eyed European lease for 8,000+ Blackwell GPUs",
+        "detail": "With US curbs on China in place, the Chinese lab discussed reaching frontier compute through a European capacity lease.",
+        "source_name": "CNBC",
+        "source_url": "https://www.cnbc.com",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude wrote about 90% of Claude Code's code",
+        "detail": "Anthropic also disclosed the six-layer review system it uses to check that AI-written output.",
+        "source_name": "BigGo Finance",
+        "source_url": "https://finance.biggo.com",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Google AI spots high blood pressure from a standard smartwatch",
+        "detail": "No cuff needed. It is live in the Google Health app now as a screening tool, not a replacement for diagnosis.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/googles-ai-detects-high-blood-pressure-from-a-regular-smartwatch-without-a-cuff",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Open models close in on closed models in cyber capability",
+        "detail": "Open-weight models now come near closed frontier models on attack tasks, shrinking the window defenders have.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/the-gap-between-open-and-closed-ai-models-in-cyber-capabilities-keeps-shrinking",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Alibaba's Qoder makes its Qoduck coding model free",
+        "detail": "Developers can now try the coding model at no cost.",
+        "source_name": "Startup Fortune",
+        "source_url": "https://startupfortune.com",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Anthropic says it blocked potential bioweapon misuse",
+        "detail": "The company describes a safety intervention against potential misuse of its AI for bioweapons.",
+        "source_name": "ABC News",
+        "source_url": "https://abcnews.com",
+        "category": "SECURITY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Claude can link bank accounts and analyze transactions",
+        "detail": "It will not give investment advice, but users who connect accounts give it access to sensitive financial data.",
+        "source_name": "Yahoo Finance",
+        "source_url": "https://finance.yahoo.com",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Kimi K3.1 Pro open weights reportedly due Nov. 4",
+        "detail": "If the release happens, practitioners could run the model themselves.",
+        "source_name": "NeoTeo",
+        "source_url": "https://www.neoteo.com",
+        "category": "MODEL",
+        "tier": "brief"
+      }
+    ],
+    "caption": "AI is increasingly being used to build AI, and today's news shows it from two angles.\n\nLEADS\n1. A METR report finds Anthropic is using AI to accelerate AI development, with models improving about twice as fast. (The Verge)\n2. Moonshot AI discussed a European capacity lease for more than 8,000 Blackwell GPUs amid US curbs on China. (CNBC)\n3. Anthropic says Claude wrote about 90% of Claude Code's code and disclosed a six-layer review system for that output. (BigGo Finance)\n4. Google AI detects high blood pressure from a standard smartwatch without a cuff. It's live in the Google Health app as screening, not diagnosis. (The Decoder)\n5. The gap between open and closed models in cyber capabilities keeps shrinking, with open-weight models near closed frontier models on attack tasks. (The Decoder)\n\nBRIEFS\n6. Alibaba's Qoder offers its Qoduck coding model for free. (Startup Fortune)\n7. Anthropic says it blocked potential AI bioweapon misuse. (ABC News)\n8. Claude can link bank accounts and analyze transactions, but won't offer investment advice. (Yahoo Finance)\n9. Kimi K3.1 Pro open weights are reportedly due Nov. 4. (NeoTeo)\n\nThe tools are speeding up, and so is the scrutiny. 🔍",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "Anthropic",
+      "Claude",
+      "MachineLearning",
+      "AISafety",
+      "Cybersecurity",
+      "OpenSourceAI",
+      "GPUs",
+      "DevTools",
+      "HealthTech"
+    ],
+    "image_query": "code on screen"
+  },
+  "clusters": [
+    {
+      "headline": "METR report finds Anthropic is using AI to accelerate AI development, with models improving about twice as fast",
+      "member_ids": [
+        60
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+      "importance": 6,
+      "why_it_matters": "If models improve twice as fast as a year ago, AI capability timelines shift for everyone building on them.",
+      "sources": [
+        "The Verge"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Moonshot AI discussed a European capacity lease for more than 8,000 Blackwell GPUs amid US China curbs",
+      "member_ids": [
+        11,
+        16
+      ],
+      "primary_url": "https://www.cnbc.com",
+      "importance": 5,
+      "why_it_matters": "Export controls are pushing a Chinese lab toward offshore compute, which affects where frontier training capacity can be reached.",
+      "sources": [
+        "CNBC",
+        "TOKENPOST"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Anthropic says Claude wrote about 90% of Claude Code's code and discloses a six-layer review system",
+      "member_ids": [
+        2
+      ],
+      "primary_url": "https://finance.biggo.com",
+      "importance": 5,
+      "why_it_matters": "A major coding tool's codebase is reportedly largely written by its own AI, and the company describes how it reviews that output.",
+      "sources": [
+        "BigGo Finance"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Google AI detects high blood pressure from a standard smartwatch without a cuff",
+      "member_ids": [
+        66
+      ],
+      "primary_url": "https://the-decoder.com/googles-ai-detects-high-blood-pressure-from-a-regular-smartwatch-without-a-cuff",
+      "importance": 5,
+      "why_it_matters": "It is already live in the Google Health app, so users can get this screening now, though it does not replace diagnosis.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Gap between open and closed AI models in cyber capabilities keeps shrinking",
+      "member_ids": [
+        73
+      ],
+      "primary_url": "https://the-decoder.com/the-gap-between-open-and-closed-ai-models-in-cyber-capabilities-keeps-shrinking",
+      "importance": 5,
+      "why_it_matters": "Open-weight models are near closed frontier models on attack tasks, shortening the window for defenders.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Alibaba's Qoder offers its Qoduck coding model for free",
+      "member_ids": [
+        9,
+        53
+      ],
+      "primary_url": "https://startupfortune.com",
+      "importance": 4,
+      "why_it_matters": "A free coding model from a major vendor lowers the cost of trying it for developers.",
+      "sources": [
+        "Startup Fortune",
+        "r/LocalLLaMA"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Anthropic says it blocked potential AI bioweapon misuse",
+      "member_ids": [
+        4
+      ],
+      "primary_url": "https://abcnews.com",
+      "importance": 4,
+      "why_it_matters": "It describes a safety intervention against bioweapon misuse by a frontier model provider.",
+      "sources": [
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Anthropic's Claude can link bank accounts and analyze transactions but will not offer investment advice",
+      "member_ids": [
+        5
+      ],
+      "primary_url": "https://finance.yahoo.com",
+      "importance": 4,
+      "why_it_matters": "Users can connect bank data to Claude, which gives it access to sensitive financial information.",
+      "sources": [
+        "Yahoo Finance"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-08/card.jpg",
+  "candidate_count": 91,
+  "unsupported_terms": [
+    "AI-written",
+    "BRIEFS",
+    "LEADS"
+  ]
+}
