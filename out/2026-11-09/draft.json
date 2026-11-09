@@ -1,0 +1,241 @@
+{
+  "date": "2026-11-09",
+  "post": {
+    "hook": "A Claude Code leak and an Nvidia board probe",
+    "subhook": "Plus DeepSeek's agent push and new lawsuits against Suno",
+    "stories": [
+      {
+        "headline": "Claude Code feature reportedly exposed secrets on GitHub",
+        "detail": "Reports say secrets committed via the 'Don't Ask Again' feature went public. Developers using it should audit repos for leaked credentials.",
+        "source_name": "iTnews",
+        "source_url": "https://www.itnews.com.au",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "DeepSeek's Harness agent app tops 1.5M daily users",
+        "detail": "DeepSeek also plans a plugin marketplace, adding competition in the agent platform market.",
+        "source_name": "SCMP",
+        "source_url": "https://scmp.com/tech/big-tech/article/3373757/can-deepseek-challenge-openai-anthropic-ai-agents-harness-adoption-takes",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Nvidia board investigates Jensen Huang over alleged spy tie",
+        "detail": "The probe concerns Huang's relationship with an alleged Chinese spy. Huang has admitted to an affair.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude reads bank transactions, but disconnecting leaves a trail",
+        "detail": "Users linking financial accounts to Claude should weigh how their data is retained after they disconnect.",
+        "source_name": "Mixed News",
+        "source_url": "https://mixed-news.com",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Elvis Presley and Eminem rights holders sue Suno",
+        "detail": "The lawsuits target AI-generated music that mimics famous artists, adding legal pressure on music generators.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Apple pushes to make Siri more agentic",
+        "detail": "Apple's CEO is reportedly pressing for a competitive AI agent in Siri.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Claude adds Project Coordination beta for paid plans",
+        "detail": "A beta project coordination feature is now part of Claude Pro, Max and Ultra.",
+        "source_name": "TokenPost",
+        "source_url": "https://www.tokenpost.com",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Anthropic says Claude generated designs in allergy drug research",
+        "detail": "Anthropic reports the model was used at scale in early drug design work.",
+        "source_name": "ABC45",
+        "source_url": "https://abc45.com",
+        "category": "RESEARCH",
+        "tier": "brief"
+      },
+      {
+        "headline": "Tencent AI chief warns AI will soon master biology",
+        "detail": "Tencent's chief AI scientist flags biological safety risks, adding to pressure for safeguards on frontier models.",
+        "source_name": "SCMP",
+        "source_url": "https://scmp.com/tech/big-tech/article/3373697/ai-will-soon-master-biology-unleashing-new-safety-risks-tencent-ai-chief-warns",
+        "category": "POLICY",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Check your repos today 🔐 A Claude Code feature reportedly leaked developer secrets, and that tops the list.\n\n1. Claude Code's 'Don't Ask Again' feature reportedly exposed secrets on GitHub. Audit for leaked credentials. (iTnews)\n2. DeepSeek says its Harness agent app tops 1.5 million daily users and plans a plugin marketplace. (SCMP)\n3. Nvidia's board is investigating Jensen Huang over a relationship with an alleged Chinese spy; Huang admits an affair. (The Verge)\n4. Apple is pushing to make Siri more agentic. (The Verge)\n5. Anthropic adds a Project Coordination beta to Claude Pro, Max and Ultra. (TokenPost)\n6. Anthropic says Claude generated designs in allergy drug research. (ABC45)\n7. Claude can read bank transactions, but disconnecting the account leaves a trail. (Mixed News)\n8. Elvis Presley and Eminem rights holders sue Suno over AI music. (The Verge)\n9. Tencent's chief AI scientist warns AI will soon master biology and create safety risks. (SCMP)\n\nRotate your keys, then read the rest.",
+    "hashtags": [
+      "AI",
+      "AINews",
+      "ClaudeCode",
+      "Anthropic",
+      "DeepSeek",
+      "Nvidia",
+      "AIAgents",
+      "DevSecOps",
+      "AISafety",
+      "Suno"
+    ],
+    "image_query": "laptop code screen"
+  },
+  "clusters": [
+    {
+      "headline": "Claude Code 'Don't Ask Again' feature reportedly exposed developer secrets on GitHub",
+      "member_ids": [
+        0,
+        1,
+        4,
+        8
+      ],
+      "primary_url": "https://www.itnews.com.au",
+      "importance": 6,
+      "why_it_matters": "Reports say secrets committed through a Claude Code feature were exposed publicly, so developers using it should audit repositories for leaked credentials.",
+      "sources": [
+        "iTnews",
+        "조선일보",
+        "GBHackers News",
+        "tech-insider.org"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "DeepSeek says its Harness agent app tops 1.5 million daily users and plans a plugin marketplace",
+      "member_ids": [
+        14,
+        15,
+        16,
+        17,
+        97
+      ],
+      "primary_url": "https://scmp.com/tech/big-tech/article/3373757/can-deepseek-challenge-openai-anthropic-ai-agents-harness-adoption-takes",
+      "importance": 5,
+      "why_it_matters": "A major Chinese lab reports fast adoption of its agent framework, adding competition in the agent platform market.",
+      "sources": [
+        "Seeking Alpha",
+        "Briefs Finance",
+        "Bloomberg.com",
+        "South China Morning Post",
+        "SCMP Tech"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Nvidia board investigates CEO Jensen Huang over relationship with alleged Chinese spy; Huang admits affair",
+      "member_ids": [
+        53,
+        59,
+        63,
+        79,
+        81,
+        82,
+        83,
+        84,
+        103,
+        111,
+        129,
+        131
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+      "importance": 3,
+      "why_it_matters": "Leadership uncertainty at the leading AI chip supplier is mainly corporate drama, though it touches national security concerns.",
+      "sources": [
+        "Techmeme",
+        "The Verge",
+        "TechCrunch",
+        "DCD",
+        "SCMP Tech",
+        "The Guardian",
+        "Lemmy"
+      ],
+      "corroboration": 7
+    },
+    {
+      "headline": "Apple pushes to make Siri more agentic",
+      "member_ids": [
+        77,
+        116
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+      "importance": 4,
+      "why_it_matters": "Reported pressure from Apple's CEO to ship a competitive AI agent in Siri would affect a very large iPhone user base.",
+      "sources": [
+        "The Verge",
+        "Lemmy"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Anthropic adds Project Coordination beta to Claude Pro, Max and Ultra",
+      "member_ids": [
+        2
+      ],
+      "primary_url": "https://www.tokenpost.com",
+      "importance": 4,
+      "why_it_matters": "Paid Claude subscribers gain a beta project coordination feature for organizing their work.",
+      "sources": [
+        "TOKENPOST"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Anthropic says Claude generated designs in allergy drug research",
+      "member_ids": [
+        5
+      ],
+      "primary_url": "https://abc45.com",
+      "importance": 4,
+      "why_it_matters": "A lab reports its model was used at scale in drug design work, showing AI applied to early pharmaceutical research.",
+      "sources": [
+        "WXLV"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Claude can read bank transactions, but disconnecting the account leaves a trail",
+      "member_ids": [
+        9
+      ],
+      "primary_url": "https://mixed-news.com",
+      "importance": 4,
+      "why_it_matters": "Users connecting financial data to Claude should weigh privacy and data retention after disconnecting.",
+      "sources": [
+        "MIXED News"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Elvis Presley and Eminem rights holders sue Suno",
+      "member_ids": [
+        78
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit",
+      "importance": 4,
+      "why_it_matters": "New lawsuits over AI-generated music mimicking famous artists add legal pressure on music generators.",
+      "sources": [
+        "The Verge"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-09/card.jpg",
+  "candidate_count": 132,
+  "unsupported_terms": [
+    "ABC45",
+    "Audit",
+    "Rotate"
+  ]
+}
