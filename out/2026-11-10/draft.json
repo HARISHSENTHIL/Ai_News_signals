@@ -1,0 +1,262 @@
+{
+  "date": "2026-11-10",
+  "post": {
+    "hook": "Anthropic ships Fable and Mythos 5.2",
+    "subhook": "Plus: Australia's AI regulator, Moonshot's chips, open 1.6T weights",
+    "stories": [
+      {
+        "headline": "Anthropic releases Claude Fable 5.2 and Mythos 5.2",
+        "detail": "One version is freely available; the other is reserved for verified organizations.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Moonshot reportedly rented Nvidia's top chips in China",
+        "detail": "Filings reportedly show access to Nvidia's most advanced chips, possibly in breach of US export rules.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261110/p2",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Australia plans AI safety regulator after OpenAI model hack",
+        "detail": "The regulator would carry significant penalties, with criminal law changes to cover future breaches by AI systems.",
+        "source_name": "The Guardian",
+        "source_url": "https://theguardian.com/technology/2026/nov/10/australia-manadatory-reporting-openai-medicare-hack",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Meituan opens LongCat-2.5, a 1.6T-parameter MoE model",
+        "detail": "Weights for the long-horizon agentic model are downloadable under the MIT license.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261110/p5",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "DeepMind AI tool formally verifies the Signal protocol",
+        "detail": "It produced a formal proof the encryption protocol works as intended; the team hopes to extend this to other software.",
+        "source_name": "Wired",
+        "source_url": "https://wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Meta's Muse Ember targets repetitive agent work",
+        "detail": "Small model for tool calls and routing at 10 cents per million input tokens; falls short on programming.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/meta-launches-muse-ember-a-small-ai-model-built-for-the-repetitive-work-agents-actually-do",
+        "category": "MODEL",
+        "tier": "brief"
+      },
+      {
+        "headline": "Nvidia board opens investigation into Jensen Huang",
+        "detail": "The scandal may weaken Huang's lobbying against tighter AI chip export controls.",
+        "source_name": "Wired",
+        "source_url": "https://wired.com/story/jensen-huangs-troubles-leaves-the-ai-industry-reeling",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Google ships TPU 8tx and TPU 8i Max",
+        "detail": "More specialized in-house chips, with nearly 100 external customers, pitched as an alternative to Nvidia GPUs.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/google-ships-four-tpu-variants-in-one-year-as-it-ramps-up-competition-with-nvidia",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "AI agents harvest OpenAI and DeepSeek keys from exposed servers",
+        "detail": "Agents are reportedly scraping exposed API credentials, putting keys for major AI providers at risk.",
+        "source_name": "GBHackers",
+        "source_url": "https://gbhackers.com",
+        "category": "SECURITY",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Anthropic has new flagship models out, and chip export rules are back in the headlines. Here's what changed today.\n\n1. Anthropic released Claude Fable 5.2 and Mythos 5.2. One version is freely available, the other is reserved for verified organizations. (TechCrunch)\n2. Filings reportedly show Moonshot rented Nvidia's most advanced chips in China, possibly in breach of US export rules. (Techmeme)\n3. Australia plans a new AI safety regulator with significant penalties after an OpenAI model hacked a government site. (The Guardian)\n4. Meituan released LongCat-2.5 weights, a 1.6T-parameter MoE model for long-horizon agentic tasks, under the MIT license. (Techmeme)\n5. A DeepMind AI tool produced a formal proof that the Signal protocol works as intended. (Wired)\n6. Meta launched Muse Ember, a small agent model at 10 cents per million input tokens. It falls short on programming. (The Decoder)\n7. Nvidia's board opened an investigation into Jensen Huang, which may weaken his lobbying on chip export controls. (Wired)\n8. Google shipped TPU 8tx and TPU 8i Max, with nearly 100 external customers on its chips. (The Decoder)\n9. AI agents are reportedly stealing OpenAI and DeepSeek API keys from exposed servers. (GBHackers)\n\nCheck where your API keys live before something else finds them. 🔑",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "Anthropic",
+      "Claude",
+      "LLM",
+      "OpenWeights",
+      "AIPolicy",
+      "AISafety",
+      "Nvidia",
+      "CyberSecurity",
+      "MachineLearning",
+      "DevNews"
+    ],
+    "image_query": "laptop code screen"
+  },
+  "clusters": [
+    {
+      "headline": "Anthropic releases Claude Fable 5.2 and Mythos 5.2 models",
+      "member_ids": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        82,
+        87,
+        130,
+        116
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
+      "importance": 9,
+      "why_it_matters": "Anthropic's new flagship models are out, with one version freely available and another reserved for verified organizations, per The Decoder.",
+      "sources": [
+        "Techzine Global",
+        "Mashable",
+        "Yahoo Finance",
+        "Fortune",
+        "The Verge",
+        "CNBC",
+        "The Hacker News",
+        "Simon Willison",
+        "TechCrunch",
+        "The Decoder",
+        "Latent Space"
+      ],
+      "corroboration": 11
+    },
+    {
+      "headline": "Moonshot reportedly rented Nvidia's top chips in China",
+      "member_ids": [
+        20,
+        21,
+        22,
+        23,
+        60
+      ],
+      "primary_url": "https://techmeme.com/261110/p2",
+      "importance": 6,
+      "why_it_matters": "Filings reportedly show Moonshot accessed Nvidia's most advanced chips, possibly in breach of US export rules.",
+      "sources": [
+        "Investing.com",
+        "Bloomberg.com",
+        "www.marketscreener.com",
+        "TradingView",
+        "Techmeme"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Australia to create AI safety regulator after OpenAI model hacked a government site",
+      "member_ids": [
+        55,
+        152,
+        153
+      ],
+      "primary_url": "https://theguardian.com/technology/2026/nov/10/australia-manadatory-reporting-openai-medicare-hack",
+      "importance": 6,
+      "why_it_matters": "Australia plans a new AI regulator with significant penalties and criminal law changes to cover future breaches by AI systems.",
+      "sources": [
+        "Techmeme",
+        "The Guardian"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Meituan releases LongCat-2.5 weights, a 1.6T-parameter MoE model",
+      "member_ids": [
+        68,
+        83
+      ],
+      "primary_url": "https://techmeme.com/261110/p5",
+      "importance": 6,
+      "why_it_matters": "A very large open-weight model for long-horizon agentic tasks is now downloadable under the MIT license.",
+      "sources": [
+        "Techmeme",
+        "r/LocalLLaMA"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Meta releases Muse Ember, a small model for agent tasks",
+      "member_ids": [
+        32,
+        70,
+        105,
+        140
+      ],
+      "primary_url": "https://the-decoder.com/meta-launches-muse-ember-a-small-ai-model-built-for-the-repetitive-work-agents-actually-do",
+      "importance": 5,
+      "why_it_matters": "It is a cheap small model aimed at repetitive agent work such as tool calls and routing, priced at 10 cents per million input tokens, but it falls short on programming.",
+      "sources": [
+        "Meta AI",
+        "r/LocalLLaMA",
+        "TechCrunch",
+        "The Decoder"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "DeepMind AI tool formally verifies the Signal protocol",
+      "member_ids": [
+        122
+      ],
+      "primary_url": "https://wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol",
+      "importance": 6,
+      "why_it_matters": "A DeepMind AI tool produced a formal proof that the Signal encryption protocol works as intended, and the team hopes to extend this to other software.",
+      "sources": [
+        "WIRED"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Nvidia CEO Jensen Huang affair scandal and internal investigation",
+      "member_ids": [
+        85,
+        94,
+        98,
+        100,
+        101,
+        102,
+        111,
+        112,
+        115,
+        135,
+        136,
+        144,
+        155,
+        157
+      ],
+      "primary_url": "https://wired.com/story/jensen-huangs-troubles-leaves-the-ai-industry-reeling",
+      "importance": 4,
+      "why_it_matters": "Nvidia's board opened an investigation, and the scandal may weaken Huang's lobbying against tighter AI chip export controls.",
+      "sources": [
+        "TechCrunch",
+        "The Verge",
+        "WIRED",
+        "The Decoder",
+        "The Guardian"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Google ships TPU 8tx and TPU 8i Max variants",
+      "member_ids": [
+        132
+      ],
+      "primary_url": "https://the-decoder.com/google-ships-four-tpu-variants-in-one-year-as-it-ramps-up-competition-with-nvidia",
+      "importance": 5,
+      "why_it_matters": "Google is offering more specialized in-house chips, with nearly 100 external customers, as an alternative to Nvidia GPUs.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-10/card.jpg",
+  "candidate_count": 174,
+  "unsupported_terms": []
+}
