@@ -1,0 +1,264 @@
+{
+  "date": "2026-11-11",
+  "post": {
+    "hook": "Claude moves into office-suite territory",
+    "subhook": "Plus an agent backdoor, a Grok Build leak and Anthropic's IPO range",
+    "stories": [
+      {
+        "headline": "Anthropic adds Sheets, Whiteboards, Data and Meetings to Claude",
+        "detail": "Spreadsheets, whiteboards and meeting notes now sit inside Claude; Barron's reports Microsoft stock fell on the news.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Nvidia scandal raises odds of tighter US chip export limits",
+        "detail": "Sources say the CEO espionage affair makes it likelier Congress passes AI chip export limits through the defence bill.",
+        "source_name": "Nvidia",
+        "source_url": "https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Microsoft Research backdoors AI agents via dormant neurons",
+        "detail": "A triggered agent with tool access could download and run attacker code, a risk for anyone running third-party or fine-tuned models.",
+        "source_name": "Microsoft Research",
+        "source_url": "https://microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Grok Build leaks data from about 35,000 apps via share links",
+        "detail": "Proprietary business information and secrets were exposed through the coding agent's sharing feature.",
+        "source_name": "Ars Technica",
+        "source_url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic starts IPO roadshow at $70 to $78 per share",
+        "detail": "Reporters say the range is below earlier expectations amid investor doubts about AI valuations.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/anthropic-kicks-off-ipo-roadshow-offering-shares-at-70-to-78-and-targeting-a-trillion-dollar-valuation",
+        "category": "FUNDING",
+        "tier": "lead"
+      },
+      {
+        "headline": "Gemini Robotics 2.5 tested in Mercedes-Benz assembly pilot",
+        "detail": "Reported 96 percent success sorting metal parts on active production lines.",
+        "source_name": "Google DeepMind",
+        "source_url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence",
+        "category": "RESEARCH",
+        "tier": "brief"
+      },
+      {
+        "headline": "OpenAI opens verified Business Agents in ChatGPT",
+        "detail": "Eligible US e-commerce businesses can have AI agents answer customer questions inside ChatGPT.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/introducing-businesses-chatgpt",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "DeepMind agents write Lean proofs verifying Signal's encryption",
+        "detail": "AlphaProof Code agents produced three million lines of machine-checked proofs for the widely used library.",
+        "source_name": "Google DeepMind",
+        "source_url": "https://deepmind.google/blog/introducing-alphaproof-code",
+        "category": "RESEARCH",
+        "tier": "brief"
+      },
+      {
+        "headline": "Meta launches Muse Ember, its smallest, most efficient model",
+        "detail": "Built for tool calls, routing and extraction, and priced below comparable small models for short prompts.",
+        "source_name": "Simon Willison",
+        "source_url": "https://simonwillison.net/2026/Nov/10/muse-ember",
+        "category": "MODEL",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Claude now ships Sheets, Whiteboards, Data and Meetings, pushing Anthropic into office-suite territory. 📊\n\nToday's stories:\n\n1. Anthropic adds Sheets, Whiteboards, Data and Meetings to Claude; Barron's reports Microsoft stock fell on the news. (The Verge)\n2. The Nvidia CEO espionage scandal raises the odds Congress passes AI chip export limits through the defence bill. (Nvidia)\n3. Microsoft Research shows a backdoor that edits dormant neurons in AI agents, letting a triggered agent run attacker code. (Microsoft Research)\n4. Grok Build's shareable links exposed data from about 35,000 apps, including proprietary business information and secrets. (Ars Technica)\n5. Anthropic kicks off its IPO roadshow at $70 to $78 per share, a range reporters call below earlier expectations. (The Decoder)\n6. Gemini Robotics 2.5 reported 96 percent success sorting metal parts in a Mercedes-Benz assembly pilot. (Google DeepMind)\n7. OpenAI opens Business profiles and verified Business Agents in ChatGPT for eligible US e-commerce businesses. (OpenAI)\n8. AlphaProof Code agents wrote three million lines of Lean proofs verifying Signal's encryption core. (Google DeepMind)\n9. Meta launches Muse Ember, its smallest and most efficient model, aimed at agent workloads. (Simon Willison)\n\nTwo security stories about agents today: check what yours can reach.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "Anthropic",
+      "Claude",
+      "AIAgents",
+      "AISecurity",
+      "Nvidia",
+      "DeepMind",
+      "OpenAI",
+      "MachineLearning",
+      "TechNews"
+    ],
+    "image_query": "spreadsheet laptop office"
+  },
+  "clusters": [
+    {
+      "headline": "Anthropic adds Sheets, Whiteboards, Data and Meetings to Claude, moving it toward office-suite territory",
+      "member_ids": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        20,
+        92,
+        127,
+        128
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
+      "importance": 7,
+      "why_it_matters": "Puts spreadsheets, whiteboards and meeting notes inside Claude, and Barron's reports Microsoft stock fell on the news.",
+      "sources": [
+        "Engadget",
+        "Reuters",
+        "TechCrunch",
+        "Yahoo Finance",
+        "Axios",
+        "Barron's",
+        "The Verge",
+        "The Register",
+        "The Decoder"
+      ],
+      "corroboration": 9
+    },
+    {
+      "headline": "Nvidia CEO espionage scandal raises odds of tighter US AI chip export limits",
+      "member_ids": [
+        49,
+        58,
+        71,
+        72,
+        74,
+        77,
+        103,
+        104,
+        113,
+        138,
+        141,
+        148,
+        156
+      ],
+      "primary_url": "https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board",
+      "importance": 5,
+      "why_it_matters": "Sources say the affair increases the chance Congress passes chip export limits through the defence bill.",
+      "sources": [
+        "NVIDIA Newsroom",
+        "Techmeme",
+        "TechCrunch",
+        "The Verge",
+        "SCMP Tech",
+        "The Guardian"
+      ],
+      "corroboration": 6
+    },
+    {
+      "headline": "Microsoft Research shows a backdoor that edits dormant neurons in AI agents",
+      "member_ids": [
+        64,
+        65
+      ],
+      "primary_url": "https://microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents",
+      "importance": 6,
+      "why_it_matters": "A triggered agent with tool access could download and run attacker code, which matters for anyone running third-party or fine-tuned models.",
+      "sources": [
+        "Microsoft Research",
+        "r/LocalLLaMA"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Grok Build coding agent leaks data from about 35,000 apps via shareable links",
+      "member_ids": [
+        73,
+        137
+      ],
+      "primary_url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi",
+      "importance": 6,
+      "why_it_matters": "Proprietary business information and secrets were exposed through the agent's sharing feature.",
+      "sources": [
+        "Techmeme",
+        "Ars Technica"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Anthropic kicks off IPO roadshow at $70 to $78 per share",
+      "member_ids": [
+        10,
+        16,
+        19,
+        91,
+        93,
+        126,
+        153
+      ],
+      "primary_url": "https://the-decoder.com/anthropic-kicks-off-ipo-roadshow-offering-shares-at-70-to-78-and-targeting-a-trillion-dollar-valuation",
+      "importance": 4,
+      "why_it_matters": "Sets the expected price range for the listing, which reporters say is below earlier expectations amid investor doubts about AI valuations.",
+      "sources": [
+        "Bloomberg.com",
+        "BBC",
+        "CNBC",
+        "TechCrunch",
+        "The Verge",
+        "The Decoder",
+        "The Guardian"
+      ],
+      "corroboration": 7
+    },
+    {
+      "headline": "Google DeepMind's Gemini Robotics 2.5 tested in a Mercedes-Benz assembly pilot",
+      "member_ids": [
+        8,
+        136
+      ],
+      "primary_url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence",
+      "importance": 5,
+      "why_it_matters": "Reported 96 percent success sorting metal parts on active production lines, a real-world robotics result.",
+      "sources": [
+        "Google DeepMind",
+        "The Decoder"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "OpenAI opens Business profiles and verified Business Agents in ChatGPT",
+      "member_ids": [
+        4,
+        96,
+        106,
+        143
+      ],
+      "primary_url": "https://openai.com/index/introducing-businesses-chatgpt",
+      "importance": 4,
+      "why_it_matters": "Lets eligible US e-commerce businesses have AI agents answer customer questions inside ChatGPT.",
+      "sources": [
+        "OpenAI",
+        "The Verge",
+        "TechCrunch",
+        "The Decoder"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "DeepMind's AlphaProof Code agents write Lean proofs verifying Signal's encryption core",
+      "member_ids": [
+        9
+      ],
+      "primary_url": "https://deepmind.google/blog/introducing-alphaproof-code",
+      "importance": 5,
+      "why_it_matters": "Shows AI agents producing three million lines of machine-checked proofs for a widely used encryption library.",
+      "sources": [
+        "Google DeepMind"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-11/card.jpg",
+  "candidate_count": 176,
+  "unsupported_terms": [
+    "Reporters"
+  ]
+}
