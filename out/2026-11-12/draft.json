@@ -1,0 +1,224 @@
+{
+  "date": "2026-11-12",
+  "post": {
+    "hook": "DeepMind's big day, and a chip crackdown",
+    "subhook": "Plus OpenAI's $10B quarter and 35,000 exposed Grok-built apps",
+    "stories": [
+      {
+        "headline": "DeepMind unveils AlphaGenome 2",
+        "detail": "Predicts how DNA variants affect cell types and disease, aimed at helping researchers trace how DNA changes drive illness.",
+        "source_name": "Google DeepMind",
+        "source_url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Commerce finalizing rule on China remote chip access",
+        "detail": "Sources say the rule targets remote access and smuggling via data centers, limiting Chinese AI firms' use of advanced chips.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261111/p53",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "AlphaProof Code verifies Signal's cryptographic core",
+        "detail": "AI agents wrote over six million lines of proof code in four weeks; DeepMind plans to extend it to critical infrastructure.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI quarterly revenue reportedly tops $10B",
+        "detail": "Reported sales are about a 50% jump from the prior quarter's $6.7 billion, the first time it has crossed $10B.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "35,000+ Grok-built apps found open without login",
+        "detail": "Security firm Claroc says a preselected default left apps exposing patient data and internal documents; most remain online.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/grok-built-apps-exposed-patient-data-plaintext-passwords-and-spacexsis-own-sales-pipeline",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Google launches Gemini Decisions API",
+        "detail": "Gemini Decision 1 answers multimodal yes/no and choice questions, priced at 10 cents per million input tokens with free output.",
+        "source_name": "Google",
+        "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Anthropic: AI is eroding Nvidia's CUDA lead",
+        "detail": "Anthropic says AI cut a switch to AMD chips to three days, which could lower switching costs between chip vendors.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Moonshot AI reportedly rents Blackwell chips in China",
+        "detail": "Documents suggest the lab rents top Nvidia chips and sought GPU access in Europe, relevant to export control enforcement.",
+        "source_name": "Yahoo Finance",
+        "source_url": "https://finance.yahoo.com",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Nvidia board reportedly moves to oust Jensen Huang",
+        "detail": "The report cites affair allegations and a falling Nvidia stock price.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/tech/1031652/jensen-huang-rumor",
+        "category": "BUSINESS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Google DeepMind had a heavy day, and Washington is closing a loophole in chip export controls. 🧬\n\n1. DeepMind unveils AlphaGenome 2, a model for predicting how DNA variants affect cell types and disease. (Google DeepMind)\n2. The Commerce Department is reportedly finalizing a rule to block remote access and chip smuggling into China via data centers. (Techmeme)\n3. Google launches the Gemini Decisions API with Gemini Decision 1 for multimodal yes/no and choice questions: 10 cents per million input tokens, output free. (Google)\n4. DeepMind's AlphaProof Code verified Signal's cryptographic core in four weeks, with AI agents writing over six million lines of proof code. (The Decoder)\n5. Anthropic says AI is eroding Nvidia's CUDA lead, cutting a switch to AMD chips to three days. (The Decoder)\n6. OpenAI's quarterly revenue reportedly crossed $10B for the first time, up from $6.7B the prior quarter. (TechCrunch)\n7. Security firm Claroc says more than 35,000 Grok-built apps were open without login, exposing patient data and internal documents. Most remain online. (The Decoder)\n8. Moonshot AI reportedly rents Nvidia Blackwell chips in China and sought GPU access in Europe. (Yahoo Finance)\n9. Nvidia's board reportedly moves to oust CEO Jensen Huang amid affair allegations and a stock drop. (The Verge)\n\nCheck your default settings before you ship.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "DeepMind",
+      "Genomics",
+      "FormalVerification",
+      "ExportControls",
+      "OpenAI",
+      "Nvidia",
+      "AISecurity",
+      "GeminiAPI",
+      "MachineLearning",
+      "TechNews"
+    ],
+    "image_query": "DNA helix"
+  },
+  "clusters": [
+    {
+      "headline": "Google DeepMind unveils AlphaGenome 2 for predicting how DNA variants affect cell types and disease",
+      "member_ids": [
+        1,
+        86
+      ],
+      "primary_url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease",
+      "importance": 6,
+      "why_it_matters": "A new genomics model could help researchers understand how DNA changes drive disease, which may inform new treatments.",
+      "sources": [
+        "Google DeepMind",
+        "The Verge"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Commerce Department finalizing rule to block remote access and chip smuggling into China via data centers",
+      "member_ids": [
+        53,
+        64,
+        69,
+        71,
+        72
+      ],
+      "primary_url": "https://techmeme.com/261111/p53",
+      "importance": 6,
+      "why_it_matters": "Sources say the rule would stop Chinese AI firms from remotely using advanced AI chips, which could change where those firms can train and serve models.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Google launches Gemini Decisions API with Gemini Decision 1 for multimodal yes/no and choice questions",
+      "member_ids": [
+        8,
+        55,
+        105,
+        126
+      ],
+      "primary_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+      "importance": 4,
+      "why_it_matters": "Developers get a new decision-model API priced at 10 cents per million input tokens with free output, according to Simon Willison's write-up.",
+      "sources": [
+        "Google AI",
+        "Simon Willison",
+        "Latent Space",
+        "The Decoder"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Google DeepMind's AlphaProof Code verifies Signal's cryptographic core in four weeks",
+      "member_ids": [
+        125
+      ],
+      "primary_url": "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years",
+      "importance": 5,
+      "why_it_matters": "AI agents wrote over six million lines of proof code, a result DeepMind says it plans to extend to critical infrastructure.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch to three days",
+      "member_ids": [
+        3
+      ],
+      "primary_url": "https://the-decoder.com",
+      "importance": 5,
+      "why_it_matters": "If accurate, lower switching costs between chip vendors could loosen Nvidia's hold on AI compute for practitioners.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI quarterly revenue reportedly crosses $10B for the first time",
+      "member_ids": [
+        96
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time",
+      "importance": 5,
+      "why_it_matters": "Reported sales of $10 billion are about a 50% jump from the prior quarter's $6.7 billion, signaling strong demand for OpenAI's products.",
+      "sources": [
+        "TechCrunch"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Grok-built apps found open to anyone, exposing patient data and internal documents",
+      "member_ids": [
+        127
+      ],
+      "primary_url": "https://the-decoder.com/grok-built-apps-exposed-patient-data-plaintext-passwords-and-spacexsis-own-sales-pipeline",
+      "importance": 5,
+      "why_it_matters": "Security firm Claroc says more than 35,000 apps were accessible without login because of a preselected default setting, and most remain online.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Moonshot AI reportedly rents Nvidia Blackwell chips in China and sought GPU access in Europe",
+      "member_ids": [
+        22,
+        23,
+        24
+      ],
+      "primary_url": "https://finance.yahoo.com",
+      "importance": 4,
+      "why_it_matters": "Documents suggest a Chinese lab is using top Nvidia chips through rental arrangements, relevant to export control enforcement.",
+      "sources": [
+        "CASRAI",
+        "NeoTeo",
+        "Yahoo Finance"
+      ],
+      "corroboration": 3
+    }
+  ],
+  "card_path": "out/2026-11-12/card.jpg",
+  "candidate_count": 152,
+  "unsupported_terms": [
+    "Washington"
+  ]
+}
