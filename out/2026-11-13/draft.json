@@ -1,0 +1,264 @@
+{
+  "date": "2026-11-13",
+  "post": {
+    "hook": "Jensen Huang resigns as Nvidia CEO",
+    "subhook": "Plus Gemini 4 Hydrogen, Qwen 4 Max and new pressure on AI chips",
+    "stories": [
+      {
+        "headline": "Jensen Huang resigns as Nvidia CEO",
+        "detail": "Colette Kress takes over as interim CEO of the largest AI chip supplier after an abrupt leadership change.",
+        "source_name": "Nvidia",
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Gemini 4 Hydrogen becomes the default in Google Search",
+        "detail": "Now default in Search and the Gemini app; benchmarks reportedly put it near Claude Sonnet 5.5 at lower cost.",
+        "source_name": "Google DeepMind",
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Congress asks Huang to testify on Nvidia's China dealings",
+        "detail": "Lawmakers also asked Commerce Secretary Lutnick to testify amid an alleged Chinese spy link to Huang.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Alibaba launches flagship Qwen 4 Max",
+        "detail": "Alibaba's new flagship model adds to frontier competition from China.",
+        "source_name": "MobiDevices",
+        "source_url": "https://mobidevices.com",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude can now join Google Meet calls in beta",
+        "detail": "Claude Meetings lets Claude sit in on video calls and draft documents during the meeting.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Meta's Muse agent can now call businesses for you",
+        "detail": "Outbound calling is available to paid subscribers in the US.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "AlphaGenome 2 reads variants at single cell-type resolution",
+        "detail": "Researchers get a noncommercial API for cell-type-level genetic variant analysis.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/google-deepmind-shifts-genomics-ai-from-bulk-tissue-predictions-to-single-cell-type-resolution-with-alphagenome-2",
+        "category": "RESEARCH",
+        "tier": "brief"
+      },
+      {
+        "headline": "US reportedly near curbs on China's remote AI chip access",
+        "detail": "The reported rules would limit Chinese firms' use of advanced AI compute through remote cloud access.",
+        "source_name": "24/7 Wall St.",
+        "source_url": "https://247wallst.com",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Australia proposes mandatory audits for frontier AI makers",
+        "detail": "If passed, frontier labs would face independent model audits and steep penalties.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/australias-proposed-ai-safety-bill-would-force-frontier-model-makers-to-open-up-to-independent-testing",
+        "category": "POLICY",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Nvidia has a new interim CEO, and it's a heavy day for AI chips and models.\n\n1. Jensen Huang resigns as Nvidia CEO; Colette Kress is named interim CEO. (Nvidia)\n2. Google launches Gemini 4 Hydrogen as the default in Search and the Gemini app, reportedly near Claude Sonnet 5.5 at lower cost. (Google DeepMind)\n3. Congress asks Huang and Commerce Secretary Lutnick to testify on Nvidia's China dealings, amid an alleged Chinese spy link. (TechCrunch)\n4. Alibaba launches its flagship Qwen 4 Max. (MobiDevices)\n5. Claude Meetings brings Claude into Google Meet in beta to join calls and draft documents. (The Decoder)\n6. Meta's Muse agent can now place calls to US businesses for paid subscribers. (TechCrunch)\n7. AlphaGenome 2 analyzes genetic variants at single cell-type resolution, with a noncommercial API. (The Decoder)\n8. The US is reportedly finalizing curbs on China's remote access to AI chips. (24/7 Wall St.)\n9. Australia proposes a safety law with mandatory independent audits for frontier AI makers. (The Decoder)\n\nChips, policy and models all moved today. 📌",
+    "hashtags": [
+      "AI",
+      "Nvidia",
+      "Gemini",
+      "Qwen",
+      "Claude",
+      "AIPolicy",
+      "AIChips",
+      "MachineLearning",
+      "GenerativeAI",
+      "TechNews"
+    ],
+    "image_query": "computer chip"
+  },
+  "clusters": [
+    {
+      "headline": "Jensen Huang resigns as Nvidia CEO; Colette Kress named interim CEO",
+      "member_ids": [
+        44,
+        91,
+        103,
+        112,
+        134,
+        135,
+        136,
+        137,
+        138,
+        140,
+        141,
+        70,
+        47
+      ],
+      "primary_url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+      "importance": 7,
+      "why_it_matters": "Leadership of the largest AI chip supplier has changed abruptly, with Colette Kress taking over as interim CEO.",
+      "sources": [
+        "NVIDIA Newsroom",
+        "The Verge",
+        "Latent Space",
+        "WIRED",
+        "SCMP Tech",
+        "The Decoder",
+        "r/LocalLLaMA",
+        "NPR"
+      ],
+      "corroboration": 8
+    },
+    {
+      "headline": "Google launches Gemini 4 Hydrogen across Search, Gemini app and tiers",
+      "member_ids": [
+        4,
+        13,
+        88,
+        89,
+        129,
+        81
+      ],
+      "primary_url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+      "importance": 7,
+      "why_it_matters": "A new Gemini model is now the default in Search and the Gemini app, and independent benchmarks reportedly put it near Claude Sonnet 5.5 at lower cost.",
+      "sources": [
+        "Google DeepMind",
+        "Google AI",
+        "TechCrunch",
+        "The Verge",
+        "The Decoder",
+        "Simon Willison"
+      ],
+      "corroboration": 6
+    },
+    {
+      "headline": "Scandal follow-ups: Huang's affairs, alleged Chinese spy link, and congressional hearings",
+      "member_ids": [
+        92,
+        101,
+        108,
+        75,
+        86,
+        72,
+        151,
+        149,
+        150,
+        132,
+        133,
+        139,
+        147,
+        144,
+        77,
+        110
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline",
+      "importance": 5,
+      "why_it_matters": "Congressional scrutiny of Nvidia's China dealings could tighten US policy on AI chip access, with Huang and Commerce Secretary Lutnick asked to testify.",
+      "sources": [
+        "TechCrunch",
+        "DCD",
+        "The Verge",
+        "Techmeme",
+        "The Guardian",
+        "WIRED",
+        "r/LocalLLaMA"
+      ],
+      "corroboration": 7
+    },
+    {
+      "headline": "Alibaba launches flagship Qwen 4 Max",
+      "member_ids": [
+        17
+      ],
+      "primary_url": "https://mobidevices.com",
+      "importance": 6,
+      "why_it_matters": "A new flagship open-or-hosted model from Alibaba adds to the competitive frontier from China.",
+      "sources": [
+        "mobidevices.com"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Anthropic brings Claude Meetings into Google Meet in beta",
+      "member_ids": [
+        5,
+        7,
+        12
+      ],
+      "primary_url": "https://the-decoder.com",
+      "importance": 5,
+      "why_it_matters": "Claude can now join video calls and draft documents during meetings for users in the beta.",
+      "sources": [
+        "Dataconomy",
+        "VentureBeat",
+        "The Decoder"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Meta launches outbound calling for Muse, its AI agent, for paid US subscribers",
+      "member_ids": [
+        41,
+        65,
+        96
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay",
+      "importance": 5,
+      "why_it_matters": "Paying US users can now have Muse place calls to businesses on their behalf.",
+      "sources": [
+        "BigGo Finance",
+        "Techmeme",
+        "TechCrunch"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "AlphaGenome 2 analyzes genetic variants at single cell-type resolution",
+      "member_ids": [
+        128
+      ],
+      "primary_url": "https://the-decoder.com/google-deepmind-shifts-genomics-ai-from-bulk-tissue-predictions-to-single-cell-type-resolution-with-alphagenome-2",
+      "importance": 5,
+      "why_it_matters": "Researchers get a noncommercial API for cell-type-level genomic variant analysis.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "US reportedly finalizing curbs on China's remote access to AI chips",
+      "member_ids": [
+        16
+      ],
+      "primary_url": "https://247wallst.com",
+      "importance": 5,
+      "why_it_matters": "Reported curbs would limit Chinese firms' access to advanced AI compute via remote cloud use.",
+      "sources": [
+        "24/7 Wall St."
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-13/card.jpg",
+  "candidate_count": 173,
+  "unsupported_terms": [
+    "Lawmakers"
+  ]
+}
