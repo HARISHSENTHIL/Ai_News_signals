@@ -1,0 +1,229 @@
+{
+  "date": "2026-11-15",
+  "post": {
+    "hook": "Nvidia's rough day, two new Claude models",
+    "subhook": "Plus llama.cpp hits 1.0 and Runway opens a robot controller",
+    "stories": [
+      {
+        "headline": "Anthropic releases Claude Fable 5.2 and Mythos 5.2",
+        "detail": "Two new Claude model versions are out for practitioners to evaluate against their current Claude setups.",
+        "source_name": "SD Times",
+        "source_url": "https://sdtimes.com",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Reports: banned Nvidia chips trained Kimi K3, DeepSeek V4",
+        "detail": "If the reports hold, they point to export-control gaps that could change how China's leading open models are assessed and regulated.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "llama.cpp reaches version 1.0",
+        "detail": "The local inference library marks a stability milestone and ships with an API version boundary note for developers building on it.",
+        "source_name": "tbreak",
+        "source_url": "https://tbreak.com",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Jensen Huang resigns as Nvidia CEO",
+        "detail": "He leaves amid a scandal and investigations; a leadership change at the top AI chip supplier could affect chip supply and policy.",
+        "source_name": "The Guardian",
+        "source_url": "https://theguardian.com/technology/2026/nov/14/jensen-huang-affair-nvidia-nightmare",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Runway opens Praxis-1 robot controller under Apache 2.0",
+        "detail": "Open weights and code for a video-trained controller, though it cannot yet plan complex action sequences on its own.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "WSJ: Nvidia chips reached China via Southeast Asian data centers",
+        "detail": "The report describes a sanctions gap that may have let Chinese companies access restricted Nvidia AI chips.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261115/p1",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "llama.cpp b12406 adds Inkling 2 text and vision",
+        "detail": "Local llama.cpp users can run Inkling 2 text and vision models with this release, per the release notes.",
+        "source_name": "llama.cpp on GitHub",
+        "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12406",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "OpenAI dissolves standalone robotics team",
+        "detail": "OpenAI says general-purpose models such as GPT-6 Astra can control robots directly, so its robotics researchers move to other teams.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-might-make-specialized-robotics-ai-unnecessary",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Amodei addresses compute costs days before Anthropic IPO",
+        "detail": "Reported commitments of nearly $901 billion raise questions about whether future revenue will cover compute spending.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo",
+        "category": "BUSINESS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Two new Claude models and a very bad day for Nvidia lead today's AI news.\n\n1. Anthropic introduces Claude Fable 5.2 and Mythos 5.2, ready to test against your current Claude setup. (SD Times)\n2. Reports say export-banned Nvidia chips were used to train Kimi K3 and DeepSeek V4, pointing to gaps in export controls. (TechCrunch)\n3. llama.cpp reaches 1.0, a stability milestone with an API version boundary note. (tbreak)\n4. Jensen Huang resigns as Nvidia CEO amid a scandal and investigations. (The Guardian)\n5. Runway releases Praxis-1, an open-weight, video-trained robot controller under Apache 2.0. It can't yet plan complex action sequences alone. (The Decoder)\n6. WSJ reports Nvidia chips reached Chinese firms through Southeast Asian data centers via a sanctions gap. (Techmeme)\n7. llama.cpp b12406 adds Inkling 2 text and vision support. (llama.cpp on GitHub)\n8. OpenAI reassigns its robotics researchers, saying general models like GPT-6 Astra can control robots directly. (The Decoder)\n9. Amodei addresses compute costs days before Anthropic's planned IPO, with reported commitments of nearly $901 billion. (The Decoder)\n\nExport controls had a worse day than any model did. 🔍",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "Anthropic",
+      "Claude",
+      "Nvidia",
+      "llamacpp",
+      "OpenSourceAI",
+      "Robotics",
+      "ExportControls",
+      "MachineLearning",
+      "AINews",
+      "LocalLLM"
+    ],
+    "image_query": "laptop code screen"
+  },
+  "clusters": [
+    {
+      "headline": "Anthropic introduces Claude Fable 5.2 and Mythos 5.2",
+      "member_ids": [
+        1
+      ],
+      "primary_url": "https://sdtimes.com",
+      "importance": 7,
+      "why_it_matters": "Two new Anthropic model versions are available for practitioners to evaluate against their current Claude setups.",
+      "sources": [
+        "SD Times"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Reports say export-banned Nvidia chips were used to train top Chinese AI models such as Kimi K3 and DeepSeek V4",
+      "member_ids": [
+        9,
+        59
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen",
+      "importance": 5,
+      "why_it_matters": "If the reports hold, they point to gaps in chip export controls that could affect how China's leading open models are assessed and regulated.",
+      "sources": [
+        "shattered.io",
+        "TechCrunch"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "llama.cpp reaches version 1.0, with an accompanying API version boundary note",
+      "member_ids": [
+        21,
+        22,
+        23
+      ],
+      "primary_url": "https://tbreak.com",
+      "importance": 4,
+      "why_it_matters": "A 1.0 version marks a stability milestone for the widely used local inference library, so developers building on its API can plan around it.",
+      "sources": [
+        "CASRAI",
+        "Tbreak UAE",
+        "shattered.io"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Jensen Huang resigns as Nvidia CEO amid scandal and investigations",
+      "member_ids": [
+        27,
+        28,
+        38,
+        43,
+        45,
+        55,
+        57,
+        60,
+        64,
+        79,
+        82
+      ],
+      "primary_url": "https://theguardian.com/technology/2026/nov/14/jensen-huang-affair-nvidia-nightmare",
+      "importance": 3,
+      "why_it_matters": "Leadership change and investigations at the leading AI chip supplier could affect chip supply and policy, though the stories are mostly about the personal scandal.",
+      "sources": [
+        "Techmeme",
+        "TechCrunch",
+        "The Verge",
+        "SCMP Tech",
+        "The Guardian"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Runway releases open-weight Praxis-1 robot controller under Apache 2.0",
+      "member_ids": [
+        76
+      ],
+      "primary_url": "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller",
+      "importance": 4,
+      "why_it_matters": "Open weights and code let robotics developers test a video-trained controller, though the model cannot yet plan complex action sequences on its own.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "WSJ reports Nvidia chips reached Chinese firms through Southeast Asian data centers exploiting a sanctions gap",
+      "member_ids": [
+        32
+      ],
+      "primary_url": "https://techmeme.com/261115/p1",
+      "importance": 4,
+      "why_it_matters": "The report describes a sanctions gap that may have let Chinese companies access restricted Nvidia AI chips.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "llama.cpp b12406 adds Inkling 2 text and vision support",
+      "member_ids": [
+        48
+      ],
+      "primary_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12406",
+      "importance": 3,
+      "why_it_matters": "Local users of llama.cpp can run Inkling 2 text and vision models after this release, per the release notes.",
+      "sources": [
+        "llama.cpp"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI reassigns robotics researchers to other teams",
+      "member_ids": [
+        75
+      ],
+      "primary_url": "https://the-decoder.com/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-might-make-specialized-robotics-ai-unnecessary",
+      "importance": 3,
+      "why_it_matters": "OpenAI says general-purpose models such as GPT-6 Astra can control robots directly, so it is dissolving its standalone robotics team.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-15/card.jpg",
+  "candidate_count": 92,
+  "unsupported_terms": [
+    "Reports",
+    "WSJ"
+  ]
+}
