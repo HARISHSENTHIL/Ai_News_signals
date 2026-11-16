@@ -1,0 +1,243 @@
+{
+  "date": "2026-11-16",
+  "post": {
+    "hook": "China ships big models; Anthropic eyes Nasdaq",
+    "subhook": "Plus chip export rules, DeepSeek caps and a child-safety report",
+    "stories": [
+      {
+        "headline": "Alibaba launches Qwen4-Max with cyber and CBRN data filtering",
+        "detail": "Alibaba says it filtered training data to remove offensive cyber and CBRN capabilities; Artificial Analysis scores it 43 on its Intelligence Index.",
+        "source_name": "South China Morning Post",
+        "source_url": "https://scmp.com/tech/big-tech/article/3374540/alibaba-says-new-flagship-ai-model-cuts-task-costs-60-while-tightening-cyber-guardrails",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic IPO reportedly set for Nasdaq debut on Nov. 19",
+        "detail": "A listing could change the lab's funding, governance and regulatory scrutiny; coverage flags limits on retail-investor access.",
+        "source_name": "The Conversation",
+        "source_url": "https://theconversation.com",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Meituan opens weights for 1.6T-parameter LongCat-2.5",
+        "detail": "A very large open-weights agent model trained on Chinese hardware, without Nvidia GPUs.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Congress moves to tighten AI chip export rules",
+        "detail": "Bipartisan push includes a bill to block Chinese companies from accessing AI chips overseas.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Reports of AI-related child abuse material up 8,400% in two years",
+        "detail": "A Childlight report finds sharp rises, including deepfakes made with nudify apps.",
+        "source_name": "The Guardian",
+        "source_url": "https://theguardian.com/technology/2026/nov/16/ai-related-child-sexual-abuse-material-rise-exploitation-deepfakes",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "DeepSeek reportedly caps chat use amid chip shortages",
+        "detail": "Users report daily quotas and shorter inputs on app and web chat; DeepSeek has not confirmed the limits.",
+        "source_name": "Pandaily",
+        "source_url": "https://pandaily.com/deepseek-app-web-usage-limits-daily-quota-long-conversations-user-reports",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Megaspeed reportedly brokered nearly $12B in Nvidia chip orders",
+        "detail": "Orders reportedly routed to Chinese companies via an intermediary could draw export-control scrutiny.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/firm-linked-to-jensen-huangs-ex-lover-reportedly-brokered-nearly-12-billion-in-nvidia-chip-orders-for-china",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Claude Opus 5.5 becomes default on paid plans",
+        "detail": "New Anthropic guidance says to drop 'think hard' prompts and start at Medium effort.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5",
+        "category": "MODEL",
+        "tier": "brief"
+      },
+      {
+        "headline": "Tencent's Hy4 flash: 224B model at 2 yuan per million output tokens",
+        "detail": "12B active parameters; the main results are on Tencent's own internal benchmark.",
+        "source_name": "Pandaily",
+        "source_url": "https://pandaily.com/tencent-hunyuan-hy4-flash-224b-12b-active-1m-context-workindex",
+        "category": "MODEL",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Chinese labs shipped big models today, and Anthropic is reportedly headed for Nasdaq.\n\n1. Alibaba launches Qwen4-Max, saying it filtered training data to remove offensive cyber and CBRN capabilities. Artificial Analysis scores it 43 on its Intelligence Index. (South China Morning Post)\n2. Anthropic's IPO is reported to debut on Nasdaq on Nov. 19, with coverage flagging limits on retail-investor access. (The Conversation)\n3. Meituan releases open weights for LongCat-2.5, a 1.6-trillion-parameter agent model trained on Chinese hardware without Nvidia GPUs. (The Decoder)\n4. DeepSeek reportedly imposes daily quotas and shorter inputs amid chip shortages. DeepSeek has not confirmed. (Pandaily)\n5. Congress moves to tighten AI chip export rules, including a bill to block Chinese companies from overseas chip access. (The Verge)\n6. A Childlight report finds reports of AI-related child sexual abuse material rose 8,400% in two years, including deepfakes from nudify apps. (The Guardian)\n7. Megaspeed reportedly brokered nearly $12 billion in Nvidia chip orders for Chinese companies. (The Decoder)\n8. Claude Opus 5.5 is now the default on paid plans, and Anthropic's new guidance says to drop 'think hard' prompts and start at Medium effort. (The Decoder)\n9. Tencent releases Hy4 flash, a 224B model with 12B active parameters at 2 yuan per million output tokens. Main results are on Tencent's own benchmark. (Pandaily)\n\nChips and export rules ran through half of today's news.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "LLM",
+      "OpenWeights",
+      "Qwen",
+      "Anthropic",
+      "Claude",
+      "DeepSeek",
+      "AIChips",
+      "ExportControls",
+      "AIPolicy",
+      "TechNews"
+    ],
+    "image_query": "server racks"
+  },
+  "clusters": [
+    {
+      "headline": "Alibaba launches Qwen4-Max flagship model with cybersecurity and CBRN data filtering",
+      "member_ids": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        45,
+        56,
+        91
+      ],
+      "primary_url": "https://scmp.com/tech/big-tech/article/3374540/alibaba-says-new-flagship-ai-model-cuts-task-costs-60-while-tightening-cyber-guardrails",
+      "importance": 7,
+      "why_it_matters": "Alibaba says it filtered Qwen4-Max training data to remove offensive cyber and CBRN capabilities, and Artificial Analysis scores it 43 on its Intelligence Index, so developers can weigh it against rival models.",
+      "sources": [
+        "Around Prague",
+        "Bloomberg",
+        "South China Morning Post",
+        "Crypto Briefing",
+        "Mezha.net",
+        "Reuters",
+        "www.trendingtopics.eu",
+        "Yahoo Finance",
+        "Techmeme",
+        "SCMP Tech"
+      ],
+      "corroboration": 10
+    },
+    {
+      "headline": "Anthropic IPO reported to debut on Nasdaq on Nov. 19",
+      "member_ids": [
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      "primary_url": "https://theconversation.com",
+      "importance": 5,
+      "why_it_matters": "A public listing of a leading AI lab could change its funding, governance and regulatory scrutiny, and coverage flags retail-investor access limits.",
+      "sources": [
+        "TradingKey",
+        "CryptoPotato",
+        "The Conversation",
+        "France 24",
+        "The Korea Times"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Meituan releases open weights for LongCat-2.5, a 1.6-trillion-parameter agent model trained on Chinese hardware",
+      "member_ids": [
+        102
+      ],
+      "primary_url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu",
+      "importance": 6,
+      "why_it_matters": "Open weights for a very large agent model trained without Nvidia GPUs give practitioners a new large open option and evidence of non-Nvidia training.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "DeepSeek reportedly imposes daily quotas and curbs chat access amid chip shortages",
+      "member_ids": [
+        12,
+        22,
+        95
+      ],
+      "primary_url": "https://pandaily.com/deepseek-app-web-usage-limits-daily-quota-long-conversations-user-reports",
+      "importance": 5,
+      "why_it_matters": "Users of DeepSeek's app and web chat may face daily caps and shorter inputs, though DeepSeek has not confirmed the limits.",
+      "sources": [
+        "investingLive",
+        "digitimes",
+        "Pandaily"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Congress moves to tighten AI chip export rules, including a bill to block Chinese companies from overseas chip access",
+      "member_ids": [
+        63,
+        80
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+      "importance": 5,
+      "why_it_matters": "Bipartisan support for tighter export rules could restrict which companies can access AI accelerators abroad.",
+      "sources": [
+        "Techmeme",
+        "The Verge"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Reports of AI-related child sexual abuse material rise 8,400% in two years",
+      "member_ids": [
+        110
+      ],
+      "primary_url": "https://theguardian.com/technology/2026/nov/16/ai-related-child-sexual-abuse-material-rise-exploitation-deepfakes",
+      "importance": 5,
+      "why_it_matters": "A Childlight report finds sharply rising reports of AI-generated abuse material, including deepfakes from nudify apps, which may push regulators toward stronger controls.",
+      "sources": [
+        "The Guardian"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Megaspeed reportedly brokered nearly $12 billion in Nvidia chip orders for Chinese companies",
+      "member_ids": [
+        96,
+        101
+      ],
+      "primary_url": "https://the-decoder.com/firm-linked-to-jensen-huangs-ex-lover-reportedly-brokered-nearly-12-billion-in-nvidia-chip-orders-for-china",
+      "importance": 4,
+      "why_it_matters": "Reported chip orders routed to China through an intermediary could draw enforcement and export-control scrutiny of AI hardware supply.",
+      "sources": [
+        "The Decoder",
+        "SCMP Tech"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Anthropic makes Claude Opus 5.5 default on paid plans and publishes new prompting guidance",
+      "member_ids": [
+        92
+      ],
+      "primary_url": "https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5",
+      "importance": 4,
+      "why_it_matters": "Paid users now default to Opus 5.5, and the guide advises dropping think hard prompts and starting at Medium effort.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-16/card.jpg",
+  "candidate_count": 129,
+  "unsupported_terms": [
+    "CBRN"
+  ]
+}
