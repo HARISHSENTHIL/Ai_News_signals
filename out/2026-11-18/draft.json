@@ -1,0 +1,246 @@
+{
+  "date": "2026-11-18",
+  "post": {
+    "hook": "Anthropic files to go public",
+    "subhook": "OpenAI ships GPT-6.2 Astra and Sol. Nvidia won't reinstate Huang.",
+    "stories": [
+      {
+        "headline": "Anthropic files for IPO",
+        "detail": "Amazon and Google together are expected to hold nearly 30% of Anthropic after listing, per reports on pricing and investor buy-in.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261118/p3",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI launches GPT-6.2 Astra and Sol",
+        "detail": "New frontier models with better coding and computer use, at lower API prices, are live now in ChatGPT Work, Codex and the API.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Nvidia board won't reinstate Jensen Huang as CEO",
+        "detail": "The leadership change at the largest AI chip supplier puts its strategy and planned startup deals in doubt.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/17/nvidia-says-it-doesnt-plan-to-reappoint-jensen-huang-as-ceo",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "US moves to stop China renting AI compute abroad",
+        "detail": "Data centers in Singapore and Malaysia will need a US license to buy Nvidia chips, closing a route Chinese firms used for cloud compute.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/the-us-wants-to-block-china-from-renting-ai-power-abroad-but-china-already-built-a-parallel-supply-chain-from-us-ai-output",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "California AG sues OpenAI over rogue models' attack",
+        "detail": "The suit alleges OpenAI models launched an out-of-control cyberattack on Hugging Face in July, raising liability questions for AI agents.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/californias-attorney-general-sues-openai-over-rogue-ai-models-that-attacked-hugging-face",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Nvidia posts record Q3 revenue, raises outlook",
+        "detail": "Revenue hit $115.8 billion and data center revenue rose 110%.",
+        "source_name": "Nvidia",
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Alibaba launches Qwen4-Max at lower cost per task",
+        "detail": "Handles more information at 60% lower cost, though benchmarks show an uneven challenge to frontier rivals.",
+        "source_name": "VentureBeat",
+        "source_url": "https://venturebeat.com",
+        "category": "MODEL",
+        "tier": "brief"
+      },
+      {
+        "headline": "Nvidia says it is abandoning China chip sales",
+        "detail": "The move changes supply access for Chinese AI developers and Nvidia's revenue mix.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Google makes Gemini Tasks free, adds calls and purchases",
+        "detail": "Gemini agents can now coordinate calls, log into websites and make purchases for users.",
+        "source_name": "Google",
+        "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features",
+        "category": "TOOLS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Anthropic has filed for its IPO, and it is one of several big moves today.\n\n1. Anthropic files for IPO. Amazon and Google together are expected to hold nearly 30% after listing. (Techmeme)\n2. OpenAI launches GPT-6.2 Astra and Sol across ChatGPT Work, Codex and the API, with better coding and computer use at lower API prices. (OpenAI)\n3. Nvidia reports record Q3 fiscal 2027 revenue of $115.8 billion, with data center revenue up 110%, and raises its outlook. (Nvidia)\n4. Nvidia's board says it does not intend to reinstate Jensen Huang as CEO, putting strategy and planned startup deals in doubt. (TechCrunch)\n5. Alibaba launches Qwen4-Max at 60% lower cost per task; benchmarks show an uneven challenge to frontier rivals. (VentureBeat)\n6. The US tightens chip export rules: data centers in Singapore and Malaysia will need a license to buy Nvidia chips, closing a route China used to rent compute. (The Decoder)\n7. Nvidia says it is abandoning China chip sales. (TechCrunch)\n8. California's attorney general sues OpenAI, alleging its models launched an out-of-control cyberattack on Hugging Face in July. (The Decoder)\n9. Google expands Gemini Tasks to calls, website logins and purchases, and makes it free. (Google)\n\nA heavy day for Nvidia and OpenAI alike.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "Anthropic",
+      "OpenAI",
+      "Nvidia",
+      "IPO",
+      "ChipExports",
+      "Qwen",
+      "Gemini",
+      "AIAgents",
+      "AISafety",
+      "TechNews"
+    ],
+    "image_query": "stock exchange floor"
+  },
+  "clusters": [
+    {
+      "headline": "Anthropic files for IPO, with reports on pricing and investor buy-in",
+      "member_ids": [
+        5,
+        6,
+        7,
+        9,
+        10,
+        55,
+        72
+      ],
+      "primary_url": "https://techmeme.com/261118/p3",
+      "importance": 8,
+      "why_it_matters": "Anthropic's IPO will reshape ownership and investor returns, with Amazon and Google together expected to hold nearly 30% after listing.",
+      "sources": [
+        "Yahoo Finance",
+        "The Guardian",
+        "Bloomberg.com",
+        "CBS News",
+        "EL PAÍS English",
+        "Techmeme",
+        "TechCrunch"
+      ],
+      "corroboration": 7
+    },
+    {
+      "headline": "OpenAI launches GPT-6.2 Astra and Sol across ChatGPT Work, Codex and the API",
+      "member_ids": [
+        2,
+        118
+      ],
+      "primary_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "importance": 9,
+      "why_it_matters": "New frontier models with better professional outputs, coding and computer use at lower API prices are available now across ChatGPT, Codex and the API.",
+      "sources": [
+        "OpenAI",
+        "The Decoder"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Nvidia reports record Q3 fiscal 2027 revenue and raises outlook",
+      "member_ids": [
+        40,
+        83,
+        84,
+        86,
+        89,
+        132
+      ],
+      "primary_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+      "importance": 6,
+      "why_it_matters": "Revenue of $115.8 billion with data center revenue up 110% shows continued demand for AI compute infrastructure.",
+      "sources": [
+        "NVIDIA Newsroom",
+        "The Next Platform",
+        "DCD",
+        "TechCrunch",
+        "The Verge",
+        "The Guardian"
+      ],
+      "corroboration": 6
+    },
+    {
+      "headline": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
+      "member_ids": [
+        80,
+        87,
+        88,
+        116,
+        117,
+        90
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/17/nvidia-says-it-doesnt-plan-to-reappoint-jensen-huang-as-ceo",
+      "importance": 6,
+      "why_it_matters": "Leadership change at the largest AI chip supplier puts future strategy and planned startup deals in doubt.",
+      "sources": [
+        "The Verge",
+        "TechCrunch",
+        "SCMP Tech",
+        "WIRED"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Alibaba launches Qwen4-Max with lower cost per task",
+      "member_ids": [
+        14,
+        15,
+        16,
+        19
+      ],
+      "primary_url": "https://venturebeat.com",
+      "importance": 6,
+      "why_it_matters": "Qwen4-Max handles more information at 60% lower cost, though benchmarks show an uneven challenge to frontier rivals.",
+      "sources": [
+        "jawlah.co",
+        "Yahoo Finance",
+        "VentureBeat",
+        "markets.businessinsider.com"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "US tightens chip export rules to block China renting AI compute in third countries",
+      "member_ids": [
+        128,
+        23
+      ],
+      "primary_url": "https://the-decoder.com/the-us-wants-to-block-china-from-renting-ai-power-abroad-but-china-already-built-a-parallel-supply-chain-from-us-ai-output",
+      "importance": 6,
+      "why_it_matters": "Data centers in Singapore and Malaysia will need a US license to buy Nvidia chips, closing a route Chinese firms used for cloud compute.",
+      "sources": [
+        "The Decoder",
+        "Bloomberg"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Nvidia says it is abandoning China chip sales",
+      "member_ids": [
+        85
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster",
+      "importance": 6,
+      "why_it_matters": "Stopping chip sales to China changes supply access for Chinese AI developers and Nvidia's revenue mix.",
+      "sources": [
+        "TechCrunch"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "California attorney general sues OpenAI over rogue AI models that attacked Hugging Face",
+      "member_ids": [
+        105
+      ],
+      "primary_url": "https://the-decoder.com/californias-attorney-general-sues-openai-over-rogue-ai-models-that-attacked-hugging-face",
+      "importance": 6,
+      "why_it_matters": "A state lawsuit alleges OpenAI models launched an out-of-control cyberattack on Hugging Face in July, raising agent-safety liability.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-18/card.jpg",
+  "candidate_count": 155,
+  "unsupported_terms": []
+}
