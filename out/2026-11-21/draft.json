@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-21",
+  "post": {
+    "hook": "Claude claims a Riemann hypothesis proof",
+    "subhook": "Plus Anthropic's record market debut and a new local open model",
+    "stories": [
+      {
+        "headline": "Claude and an Anthropic mathematician claim a Riemann proof",
+        "detail": "An AI-assisted proof of the 167-year-old problem is claimed, mathematicians are reacting, and a competing human proof is also reported.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic's record market debut peaks near $1.3T",
+        "detail": "The stock market debut sets a new valuation benchmark for AI companies and affects investors across the sector.",
+        "source_name": "The Guardian",
+        "source_url": "https://theguardian.com/news/audio/2026/nov/20/anthropic-1-trillion-valuation-the-latest",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Inkling 2 Mini lands in Hugging Face, llama.cpp and Ollama",
+        "detail": "The open model has 26B parameters with 5.4B active and fits on a Mac at about 20GB, so local users can run it now.",
+        "source_name": "Hugging Face",
+        "source_url": "https://huggingface.co/blog/inkling2mini",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Alibaba trains next Qwen model on its own T-Head chips",
+        "detail": "The move aims to cut reliance on Nvidia, though reports say US chip curbs could slow Alibaba's AI cloud growth.",
+        "source_name": "TechNode",
+        "source_url": "https://technode.com",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "OpenAI cuts reasoning extraction success from 54% to 0.2%",
+        "detail": "New safeguards target distillation, and OpenAI is suspending accounts tied to distillation campaigns.",
+        "source_name": "OpenAI",
+        "source_url": "https://openai.com/index/combatting-adversarial-distillation",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "METR Q4: AI R&D skills rising fast, harder to measure",
+        "detail": "Some capabilities still track an exponential trend, while models lag on judgment-heavy tasks compared with coding.",
+        "source_name": "METR",
+        "source_url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update",
+        "category": "RESEARCH",
+        "tier": "brief"
+      },
+      {
+        "headline": "Signal blocks screenshots to keep AI agents out of chats",
+        "detail": "Signal says OS-level AI agents undermine its privacy guarantees; protections remain incomplete, including on macOS.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+        "category": "SECURITY",
+        "tier": "brief"
+      },
+      {
+        "headline": "US records show ~880,000 AI chips approved for Chinese firms",
+        "detail": "The data could push Chinese buyers from Nvidia to AMD, and new export rules now reach beyond advanced AI parts.",
+        "source_name": "South China Morning Post",
+        "source_url": "https://scmp.com/tech/big-tech/article/3375287/nvidia-faces-further-blow-after-shock-us-export-permit-data-release-analysts",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Cursor tells Congress it may phase out Chinese models",
+        "detail": "Dropping them would change which models Cursor users can access.",
+        "source_name": "CNBC",
+        "source_url": "https://www.cnbc.com",
+        "category": "BUSINESS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "An Anthropic mathematician and Claude claim a proof of the 167-year-old Riemann hypothesis, and a competing human proof is reported too. Here's what changed today:\n\n1. Claude-assisted Riemann hypothesis proof claimed, with a rival human proof reported (TechCrunch)\n2. Anthropic's record stock market debut peaks at about $1.3 trillion (The Guardian)\n3. Inkling 2 Mini, a 26B open model with 5.4B active, now runs locally via Hugging Face, llama.cpp and Ollama at about 20GB (Hugging Face)\n4. Alibaba trains its next Qwen model on its own T-Head chips amid US curbs (TechNode)\n5. OpenAI says reasoning extraction success fell from 54% to 0.2% and it is suspending distillation accounts (OpenAI)\n6. METR's Q4 update: AI R&D-relevant capabilities improving fast and getting harder to measure (METR)\n7. Signal blocks screenshots on iOS and Android to keep AI agents out of chats (The Verge)\n8. US lawmakers release records showing about 880,000 advanced AI chips approved for Chinese firms (South China Morning Post)\n9. Cursor tells Congress it is considering phasing out Chinese models (CNBC)\n\nThe proof claim is the one to watch as mathematicians check the work.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "Anthropic",
+      "Claude",
+      "RiemannHypothesis",
+      "OpenAI",
+      "OpenSourceAI",
+      "LocalLLM",
+      "AIPolicy",
+      "AISecurity",
+      "MachineLearning",
+      "TechNews"
+    ],
+    "image_query": "chalkboard math equations"
+  },
+  "clusters": [
+    {
+      "headline": "Anthropic mathematician and Claude claim a proof of the Riemann hypothesis, with a competing human proof reported",
+      "member_ids": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        54,
+        66,
+        83
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too",
+      "importance": 9,
+      "why_it_matters": "If the AI-assisted proof holds up, it would resolve a 167-year-old open problem, and mathematicians are already reacting to it.",
+      "sources": [
+        "Futurism",
+        "The New York Times",
+        "WSJ",
+        "IBM",
+        "The Verge",
+        "Scientific American",
+        "Business Insider",
+        "Phys.org",
+        "Simon Willison",
+        "TechCrunch",
+        "Latent Space"
+      ],
+      "corroboration": 11
+    },
+    {
+      "headline": "Anthropic makes a record-breaking stock market debut with a peak valuation of about $1.3 trillion",
+      "member_ids": [
+        11,
+        17,
+        114,
+        115
+      ],
+      "primary_url": "https://theguardian.com/news/audio/2026/nov/20/anthropic-1-trillion-valuation-the-latest",
+      "importance": 8,
+      "why_it_matters": "The debut at a peak of $1.3tn sets a new valuation benchmark for AI companies and affects investors across the sector.",
+      "sources": [
+        "Seeking Alpha",
+        "36Kr",
+        "The Guardian"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Hugging Face, llama.cpp and Ollama add support for the Inkling 2 Mini open model",
+      "member_ids": [
+        25,
+        41,
+        60,
+        63,
+        64
+      ],
+      "primary_url": "https://huggingface.co/blog/inkling2mini",
+      "importance": 6,
+      "why_it_matters": "The open model with 26B parameters and 5.4B active fits on a Mac at about 20GB, so local users can run it now.",
+      "sources": [
+        "HF Models",
+        "Hugging Face",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Alibaba trains its next-generation Qwen model on its own T-Head chips amid new US curbs",
+      "member_ids": [
+        13,
+        14,
+        15,
+        16,
+        24
+      ],
+      "primary_url": "https://technode.com",
+      "importance": 5,
+      "why_it_matters": "Training on domestic chips is meant to reduce reliance on Nvidia, but reports say Alibaba's AI cloud growth could slow under US chip curbs.",
+      "sources": [
+        "Fortune",
+        "Breakingviews",
+        "TechNode",
+        "TradingView",
+        "TrendForce"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "OpenAI strengthens safeguards against distillation and extraction of model reasoning",
+      "member_ids": [
+        1,
+        104
+      ],
+      "primary_url": "https://openai.com/index/combatting-adversarial-distillation",
+      "importance": 6,
+      "why_it_matters": "OpenAI reports that the success rate for extracting protected reasoning fell from 54 percent to 0.2 percent and that it is suspending accounts tied to distillation campaigns.",
+      "sources": [
+        "OpenAI",
+        "The Decoder"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "METR releases Q4 update showing AI R&D-relevant capabilities improving rapidly and harder to measure",
+      "member_ids": [
+        26,
+        111
+      ],
+      "primary_url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update",
+      "importance": 6,
+      "why_it_matters": "The update reports some capabilities still improving on an exponential trajectory, while models lag on tasks that require judgment compared with coding.",
+      "sources": [
+        "METR",
+        "MIT Tech Review"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Signal blocks screenshots on iOS and Android to stop AI agents from reading private chats",
+      "member_ids": [
+        43,
+        73,
+        107,
+        123
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+      "importance": 5,
+      "why_it_matters": "Signal says OS-level AI agents undermine its ability to guarantee privacy, and its protections remain incomplete, including on macOS.",
+      "sources": [
+        "Hacker News",
+        "The Verge",
+        "The Decoder",
+        "Lemmy"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "US lawmakers release export licence records showing about 880,000 advanced AI chips approved for Chinese firms",
+      "member_ids": [
+        48,
+        103
+      ],
+      "primary_url": "https://scmp.com/tech/big-tech/article/3375287/nvidia-faces-further-blow-after-shock-us-export-permit-data-release-analysts",
+      "importance": 5,
+      "why_it_matters": "The disclosed approvals could push Chinese buyers to switch from Nvidia to AMD, and new export rules now reach chips beyond advanced AI parts.",
+      "sources": [
+        "Techmeme",
+        "SCMP Tech"
+      ],
+      "corroboration": 2
+    }
+  ],
+  "card_path": "out/2026-11-21/card.jpg",
+  "candidate_count": 125,
+  "unsupported_terms": [
+    "AI-assisted",
+    "Claude-assisted",
+    "Dropping",
+    "Morning",
+    "OS-level",
+    "South"
+  ]
+}
