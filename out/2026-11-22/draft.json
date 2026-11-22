@@ -1,0 +1,235 @@
+{
+  "date": "2026-11-22",
+  "post": {
+    "hook": "Claude, Riemann, and an Anthropic IPO",
+    "subhook": "A claimed proof awaits checking as Anthropic lists on Nasdaq",
+    "stories": [
+      {
+        "headline": "Claude credited in claimed Riemann hypothesis proof",
+        "detail": "An Anthropic mathematician makes the claim. Mathematicians are still checking it, and a rival all-human proof has appeared.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic completes its IPO on Nasdaq",
+        "detail": "The listing gives investors a public reference for pricing frontier AI labs and raises questions about safety commitments at scale.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Inkling 2 Mini open model lands in Transformers v5.24.0",
+        "detail": "An open multimodal model described as laptop-runnable, with community quantized variants already appearing.",
+        "source_name": "Hugging Face",
+        "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.24.0",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Canary keys in AI routers expose broken privacy promises",
+        "detail": "Researchers tested routers such as OpenRouter and Vercel and found zero-data-retention promises often broken and keys stolen.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261121/p10",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "AI bug-hunting could mean more internet outages",
+        "detail": "AI is pushing companies to patch faster as attackers race to exploit newly found flaws, with Claude Code use also cited.",
+        "source_name": "Wired",
+        "source_url": "https://wired.com/story/brace-yourself-for-years-of-outage-chaos",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "House committees flag Chinese open-weight models",
+        "detail": "Cursor is weighing phasing out Kimi K2.5 as scrutiny grows over which models developers can use.",
+        "source_name": "casrai.org",
+        "source_url": "https://casrai.org",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Network reportedly moved restricted Nvidia chips to China",
+        "detail": "The reporting links it to the Jensen Huang scandal; tighter export enforcement could affect access to AI compute.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261122/p5",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Amazon reportedly nearing $7.5B deal for Decart",
+        "detail": "Per the reporting, the acquisition would help AWS compete with Nvidia for computing power.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261121/p8",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Tesla rolls out FSD v15 with photorealistic rendering",
+        "detail": "Musk calls it real-time AI video generation without game engines; that claim is not independently verified.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261122/p4",
+        "category": "NEWS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "An Anthropic mathematician says Claude helped prove the Riemann hypothesis, and the checking has only started.\n\nLeads:\n1. Claude credited in a claimed Riemann hypothesis proof. Mathematicians are still verifying it, and a rival all-human proof has appeared. (The Verge)\n2. Anthropic completes its IPO on Nasdaq, setting a public reference point for pricing frontier AI labs. (The Verge)\n3. Inkling 2 Mini, an open multimodal model described as laptop-runnable, gets support in Transformers v5.24.0. Community quantized variants are already out. (Hugging Face)\n4. Researchers planted canary credentials in AI routers such as OpenRouter and Vercel and found privacy promises often broken and keys stolen. (Techmeme)\n5. AI-driven vulnerability discovery could make internet outages more frequent as patch and exploit cycles speed up. (Wired)\n\nBriefs:\n6. US House committees flag Chinese open-weight models. Cursor is weighing phasing out Kimi K2.5. (casrai.org)\n7. A network reportedly moved restricted Nvidia chips to China, linked to the Jensen Huang scandal. (Techmeme)\n8. Amazon is reportedly nearing a $7.5B deal to buy Decart. (Techmeme)\n9. Tesla rolls out FSD v15. Musk's claim that its rendering is AI video generation is unverified. (Techmeme)\n\nIf you route API calls through a third party, today is a good day to rotate your keys. 🔑",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "Anthropic",
+      "Claude",
+      "MachineLearning",
+      "OpenSource",
+      "HuggingFace",
+      "AISecurity",
+      "Cybersecurity",
+      "AIPolicy",
+      "TechNews"
+    ],
+    "image_query": "chalkboard equations"
+  },
+  "clusters": [
+    {
+      "headline": "Anthropic mathematician claims Claude helped prove the Riemann hypothesis; Lean community and Stanford respond with statements and a human proof",
+      "member_ids": [
+        6,
+        26,
+        42,
+        52,
+        70
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+      "importance": 9,
+      "why_it_matters": "If verified, it would be a major AI-in-mathematics milestone, though mathematicians are still checking whether the proof holds up and a rival all-human proof has also appeared.",
+      "sources": [
+        "The Guardian",
+        "Techmeme",
+        "The Verge",
+        "The Decoder",
+        "Lemmy"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Anthropic completes its IPO on Nasdaq, drawing investor and valuation commentary",
+      "member_ids": [
+        0,
+        1,
+        4,
+        43
+      ],
+      "primary_url": "https://theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+      "importance": 6,
+      "why_it_matters": "The IPO sets a public market reference for how investors price frontier AI labs, and the candidates debate whether its safety commitments can coexist with that scale.",
+      "sources": [
+        "CTech",
+        "Bleap",
+        "조선일보",
+        "The Verge"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Inkling 2 Mini open model released, with Transformers v5.24.0 adding support and community quantized variants appearing",
+      "member_ids": [
+        31,
+        53,
+        15,
+        16
+      ],
+      "primary_url": "https://github.com/huggingface/transformers/releases/tag/v5.24.0",
+      "importance": 6,
+      "why_it_matters": "An open multimodal model that the candidates describe as able to run on a laptop is now usable directly in the Transformers library.",
+      "sources": [
+        "Transformers",
+        "The Decoder",
+        "HF Models"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Researchers plant canary credentials in AI routers such as OpenRouter and Vercel and find privacy promises often broken and keys stolen",
+      "member_ids": [
+        32
+      ],
+      "primary_url": "https://techmeme.com/261121/p10",
+      "importance": 5,
+      "why_it_matters": "The reported results suggest zero-data-retention privacy policies at AI routing services may not hold, putting API keys at risk.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Warnings that AI-driven vulnerability discovery and Claude Code use could make internet outages more frequent",
+      "member_ids": [
+        2,
+        58
+      ],
+      "primary_url": "https://wired.com/story/brace-yourself-for-years-of-outage-chaos",
+      "importance": 4,
+      "why_it_matters": "Wired reports that AI is pushing companies to patch faster as attackers race to exploit newly found flaws, which could bring more outages.",
+      "sources": [
+        "Yahoo Finance",
+        "WIRED"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "US House committees flag Chinese open-weight AI models as Cursor weighs phasing out Kimi K2.5",
+      "member_ids": [
+        9,
+        11
+      ],
+      "primary_url": "https://casrai.org",
+      "importance": 4,
+      "why_it_matters": "Congressional scrutiny of Chinese open-weight models could affect which models developers are allowed or willing to use.",
+      "sources": [
+        "Asia Times",
+        "CASRAI"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Reporting on a network moving restricted Nvidia AI chips to China, linked to the Jensen Huang scandal",
+      "member_ids": [
+        27,
+        28,
+        29,
+        35
+      ],
+      "primary_url": "https://techmeme.com/261122/p5",
+      "importance": 4,
+      "why_it_matters": "Reported espionage and smuggling efforts for AI chips could tighten export enforcement and affect access to AI compute.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Amazon reportedly nearing a $7.5B deal to buy AI startup Decart",
+      "member_ids": [
+        36
+      ],
+      "primary_url": "https://techmeme.com/261121/p8",
+      "importance": 4,
+      "why_it_matters": "Per the reporting, the acquisition would help AWS compete with Nvidia for computing power.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-22/card.jpg",
+  "candidate_count": 77,
+  "unsupported_terms": [
+    "AI-driven",
+    "Briefs",
+    "Leads"
+  ]
+}
