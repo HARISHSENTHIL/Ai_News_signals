@@ -1,0 +1,221 @@
+{
+  "date": "2026-11-23",
+  "post": {
+    "hook": "AI proof verified, Anthropic goes public",
+    "subhook": "Plus Qwen4-Max, inference key theft and banks blocking agents",
+    "stories": [
+      {
+        "headline": "Lean community confirms Claude-assisted Riemann hypothesis proof",
+        "detail": "Independent verifiers checked the Lean proof, so AI-assisted work on a famous open problem is now confirmed, not just claimed.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Anthropic IPO opens about 34% above offer price on Nasdaq",
+        "detail": "A record listing for a frontier lab that has raised $81.3B. Its finances are now public and may shape how investors value AI companies.",
+        "source_name": "CIO Africa",
+        "source_url": "https://cioafrica.co",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Alibaba widely releases Qwen4-Max, reported at 2.4T parameters",
+        "detail": "Alibaba claims better coding and reasoning, giving developers another very large model option for those workloads.",
+        "source_name": "Vietnam.vn",
+        "source_url": "https://www.vietnam.vn",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Cheap inference resellers caught stealing API keys",
+        "detail": "Researchers show resellers reading requests and taking keys; OpenRouter removed three providers and 125 endpoints. Audit your providers.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Major US banks block third-party AI agents from customer logins",
+        "detail": "Banks say bot mistakes are the customer's problem, limiting what agent builders can automate in finance.",
+        "source_name": "WIRED",
+        "source_url": "https://wired.com/story/banks-are-cracking-down-on-ai-agents",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "METR: models are improving faster than safety tests can measure",
+        "detail": "METR says current evaluations cannot rule out dangerous acceleration, so safety assessments may lag capability.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns",
+        "category": "RESEARCH",
+        "tier": "brief"
+      },
+      {
+        "headline": "Coding agents finish under 1 in 10 tasks in a simulated workplace",
+        "detail": "Agents pass isolated tests but struggle with ongoing project work, well below what standalone benchmarks suggest.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace",
+        "category": "RESEARCH",
+        "tier": "brief"
+      },
+      {
+        "headline": "MiniMax publishes AI-discovered cryptographic attacks with code",
+        "detail": "Papers and code are out, so security researchers can test the attacks themselves.",
+        "source_name": "TechNode",
+        "source_url": "https://technode.com",
+        "category": "SECURITY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Perplexity launches Monitor API for scheduled web searches",
+        "detail": "Agents get webhook alerts only on relevant changes, so always-on monitoring no longer needs polling.",
+        "source_name": "Perplexity via The Decoder",
+        "source_url": "https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog",
+        "category": "TOOLS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "A Claude-assisted proof of the Riemann hypothesis has been confirmed by the Lean and Mathlib community, and Anthropic is now a public company. Here is what changed today.\n\n1. Lean and Mathlib verifiers confirm a Claude-assisted proof of the Riemann hypothesis. Source: The Decoder\n2. Anthropic completes a record IPO, with shares opening about 34% above the offer price on Nasdaq. Source: CIO Africa\n3. Alibaba widely releases Qwen4-Max, reported at 2.4 trillion parameters, claiming better coding and reasoning. Source: Vietnam.vn\n4. Researchers show cheap inference resellers stealing API keys and reading requests; OpenRouter removed three providers and 125 endpoints. Source: The Decoder\n5. Major US banks ban third-party AI agents from logging into customer accounts. Source: WIRED\n6. METR warns frontier models are improving faster than safety tests can measure. Source: The Decoder\n7. Coding agents finish fewer than one in ten tasks in a simulated developer workplace. Source: The Decoder\n8. MiniMax publishes AI-discovered cryptographic attacks with papers and code. Source: TechNode\n9. Perplexity launches a Monitor API with webhook alerts on relevant web changes. Source: The Decoder\n\nIf you route traffic through a cheap inference provider, audit it today. 🔐",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "Anthropic",
+      "Claude",
+      "LeanProver",
+      "Qwen",
+      "AISecurity",
+      "AIAgents",
+      "LLM",
+      "DevTools",
+      "TechNews"
+    ],
+    "image_query": "chalkboard math equations"
+  },
+  "clusters": [
+    {
+      "headline": "Anthropic-affiliated mathematician's Claude-assisted proof of the Riemann hypothesis is confirmed by the Lean and Mathlib community",
+      "member_ids": [
+        3,
+        6,
+        82,
+        95
+      ],
+      "primary_url": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct",
+      "importance": 8,
+      "why_it_matters": "Independent verifiers checked the Lean proof, so AI-assisted work on a famous open problem is now confirmed rather than only claimed.",
+      "sources": [
+        "Dataconomy",
+        "NPR",
+        "The Decoder",
+        "The Guardian"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Anthropic completes a record IPO and shares open about 34% above the offer price on Nasdaq",
+      "member_ids": [
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "primary_url": "https://cioafrica.co",
+      "importance": 6,
+      "why_it_matters": "The listing of a leading frontier lab with $81.3B raised makes its finances public and is likely to shape how investors value AI companies.",
+      "sources": [
+        "https://internationalfinance.com/",
+        "CIO Africa",
+        "Crypto Briefing",
+        "80 Level",
+        "TechCrunch"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Alibaba widely releases its Qwen4-Max model, reported at 2.4 trillion parameters, with claims of better coding and reasoning",
+      "member_ids": [
+        12,
+        13
+      ],
+      "primary_url": "https://www.vietnam.vn",
+      "importance": 7,
+      "why_it_matters": "A widely released very large model from a major provider gives developers another option for coding and reasoning workloads.",
+      "sources": [
+        "Vietnam.vn",
+        "SoyaCincau"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Security researchers show cheap AI inference resellers steal API keys and read customer requests; OpenRouter removes three providers and 125 endpoints",
+      "member_ids": [
+        85
+      ],
+      "primary_url": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users",
+      "importance": 7,
+      "why_it_matters": "Teams routing traffic through cheap inference providers may have leaked AWS keys and exposed prompts, so they should audit their providers.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Major US banks ban third-party AI agents from logging into customer accounts and say bot mistakes are the customer's problem",
+      "member_ids": [
+        76
+      ],
+      "primary_url": "https://wired.com/story/banks-are-cracking-down-on-ai-agents",
+      "importance": 6,
+      "why_it_matters": "Agents that act through customer logins will lose access to major bank accounts, which limits what agent builders can automate in finance.",
+      "sources": [
+        "WIRED"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "METR warns that frontier models are improving faster than safety tests can measure them",
+      "member_ids": [
+        73
+      ],
+      "primary_url": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns",
+      "importance": 5,
+      "why_it_matters": "METR says current evaluations cannot rule out dangerous acceleration, so safety assessments may lag behind model capability.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "AI coding agents pass isolated tests but finish fewer than one in ten tasks in a simulated developer workplace",
+      "member_ids": [
+        72
+      ],
+      "primary_url": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace",
+      "importance": 5,
+      "why_it_matters": "Teams relying on coding agents for ongoing project work should expect much lower completion than standalone benchmarks suggest.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "MiniMax publishes AI-discovered cryptographic attacks with papers and code",
+      "member_ids": [
+        22
+      ],
+      "primary_url": "https://technode.com",
+      "importance": 5,
+      "why_it_matters": "Published attack code and papers let security researchers test cryptographic systems that AI discovered.",
+      "sources": [
+        "TechNode"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-23/card.jpg",
+  "candidate_count": 114,
+  "unsupported_terms": []
+}
