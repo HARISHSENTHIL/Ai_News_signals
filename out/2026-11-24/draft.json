@@ -1,0 +1,274 @@
+{
+  "date": "2026-11-24",
+  "post": {
+    "hook": "AI agents start approving code",
+    "subhook": "Plus GLM-5.4, an AI Riemann proof sketch and new US blacklists",
+    "stories": [
+      {
+        "headline": "Anthropic launches Claude Ship to review and approve PRs",
+        "detail": "The agent reviews, fixes and approves pull requests on its own, which changes how teams review and ship code.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Z.ai releases GLM-5.4, a 750B loop-transformer flagship",
+        "detail": "It is Z.ai's first looped-architecture model, and the company says it matches much larger models.",
+        "source_name": "Simon Willison",
+        "source_url": "https://simonwillison.net/2026/Nov/23/glm-54",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "AI-produced Riemann hypothesis proof sketch puzzles experts",
+        "detail": "Experts say humans are struggling to understand the 17-million-line output, which may take months to verify.",
+        "source_name": "Wired",
+        "source_url": "https://wired.com/story/ai-solved-maths-most-famous-problem",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Meta rolls out its Muse personal AI agent to UK adults",
+        "detail": "Users can give it access to email, calendar and shopping apps, and regulators are watching the rollout.",
+        "source_name": "Meta",
+        "source_url": "https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "US adds Megaspeed and an Alibaba unit to the Entity List",
+        "detail": "Companies now need a special federal license to deal with the firms, which affects AI chip supply chains.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Lab insiders say unreleased models advanced fast in reasoning",
+        "detail": "Anthropic and OpenAI employees suggest some internal models may be too capable to release publicly.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261124/p11",
+        "category": "MODEL",
+        "tier": "brief"
+      },
+      {
+        "headline": "Nvidia board reinstates Jensen Huang as CEO",
+        "detail": "The reversal came within two weeks of his resignation, and a Senate hearing is to follow.",
+        "source_name": "Nvidia",
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Reports: Meta's Muse read Signal chats via device permissions",
+        "detail": "Access reportedly came through Android and Mac permissions, and UK regulators have issued warnings.",
+        "source_name": "eSecurity Planet",
+        "source_url": "https://www.esecurityplanet.com",
+        "category": "SECURITY",
+        "tier": "brief"
+      },
+      {
+        "headline": "OpenAI publishes perplexity scores, urges rivals on shared limits",
+        "detail": "It proposes a shared progress metric and industry-wide limits for judging when systems are ready.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/openai-warns-that-upcoming-ai-systems-could-outpace-safety-checks-and-urges-rivals-to-agree-on-shared-limits",
+        "category": "POLICY",
+        "tier": "brief"
+      }
+    ],
+    "caption": "AI agents can now approve and merge code on their own. Here is what changed today.\n\n1. Anthropic launches Claude Ship, an agent that reviews, fixes and approves pull requests (TechCrunch)\n2. Z.ai releases GLM-5.4, its first loop-transformer model, a 750B flagship it says matches much larger models (Simon Willison)\n3. An AI-produced Riemann hypothesis proof sketch runs to 17 million lines, and experts say it may take months to verify (Wired)\n4. Meta rolls out its Muse personal AI agent to UK adults, with access to email, calendar and shopping apps (Meta)\n5. Anthropic and OpenAI employees say unreleased models have advanced quickly in reasoning (Techmeme)\n6. The US adds Megaspeed and an Alibaba subsidiary to the Entity List (TechCrunch)\n7. Nvidia's board reinstates Jensen Huang as CEO within two weeks of his resignation (Nvidia)\n8. Reports say Meta's Muse read Signal chats through Android and Mac permissions, and UK regulators have issued warnings (eSecurity Planet)\n9. OpenAI publishes internal perplexity scores and urges rivals to agree on shared limits (The Decoder)\n\nCheck what your agents can access before you let them act. 🔍",
+    "hashtags": [
+      "AI",
+      "AINews",
+      "AIAgents",
+      "Anthropic",
+      "OpenAI",
+      "Nvidia",
+      "OpenWeights",
+      "CodeReview",
+      "AISafety",
+      "TechPolicy"
+    ],
+    "image_query": "code review screen"
+  },
+  "clusters": [
+    {
+      "headline": "Anthropic launches Claude Ship, an AI agent that reviews, fixes and approves pull requests",
+      "member_ids": [
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "primary_url": "https://techcrunch.com",
+      "importance": 8,
+      "why_it_matters": "Agents can now merge code changes on their own, which changes how developer teams review and ship software.",
+      "sources": [
+        "Technology Org",
+        "Reuters",
+        "TechCrunch",
+        "The Decoder",
+        "SiliconANGLE",
+        "The Verge",
+        "Help Net Security"
+      ],
+      "corroboration": 7
+    },
+    {
+      "headline": "Z.ai releases GLM-5.4, its first loop-transformer model, a 750B flagship",
+      "member_ids": [
+        17,
+        18,
+        32,
+        58,
+        136
+      ],
+      "primary_url": "https://simonwillison.net/2026/Nov/23/glm-54",
+      "importance": 7,
+      "why_it_matters": "A looped architecture that Z.ai says matches much larger models could change how open-weight models are built and priced.",
+      "sources": [
+        "Decrypt",
+        "South China Morning Post",
+        "www.trendingtopics.eu",
+        "Simon Willison",
+        "The Decoder"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Riemann hypothesis proof sketch produced with AI; experts say humans are struggling to understand it",
+      "member_ids": [
+        109,
+        121
+      ],
+      "primary_url": "https://wired.com/story/ai-solved-maths-most-famous-problem",
+      "importance": 7,
+      "why_it_matters": "A 17-million-line AI-produced solution to a famous open problem may take mathematicians months to verify.",
+      "sources": [
+        "WIRED",
+        "The Decoder"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Meta launches its Muse personal AI agent to UK adults",
+      "member_ids": [
+        22,
+        25,
+        47,
+        61,
+        53
+      ],
+      "primary_url": "https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control",
+      "importance": 6,
+      "why_it_matters": "UK adults can now give a Meta agent access to their email, calendar and shopping apps, and regulators are watching the rollout.",
+      "sources": [
+        "Meta Newsroom",
+        "POLITICO.eu",
+        "Techmeme",
+        "The Times"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Anthropic and OpenAI employees warn that unreleased models have advanced quickly in reasoning",
+      "member_ids": [
+        64
+      ],
+      "primary_url": "https://techmeme.com/261124/p11",
+      "importance": 6,
+      "why_it_matters": "Insiders say internal models may be too capable to release publicly, which could affect future launch decisions.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "US adds Megaspeed and an Alibaba subsidiary to the Entity List",
+      "member_ids": [
+        57,
+        86,
+        131
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist",
+      "importance": 5,
+      "why_it_matters": "Companies need a special federal license to do business with the blacklisted firms, which affects AI chip supply chains.",
+      "sources": [
+        "Techmeme",
+        "TechCrunch",
+        "SCMP Tech"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Nvidia board reinstates Jensen Huang as CEO after his resignation",
+      "member_ids": [
+        48,
+        62,
+        66,
+        80,
+        82,
+        83,
+        84,
+        85,
+        89,
+        95,
+        97,
+        98,
+        99,
+        101,
+        102,
+        113,
+        118,
+        119,
+        124,
+        132,
+        133,
+        138,
+        141,
+        154
+      ],
+      "primary_url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+      "importance": 4,
+      "why_it_matters": "Leadership of the largest AI chip supplier changed back within two weeks, with a reported surge in market value and a Senate hearing to follow.",
+      "sources": [
+        "NVIDIA Newsroom",
+        "Techmeme",
+        "TechCrunch",
+        "The Verge",
+        "The Next Platform",
+        "SCMP Tech",
+        "WIRED",
+        "The Decoder",
+        "The Guardian",
+        "Lemmy"
+      ],
+      "corroboration": 10
+    },
+    {
+      "headline": "Reports that Meta's Muse agent read Signal chats through Android and Mac permissions",
+      "member_ids": [
+        46,
+        49
+      ],
+      "primary_url": "https://www.esecurityplanet.com",
+      "importance": 5,
+      "why_it_matters": "An AI agent with access to private messages raises privacy questions, and UK regulators have issued warnings.",
+      "sources": [
+        "eSecurity Planet",
+        "The Independent"
+      ],
+      "corroboration": 2
+    }
+  ],
+  "card_path": "out/2026-11-24/card.jpg",
+  "candidate_count": 161,
+  "unsupported_terms": [
+    "AI-produced",
+    "PRs"
+  ]
+}
