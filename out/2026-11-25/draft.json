@@ -1,0 +1,228 @@
+{
+  "date": "2026-11-25",
+  "post": {
+    "hook": "A claimed proof, a PR agent, an AI 0-day",
+    "subhook": "Nine AI stories across research, tools, policy and security",
+    "stories": [
+      {
+        "headline": "OpenAI preprint claims matrix multiplication exponent is 9/4",
+        "detail": "A claimed proof of a long-standing open problem in mathematics. If it holds, it is a major AI-driven research milestone.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261125/p5",
+        "category": "RESEARCH",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude Ship agent reviews, fixes and approves pull requests",
+        "detail": "Anthropic's new agent lets engineers hand PR review, fixes and approval to Claude, which changes how code gets shipped.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude Artifacts become desktop apps for macOS and Windows",
+        "detail": "Artifacts built in chat without code can be installed as standalone desktop apps with a free account.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows",
+        "category": "TOOLS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Tidal bans fully AI-generated music",
+        "detail": "It will delete around 29 million AI-generated songs and reject 80,000 to 85,000 tracks a day starting December 9.",
+        "source_name": "The Guardian",
+        "source_url": "https://theguardian.com/music/2026/nov/25/tidal-streaming-service-bans-ai-generated-music",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Google DeepMind releases Gemini 4 Neon",
+        "detail": "Latent Space reports Neon beats Astra and Fable on LiveBench, calling it GDM's full return as a frontier lab.",
+        "source_name": "Latent Space",
+        "source_url": "https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Amazon: attackers' AI agents found and exploited a 0-day",
+        "detail": "Amazon says the agents did it with little human input, lowering the effort an attack takes and raising the bar for defenders.",
+        "source_name": "Ars Technica",
+        "source_url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input",
+        "category": "SECURITY",
+        "tier": "brief"
+      },
+      {
+        "headline": "Insiders say OpenAI, Anthropic models outgrew safety measures",
+        "detail": "Employees reportedly debate halting releases or training altogether.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/dozens-of-insiders-say-openai-and-anthropics-unreleased-models-have-outgrown-their-safety-measures",
+        "category": "NEWS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Meta brings Muse AI assistant into Instagram DMs",
+        "detail": "Muse is now reachable inside DMs without switching apps.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "MCP SDK tops 700M monthly downloads, adds background tasks",
+        "detail": "Anthropic also adds file uploads; both are meant to let Claude agents work more independently.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents",
+        "category": "TOOLS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "A heavy day: a claimed math proof, an agent that merges your PRs, and AI agents finding a 0-day on their own.\n\n1. OpenAI preprint claims the matrix multiplication exponent is exactly 9/4. If the proof holds, it settles a long-standing open problem. (Techmeme)\n2. Anthropic's Claude Ship is an agent that reviews, fixes and approves pull requests. (The Verge)\n3. Claude Artifacts can now be installed as standalone desktop apps on macOS and Windows with a free account. (The Decoder)\n4. Tidal bans fully AI-generated music: around 29 million songs deleted, 80,000 to 85,000 tracks rejected per day starting December 9. (The Guardian)\n5. Google DeepMind releases Gemini 4 Neon, reported to beat Astra and Fable on LiveBench. (Latent Space)\n6. Dozens of insiders say unreleased OpenAI and Anthropic models have outgrown their safety measures; employees reportedly debate halting releases or training. (The Decoder)\n7. Amazon says attackers' AI agents found and exploited a 0-day with little human input. (Ars Technica)\n8. Meta brings its Muse AI assistant into Instagram DMs. (TechCrunch)\n9. Anthropic's MCP SDK tops 700 million monthly downloads and adds background tasks and file uploads. (The Decoder)\n\nThe 9/4 claim is the one to watch as reviewers dig in 🧮",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "MachineLearning",
+      "OpenAI",
+      "Anthropic",
+      "Claude",
+      "Gemini",
+      "GoogleDeepMind",
+      "Cybersecurity",
+      "MCP",
+      "DevTools",
+      "AINews"
+    ],
+    "image_query": "math chalkboard equations"
+  },
+  "clusters": [
+    {
+      "headline": "OpenAI publishes preprint claiming matrix multiplication exponent is exactly 9/4",
+      "member_ids": [
+        65,
+        133,
+        55
+      ],
+      "primary_url": "https://techmeme.com/261125/p5",
+      "importance": 8,
+      "why_it_matters": "A claimed proof of a long-standing open problem in mathematics on the matrix multiplication exponent, if it holds, would be a major AI-driven research milestone.",
+      "sources": [
+        "Techmeme",
+        "Lobsters",
+        "Hacker News"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Anthropic's Claude Ship launches AI agent that reviews, fixes and approves pull requests",
+      "member_ids": [
+        9,
+        10,
+        78
+      ],
+      "primary_url": "https://theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
+      "importance": 7,
+      "why_it_matters": "Engineers can have Claude review, fix and approve pull requests, which directly changes how code gets shipped.",
+      "sources": [
+        "Brave New Coin",
+        "The New Stack",
+        "The Verge"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Anthropic Claude Artifacts becomes standalone desktop apps for macOS and Windows",
+      "member_ids": [
+        6,
+        7,
+        8,
+        110
+      ],
+      "primary_url": "https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows",
+      "importance": 6,
+      "why_it_matters": "Users can install Artifacts as desktop apps on Mac and Windows with a free account, building them in chat without code.",
+      "sources": [
+        "Tech Times",
+        "9to5Mac",
+        "Macworld",
+        "The Decoder"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Tidal bans fully AI-generated music from its platform and will delete millions of tracks",
+      "member_ids": [
+        49,
+        93,
+        94,
+        134
+      ],
+      "primary_url": "https://theguardian.com/music/2026/nov/25/tidal-streaming-service-bans-ai-generated-music",
+      "importance": 5,
+      "why_it_matters": "Tidal will delete around 29 million AI-generated songs and reject 80,000 to 85,000 tracks per day starting December 9, per The Verge's report.",
+      "sources": [
+        "Hacker News",
+        "TechCrunch",
+        "The Verge",
+        "The Guardian"
+      ],
+      "corroboration": 4
+    },
+    {
+      "headline": "Gemini 4 Neon released, marking Google DeepMind's full return as a frontier lab",
+      "member_ids": [
+        100
+      ],
+      "primary_url": "https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab",
+      "importance": 6,
+      "why_it_matters": "Latent Space reports Neon beats Astra and Fable on LiveBench, a new model that practitioners may test.",
+      "sources": [
+        "Latent Space"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Dozens of insiders say OpenAI and Anthropic unreleased models have outgrown their safety measures",
+      "member_ids": [
+        112
+      ],
+      "primary_url": "https://the-decoder.com/dozens-of-insiders-say-openai-and-anthropics-unreleased-models-have-outgrown-their-safety-measures",
+      "importance": 6,
+      "why_it_matters": "Employees reportedly debate halting releases or training altogether, which could affect future frontier model availability.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Amazon says hackers' AI agents found and exploited a 0-day with little human input",
+      "member_ids": [
+        106
+      ],
+      "primary_url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input",
+      "importance": 6,
+      "why_it_matters": "AI agents autonomously exploiting zero-days lowers the effort needed for attacks and raises the bar for defenders.",
+      "sources": [
+        "Ars Technica"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Meta brings Muse AI assistant into Instagram DMs",
+      "member_ids": [
+        87
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms",
+      "importance": 5,
+      "why_it_matters": "Muse becomes reachable inside Instagram DMs without switching apps, which expands its everyday reach.",
+      "sources": [
+        "TechCrunch"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-25/card.jpg",
+  "candidate_count": 154,
+  "unsupported_terms": [
+    "700M"
+  ]
+}
