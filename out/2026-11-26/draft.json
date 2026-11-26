@@ -1,0 +1,240 @@
+{
+  "date": "2026-11-26",
+  "post": {
+    "hook": "AI security slips and chip shipments halt",
+    "subhook": "Plus Nvidia pauses SE Asia servers and New York bans AI toys",
+    "stories": [
+      {
+        "headline": "MiniMax tied to unauthorized access of user data",
+        "detail": "Users who asked MiniMax not to retain their data say unidentified parties accessed it anyway.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261126/p7",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Chinese and North Korean state hackers adopt AI pentest tool ARTEX",
+        "detail": "Microsoft says state-backed groups from both countries are now using the AI pentesting tool ARTEX.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261126/p3",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Nvidia tells partners to halt AI server shipments in SE Asia",
+        "detail": "Shipments to Malaysia, Singapore, Thailand and Indonesia are paused as US export controls tighten.",
+        "source_name": "Techmeme",
+        "source_url": "https://techmeme.com/261126/p2",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "Amazon and Meta reportedly in talks over Muse shopping agent",
+        "detail": "A deal would end Amazon's block and let Meta's AI shopping agent sell through Amazon's marketplace.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse",
+        "category": "BUSINESS",
+        "tier": "lead"
+      },
+      {
+        "headline": "New York bans AI chatbot toys for kids for five years",
+        "detail": "The law bans making and selling AI chatbot toys in the state, and the attorney general says she will enforce it.",
+        "source_name": "The Guardian",
+        "source_url": "https://theguardian.com/us-news/2026/nov/25/new-york-bans-ai-toys",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Claude artifacts can now be installed as Mac apps",
+        "detail": "Anthropic lets users turn Claude-generated artifacts into installable desktop software.",
+        "source_name": "Computerworld",
+        "source_url": "https://www.computerworld.com",
+        "category": "TOOLS",
+        "tier": "brief"
+      },
+      {
+        "headline": "US chip curbs reportedly slowing Chinese AI labs",
+        "detail": "Chip limits and anti-distillation measures may delay releases; DeepSeek researchers estimate a nine-month gap to US models.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/us-chip-access-curbs-and-anti-distillation-measures-are-reportedly-already-slowing-chinese-ai-labs",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "AI-driven math results are landing faster",
+        "detail": "Mathematicians and labs report progress on Erdős problems and new bounds, though details remain informal.",
+        "source_name": "Latent Space",
+        "source_url": "https://latent.space/p/ainews-math-proofs-are-landing-faster-than-we-can-read-them",
+        "category": "RESEARCH",
+        "tier": "brief"
+      },
+      {
+        "headline": "Anthropic moves Claude Messages API from Python to Rust",
+        "detail": "A write-up describes the live backend rewrite of the API, done with no downtime.",
+        "source_name": "Anthropic",
+        "source_url": "https://www.anthropic.com",
+        "category": "TOOLS",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Security leads today: a data-access problem at MiniMax and state hackers using an AI pentesting tool.\n\n1. MiniMax linked to unauthorized access of user data that customers asked it not to retain (Techmeme)\n2. Microsoft says Chinese and North Korean state groups have adopted the AI pentesting tool ARTEX (Techmeme)\n3. Nvidia tells partners to halt AI server shipments to Malaysia, Singapore, Thailand and Indonesia (Techmeme)\n4. Amazon and Meta reportedly in talks to end Amazon's block on Meta's Muse shopping agent (TechCrunch)\n5. Claude artifacts can now be installed as Mac apps (Computerworld)\n6. US chip curbs and anti-distillation measures reportedly slowing Chinese AI labs (The Decoder)\n7. AI-driven math results, including Erdős problems and new bounds, are accelerating (Latent Space)\n8. New York bans AI chatbot toys for children for five years (The Guardian)\n9. Anthropic migrates its Claude Messages API from Python to Rust with no downtime (Anthropic)\n\nCheck what your AI vendors keep, and who can see it.",
+    "hashtags": [
+      "AI",
+      "AINews",
+      "CyberSecurity",
+      "DataPrivacy",
+      "Nvidia",
+      "ExportControls",
+      "Anthropic",
+      "Claude",
+      "Meta",
+      "AIPolicy",
+      "MachineLearning",
+      "Rust"
+    ],
+    "image_query": "padlock keyboard"
+  },
+  "clusters": [
+    {
+      "headline": "MiniMax linked to unauthorized access of confidential user data submitted to its AI service",
+      "member_ids": [
+        15,
+        16,
+        17,
+        18,
+        45
+      ],
+      "primary_url": "https://techmeme.com/261126/p7",
+      "importance": 5,
+      "why_it_matters": "Users who asked MiniMax not to retain their data say unidentified parties accessed it anyway, raising privacy concerns for anyone sending sensitive prompts.",
+      "sources": [
+        "BigGo Finance",
+        "Unite.AI",
+        "Kansas City Star",
+        "Investing.com",
+        "Techmeme"
+      ],
+      "corroboration": 5
+    },
+    {
+      "headline": "Microsoft says Chinese and North Korean state hacking groups have adopted the AI pentesting tool ARTEX",
+      "member_ids": [
+        48
+      ],
+      "primary_url": "https://techmeme.com/261126/p3",
+      "importance": 6,
+      "why_it_matters": "State-backed groups using an AI offensive tool in live attacks raises the threat level for defenders.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Nvidia tells manufacturing partners to halt AI server shipments to Malaysia, Singapore, Thailand and Indonesia",
+      "member_ids": [
+        52
+      ],
+      "primary_url": "https://techmeme.com/261126/p2",
+      "importance": 6,
+      "why_it_matters": "Halting AI server shipments in Southeast Asia constrains compute supply in the region as US export controls tighten.",
+      "sources": [
+        "Techmeme"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Amazon and Meta reportedly in talks to end Amazon's block on Meta's Muse AI shopping agent",
+      "member_ids": [
+        28,
+        63,
+        64
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse",
+      "importance": 5,
+      "why_it_matters": "A deal would let Meta's AI shopping agent sell through Amazon's marketplace, which could shift ecommerce traffic and ad revenue.",
+      "sources": [
+        "The Decoder",
+        "TechCrunch",
+        "The Verge"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Anthropic lets users install Claude artifacts as Mac apps",
+      "member_ids": [
+        1,
+        4,
+        5
+      ],
+      "primary_url": "https://www.computerworld.com",
+      "importance": 5,
+      "why_it_matters": "Users can turn Claude-generated outputs into installable desktop software, lowering the barrier to shipping small AI-built tools.",
+      "sources": [
+        "Computerworld",
+        "Inc.com",
+        "WSJ"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "US chip-access curbs and anti-distillation measures reportedly slowing Chinese AI labs",
+      "member_ids": [
+        21,
+        22,
+        112
+      ],
+      "primary_url": "https://the-decoder.com/us-chip-access-curbs-and-anti-distillation-measures-are-reportedly-already-slowing-chinese-ai-labs",
+      "importance": 5,
+      "why_it_matters": "Reported chip limits could delay Chinese model releases, with DeepSeek researchers estimating a nine-month gap to US models.",
+      "sources": [
+        "The Japan Times",
+        "Superpower Daily",
+        "The Decoder"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Mathematicians and AI labs report accelerating AI-driven math results, including Erdős problems and new bounds",
+      "member_ids": [
+        86,
+        50,
+        54
+      ],
+      "primary_url": "https://latent.space/p/ainews-math-proofs-are-landing-faster-than-we-can-read-them",
+      "importance": 5,
+      "why_it_matters": "Reported AI progress on open math problems is pointing to a faster pace of formal discovery, though details remain informal.",
+      "sources": [
+        "Latent Space",
+        "Simon Willison",
+        "Techmeme"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "New York bans AI chatbot toys for children for five years",
+      "member_ids": [
+        85,
+        120,
+        131
+      ],
+      "primary_url": "https://theguardian.com/us-news/2026/nov/25/new-york-bans-ai-toys",
+      "importance": 4,
+      "why_it_matters": "The law bans manufacture and sale of AI chatbot toys in New York, and the attorney general says she will enforce it.",
+      "sources": [
+        "TechCrunch",
+        "The Guardian",
+        "Lemmy"
+      ],
+      "corroboration": 3
+    }
+  ],
+  "card_path": "out/2026-11-26/card.jpg",
+  "candidate_count": 139,
+  "unsupported_terms": [
+    "AI-driven",
+    "Asia",
+    "Claude-generated",
+    "Korean",
+    "Mathematicians"
+  ]
+}
