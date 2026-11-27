@@ -1,0 +1,229 @@
+{
+  "date": "2026-11-27",
+  "post": {
+    "hook": "AI chip curbs hit Southeast Asia and China",
+    "subhook": "Plus an AI attack framework, chatbot crackdowns and an agent pizza",
+    "stories": [
+      {
+        "headline": "Z.AI and Moonshot delay flagship models after data cutoff",
+        "detail": "Chinese labs reportedly seek training data from Google and Meta after OpenAI and Anthropic cut off access, amid US curbs.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/after-openai-and-anthropic-shut-the-door-on-their-data-a-chinese-ai-developer-is-turning-to-google-and-meta-instead",
+        "category": "MODEL",
+        "tier": "lead"
+      },
+      {
+        "headline": "Nvidia pauses server shipments to four Southeast Asian countries",
+        "detail": "Partners told to halt shipments to Malaysia, Singapore, Thailand and Indonesia as the US tightens AI chip export controls.",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Microsoft details ARTEX, a state-backed AI attack framework",
+        "detail": "In wide use since July 2026, it runs attacks via specialized agents with little human input. Microsoft recommends honeypots.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/microsoft-details-how-state-backed-hackers-use-the-artex-ai-framework-to-automate-cyberattacks",
+        "category": "SECURITY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Apple pulls MiniMax chatbot over child safety concerns",
+        "detail": "Removed from the App Store after reports of sexualized content, adding pressure on chatbot makers to meet store safety rules.",
+        "source_name": "The Information",
+        "source_url": "https://www.theinformation.com",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "42 state AGs move to block sale of Character.AI chat histories",
+        "detail": "The coalition targets chats from more than 21 million US accounts in Character.AI's Chapter 11 case.",
+        "source_name": "The Verge",
+        "source_url": "https://theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+        "category": "POLICY",
+        "tier": "lead"
+      },
+      {
+        "headline": "Dutch groups seek court halt on Meta AI glasses sales",
+        "detail": "Citing secret-recording privacy risks, they want a Dutch court to stop sales of the glasses in the Netherlands.",
+        "source_name": "Business of Fashion",
+        "source_url": "https://www.businessoffashion.com",
+        "category": "POLICY",
+        "tier": "brief"
+      },
+      {
+        "headline": "AI agent makes first UK cardless purchase: a Papa John's order",
+        "detail": "Done under an FCA-backed test without sharing bank security details.",
+        "source_name": "The Guardian",
+        "source_url": "https://theguardian.com/business/2026/nov/27/ai-agent-cardless-transaction-pizza-papa-john-uk-fca-truelayer",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "OpenAI fixes GPT-6.2 billing bug; usage limits hit faster",
+        "detail": "After correcting wrong discounts, Astra users hit limits 40% faster and Sol users 25% faster.",
+        "source_name": "The Decoder",
+        "source_url": "https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error",
+        "category": "BUSINESS",
+        "tier": "brief"
+      },
+      {
+        "headline": "Researcher says MiniMax data was accessed by unknown parties",
+        "detail": "Unidentified parties reportedly accessed data held by the Chinese AI firm.",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com",
+        "category": "SECURITY",
+        "tier": "brief"
+      }
+    ],
+    "caption": "Export controls and data access set the pace today.\n\n1. Z.AI and Moonshot reportedly delay flagship models and turn to Google and Meta for training data after OpenAI and Anthropic cut off access. (The Decoder)\n2. Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as US chip controls tighten. (TechCrunch)\n3. Microsoft publishes the architecture of ARTEX, an AI framework state-backed hackers use to automate attacks, and recommends deception defenses like honeypots. (The Decoder)\n4. Apple removes a MiniMax chatbot from the App Store over sexualized content and child safety concerns. (The Information)\n5. 42 state attorneys general move to block the sale of chat histories from 21M+ Character.AI accounts in bankruptcy. (The Verge)\n6. Dutch groups ask a court to halt sales of Meta's AI glasses over secret-recording risks. (Business of Fashion)\n7. A Papa John's order becomes the first UK purchase by an AI agent using cardless payment, under an FCA-backed test. (The Guardian)\n8. OpenAI patches a GPT-6.2 billing error; Astra users now hit limits 40% faster, Sol users 25% faster. (The Decoder)\n9. A researcher says unidentified parties accessed MiniMax data. (Reuters)\n\nThat's the day. Back tomorrow.",
+    "hashtags": [
+      "AI",
+      "ArtificialIntelligence",
+      "AINews",
+      "Nvidia",
+      "ExportControls",
+      "Cybersecurity",
+      "AIPolicy",
+      "Privacy",
+      "OpenAI",
+      "AIAgents",
+      "TechNews"
+    ],
+    "image_query": "server racks"
+  },
+  "clusters": [
+    {
+      "headline": "Z.AI and Moonshot delay flagship models as US curbs and distillation blocks cut data access",
+      "member_ids": [
+        12,
+        13,
+        20,
+        21,
+        22,
+        78
+      ],
+      "primary_url": "https://the-decoder.com/after-openai-and-anthropic-shut-the-door-on-their-data-a-chinese-ai-developer-is-turning-to-google-and-meta-instead",
+      "importance": 6,
+      "why_it_matters": "Chinese labs reportedly must delay their next flagship models and seek training data from Google and Meta after OpenAI and Anthropic cut off access.",
+      "sources": [
+        "shattered.io",
+        "Dealroom",
+        "CASRAI",
+        "Taipei Times",
+        "Startup Fortune",
+        "The Decoder"
+      ],
+      "corroboration": 6
+    },
+    {
+      "headline": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia",
+      "member_ids": [
+        69,
+        89
+      ],
+      "primary_url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "importance": 7,
+      "why_it_matters": "Server shipments to four Southeast Asian countries are paused as the US tightens export controls on AI chips, leaving data center projects there in limbo.",
+      "sources": [
+        "TechCrunch",
+        "The Decoder"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Microsoft publishes architecture of ARTEX, an AI framework used by state-backed hackers to automate cyberattacks",
+      "member_ids": [
+        87
+      ],
+      "primary_url": "https://the-decoder.com/microsoft-details-how-state-backed-hackers-use-the-artex-ai-framework-to-automate-cyberattacks",
+      "importance": 6,
+      "why_it_matters": "Microsoft says ARTEX has been in wide use since July 2026 to run cyberattacks with specialized agents and little human involvement, and it recommends deception defenses such as honeypots.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Apple pulls MiniMax chatbot from App Store over sexualized content and child safety concerns",
+      "member_ids": [
+        10,
+        11
+      ],
+      "primary_url": "https://www.theinformation.com",
+      "importance": 5,
+      "why_it_matters": "Apple removed a MiniMax chatbot from its store after reports of sexualized content, which puts pressure on AI chatbot makers to meet app store safety rules.",
+      "sources": [
+        "The Information",
+        "Caixin Global"
+      ],
+      "corroboration": 2
+    },
+    {
+      "headline": "Character.AI faces a 42-state AG push to stop sale of user chat histories in bankruptcy",
+      "member_ids": [
+        62
+      ],
+      "primary_url": "https://theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+      "importance": 5,
+      "why_it_matters": "A coalition of 42 attorneys general is trying to block the sale of chat histories from more than 21 million US accounts during Character.AI's Chapter 11 case.",
+      "sources": [
+        "The Verge"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "Dutch groups ask court to halt sales of Meta AI glasses over secret-recording privacy risk",
+      "member_ids": [
+        28,
+        29,
+        34
+      ],
+      "primary_url": "https://www.businessoffashion.com",
+      "importance": 4,
+      "why_it_matters": "A Dutch court will rule on whether Meta's AI glasses can keep being sold in the Netherlands, which would affect buyers there if the ban is granted.",
+      "sources": [
+        "BigGo Finance",
+        "The Business of Fashion",
+        "Seeking Alpha"
+      ],
+      "corroboration": 3
+    },
+    {
+      "headline": "Papa John's order becomes first UK purchase made by an AI agent with cardless payment",
+      "member_ids": [
+        101
+      ],
+      "primary_url": "https://theguardian.com/business/2026/nov/27/ai-agent-cardless-transaction-pizza-papa-john-uk-fca-truelayer",
+      "importance": 4,
+      "why_it_matters": "The order was made under an FCA-backed test without sharing bank security details, an early look at how agents may handle payments.",
+      "sources": [
+        "The Guardian"
+      ],
+      "corroboration": 1
+    },
+    {
+      "headline": "OpenAI patches GPT-6.2 billing error, so Astra and Sol users hit limits faster",
+      "member_ids": [
+        82
+      ],
+      "primary_url": "https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error",
+      "importance": 4,
+      "why_it_matters": "After fixing a billing bug that had given incorrect discounts, Astra users hit their limits 40% faster and Sol users 25% faster.",
+      "sources": [
+        "The Decoder"
+      ],
+      "corroboration": 1
+    }
+  ],
+  "card_path": "out/2026-11-27/card.jpg",
+  "candidate_count": 113,
+  "unsupported_terms": [
+    "21M",
+    "Asian",
+    "Citing",
+    "FCA-backed",
+    "Removed"
+  ]
+}
